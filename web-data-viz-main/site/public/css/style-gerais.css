@@ -16,6 +16,51 @@ body {
   justify-content: center;
 }
 
+.home-Book{
+  display: flex;
+  position: relative;
+ 
+}
+
+ ul{
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  gap: 20px;
+  margin-left: 92px;
+}
+
+.container-principal .espada-historia img:hover {
+  position: relative;
+  right: -260px;
+}
+
+.container-principal .espada-onis img:hover {
+  position: relative;
+  right: -260px;
+}
+
+.container-principal .espada-hashiras img:hover {
+  position: relative;
+  right: -260px;
+}
+
+.container-principal .espada-espadas img:hover {
+  position: relative;
+  right: -260px;
+}
+
+.container-principal .espada-formulario img:hover {
+  position: relative;
+  right: -260px;
+}
+
+.container-principal .espada-login img:hover {
+  position: relative;
+  right: -260px;
+}
+
 .home-Book img{
   width: 475px;
+  position: relative;
 }

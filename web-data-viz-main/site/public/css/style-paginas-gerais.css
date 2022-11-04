@@ -1,0 +1,44 @@
+/*  RESET */
+body {
+    margin: 0px;
+    padding: 0px;
+}
+
+/* CONFIGURAÇÕES GERAIS DA PAGINAS */
+body{
+    background-color: #383837;
+}
+
+.container-paginas{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: black;
+    padding: 0px;
+    margin: 20px 65px 0px 65px;
+}
+
+/* CONFIGURAÇÕES HEADER */
+.container-header{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: row;
+    background-color: black;
+    border-bottom: white solid;
+    color: white;
+    height: 35px;
+}
+
+.container-header .logo{
+    display: flex;
+}
+
+.container-header .volta{
+    display: flex;
+}
+
+.titulo{
+    color: white;
+} 
