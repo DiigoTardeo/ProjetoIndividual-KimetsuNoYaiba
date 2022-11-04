@@ -382,7 +382,7 @@
     color: white;
 }
 
-/* Kyogai - 6ª Lua Inferior */ 
+/* Kyogai - EX-6ª Lua Inferior */ 
 .kyogai{
     display: flex;
 }
@@ -404,5 +404,30 @@
 }
 
 .kyogai .texto-kyogai{
+    color: white;
+}
+
+/* Kyogai - 6ª Lua Inferior SUBSTITUTA */ 
+.kamanue{
+    display: flex;
+}
+
+.img-kamanue img{
+    width: 370px;
+}
+
+.kamanue .hist-kamanue{
+    display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+   padding: 20px;
+}
+
+.hist-kamanue h2{
+    color: white;
+}
+
+.kamanue .texto-kamanue{
     color: white;
 }
