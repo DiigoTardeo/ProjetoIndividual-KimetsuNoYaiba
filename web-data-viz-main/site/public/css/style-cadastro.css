@@ -1,0 +1,53 @@
+body{
+    background-image: url("../assets/img/Background/Background.png");
+}
+
+.container-cadastro{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: black;
+    margin: 100px 350px 0px 350px;
+}
+
+.titulo{
+    color: white;
+}
+
+.container-campos{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #5e5e5d;
+    width: 360px;
+    height: 250px;
+    margin-bottom: 30px;
+}
+
+
+.container-campos span{
+    color: #FFF;
+}
+
+.container-campos .campo-nome{
+    margin-top: 25px;
+}
+
+.container-campos .campo-nasc{
+    margin-top: 15px;
+}
+
+.container-campos .campo-altura{
+    margin-top: 15px;
+}
+
+.container-campos .campo-peso{
+    margin-top: 15px;
+}
+
+.container-campos .campo-funcaoDesejada{
+    margin-top: 15px;
+    margin-bottom: 20px;
+}

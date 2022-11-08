@@ -4,9 +4,64 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cadastro</title>
+    <link rel="stylesheet" href="./css/style-paginas-gerais.css">
+    <link rel="stylesheet" href="./css/style-cadastro.css">
+    <title>KnY - Cadastrar-se</title>
 </head>
 <body>
-    
+    <!-- HEADER -->
+    <header>
+        <div class="container-header">
+            <div class="logo">
+                Diario do Exterminador
+            </div>
+            <div class="voltar">
+                Voltar
+            </div>
+        </div>
+    </header>
+
+    <!-- MAIN -->
+    <main>
+        <div class="container-cadastro">
+            <div class="titulo">
+                <h1> CADASTRAR </h1>
+            </div>
+
+            <div class="container-campos">
+                
+                <div class="campo-nome">
+                    <span>Nome:</span>
+                    <input type="text" name="nome" id="ipt_nome">
+                </div>
+                
+                <div class="campo-nasc">
+                    <span>Data de Nasc.:</span>
+                    <input type="text" name="data_nasc" id="ipt_data_nasc">
+                </div>
+                
+                <div class="campo-altura">
+                    <span>Altura(cm):</span>
+                    <input type="text" name="altura" id="ipt_altura">
+                </div>
+                
+                <div class="campo-peso">
+                    <span>Peso(kg):</span>
+                    <input type="text" name="peso" id="ipt_peso">
+                </div>
+                
+                <div class="campo-funcaoDesejada">
+                    <span>Função desejada:</span>
+                    <select name="funcao" id="select_funcao">
+                        <option value="0">-- Selecionar uma função --</option>
+                        <option value="1">Exterminador</option>
+                        <option value="2">Ferreiro</option>
+                        <option value="3">Kakushi</option>
+                        <option value="4">Costureiro</option>
+                    </select>
+                </div>
+            </div>
+        </div> 
+    </main>
 </body>
 </html>

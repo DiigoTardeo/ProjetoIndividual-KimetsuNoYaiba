@@ -1,0 +1,27 @@
+Respiração da Fera: número de formas:10
+
+Respiração do Amor: número de formas:6
+
+Respiração da Água: número de formas:11
+
+Respiração das Chamas: número de formas:9
+
+Respiração da Névoa: número de formas:7
+
+Respiração do Sol: número de formas:13
+
+Respiração da Serpente: número de formas:5
+
+Respiração da Flor: número de formas:7
+
+Respiração da Lua: número de formas:16
+
+Respiração da Pedra: número de formas:5
+
+Respiração do Som: número de formas:5
+
+Respiração do Trovão: número de formas:7
+
+Respiração do Vento: número de formas:9
+
+Respiração do inseto: número de formas: 4

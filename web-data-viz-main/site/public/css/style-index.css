@@ -16,10 +16,20 @@ body {
   justify-content: center;
 }
 
+.container-principal .fumaca-fundo{
+  position: relative;
+  display: flex;
+  bottom: -53px;
+  left: 80px;
+  height: 600px;
+}
+
 .home-Book{
   display: flex;
   position: relative;
- 
+  width: 475px;
+  position: relative;
+  left: -420px;
 }
 
  ul{
