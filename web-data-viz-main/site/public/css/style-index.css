@@ -73,4 +73,6 @@ body {
 .home-Book img{
   width: 475px;
   position: relative;
+  right: 60px;
+  top: 10px;
 }
