@@ -5,7 +5,7 @@
 body {
   margin: 0;
   padding: 0;
-  background-image: url("../assets/img/Background/Smoke3.jpg");
+  background-image: url("../assets/img/Background/Smoke4.jpg");
   background-repeat: no-repeat;
   background-size: 1366px 663px;
 }
@@ -14,22 +14,25 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: row;
 }
 
 .container-principal .fumaca-fundo{
-  position: relative;
   display: flex;
-  bottom: -53px;
-  left: 80px;
-  height: 600px;
+  position: relative;
+  height: 666px;
+  width: 892px;
+  left: 85px;
+  top: 0px;
+  opacity: 0.5;
 }
 
 .home-Book{
   display: flex;
-  position: relative;
   width: 475px;
   position: relative;
-  left: -420px;
+  top: -12px;
+  left: -450px;
 }
 
  ul{
@@ -37,7 +40,12 @@ body {
   flex-direction: column;
   position: absolute;
   gap: 10px;
-  margin-left: 92px;
+  left: 92px;
+}
+
+.container-principal .espada-sobre-mim img:hover {
+  position: relative;
+  right: -260px;
 }
 
 .container-principal .espada-historia img:hover {
@@ -76,3 +84,22 @@ body {
   right: 60px;
   top: 10px;
 }
+
+/* .container-principal .fumaca-fundo{
+  position: relative;
+  display: flex;
+  left: -390px;
+  height: 629px;
+  width: 1105px;
+  opacity: 0.6;
+} */
+
+/* .container-principal .fumaca-fundo{
+  position: relative;
+  display: flex;
+  left: -439px;
+  height: 666px;
+  width: 892px;
+  top: -20px;
+  opacity: 0.5;
+} */
