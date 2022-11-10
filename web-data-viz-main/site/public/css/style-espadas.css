@@ -1,0 +1,270 @@
+.titulo{
+    color: white;
+}
+
+/* Kagaya - Lider */
+.kagaya{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.img-kagaya img{
+    width: 370px;
+}
+
+.kagaya .hist-kagaya{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+   padding: 20px;
+}
+
+.hist-kagaya h2{
+    color: white;
+}
+
+.kagaya .texto-kagaya{
+    color: white;
+}
+
+/* HASHIRAS */
+.container-hashiras{    
+    display: flex;
+    flex-direction: column;
+    margin: 50px 30px 30px 30px;
+}
+
+.container-hashiras h1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+/* PILAR DA PEDRA - GYOMEI */ 
+.gyomei{
+    display: flex;
+}
+
+.img-gyomei img{
+    width: 370px;
+}
+
+.gyomei .hist-gyomei{
+    display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+   padding: 20px;
+}
+
+.hist-gyomei h2{
+    color: white;
+}
+
+.gyomei .texto-gyomei{
+    color: white;
+}
+
+/* PILAR DO VENTO - SANEMI */ 
+.sanemi{
+    display: flex;
+}
+
+.img-sanemi img{
+    width: 370px;
+}
+
+.sanemi .hist-sanemi{
+    display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+   padding: 20px;
+}
+
+.hist-sanemi h2{
+    color: white;
+}
+
+.sanemi .texto-sanemi{
+    color: white;
+}
+
+/* PILAR DA NÉVOA - MUICHIRO */ 
+.muichiro{
+    display: flex;
+}
+
+.img-muichiro img{
+    width: 370px;
+}
+
+.muichiro .hist-muichiro{
+    display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+   padding: 20px;
+}
+
+.hist-muichiro h2{
+    color: white;
+}
+
+.muichiro .texto-muichiro{
+    color: white;
+}
+
+/* PILAR DA ÁGUA - GIYU */ 
+.giyu{
+    display: flex;
+}
+
+.img-giyu img{
+    width: 370px;
+}
+
+.giyu .hist-giyu{
+    display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+   padding: 20px;
+}
+
+.hist-giyu h2{
+    color: white;
+}
+
+.giyu .texto-giyu{
+    color: white;
+}
+
+/* PILAR DAS SERPENTES - OBANAIL */ 
+.obanail{
+    display: flex;
+}
+
+.img-obanail img{
+    width: 370px;
+}
+
+.obanail .hist-obanail{
+    display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+   padding: 20px;
+}
+
+.hist-obanail h2{
+    color: white;
+}
+
+.obanail .texto-obanail{
+    color: white;
+}
+
+/* PILAR DO AMOR - MITSURI */ 
+.mitsuri{
+    display: flex;
+}
+
+.img-mitsuri img{
+    width: 370px;
+}
+
+.mitsuri .hist-mitsuri{
+    display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+   padding: 20px;
+}
+
+.hist-mitsuri h2{
+    color: white;
+}
+
+.mitsuri .texto-mitsuri{
+    color: white;
+}
+
+/* PILAR DO SOM - TENGEN */ 
+.tengen{
+    display: flex;
+}
+
+.img-tengen img{
+    width: 370px;
+}
+
+.tengen .hist-tengen{
+    display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+   padding: 20px;
+}
+
+.hist-tengen h2{
+    color: white;
+}
+
+.tengen .texto-tengen{
+    color: white;
+}
+
+/* PILAR DAS CHAMAS - KYOJURO */ 
+.kyojuro{
+    display: flex;
+}
+
+.img-kyojuro img{
+    width: 370px;
+}
+
+.kyojuro .hist-kyojuro{
+    display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+   padding: 20px;
+}
+
+.hist-kyojuro h2{
+    color: white;
+}
+
+.kyojuro .texto-kyojuro{
+    color: white;
+}
+
+/* PILAR DOS INSETOS - SHINOBU */ 
+.shinobu{
+    display: flex;
+}
+
+.img-shinobu img{
+    width: 370px;
+}
+
+.shinobu .hist-shinobu{
+    display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+   padding: 20px;
+}
+
+.hist-shinobu h2{
+    color: white;
+}
+
+.shinobu .texto-shinobu{
+    color: white;
+}

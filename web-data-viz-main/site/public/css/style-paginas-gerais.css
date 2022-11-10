@@ -9,6 +9,15 @@ body{
     background-color: #383837;
 }
 
+header .botoes-acesso button{
+    background-color: black;
+    color: white;
+}
+
+header button:hover{
+    cursor: pointer;
+}
+
 .container-paginas{
     display: flex;
     align-items: center;
@@ -16,7 +25,7 @@ body{
     flex-direction: column;
     background-color: black;
     padding: 0px;
-    margin: 20px 65px 0px 65px;
+    margin: 20px 65px 20px 65px;
 }
 
 /* CONFIGURAÇÕES HEADER */

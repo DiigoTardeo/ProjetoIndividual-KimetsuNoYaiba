@@ -1,0 +1,293 @@
+.titulo{
+    color: white;
+}
+
+/* HISTORIA */
+.historia{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.img-historia img{
+    width: 370px;
+}
+
+.historia .hist-historia{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+   padding: 20px;
+}
+
+.hist-historia h2{
+    color: white;
+}
+
+.historia .texto-historia{
+    color: white;
+}
+
+/* HISTORIA - ONIS */
+.hist-onis{
+    display: flex;
+}
+
+.img-hist-onis img{
+    width: 370px;
+}
+
+.hist-onis .hist-hist-onis{
+    display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+   padding: 20px;
+}
+
+.hist-hist-onis h2{
+    color: white;
+}
+
+.hist-onis .texto-hist-onis{
+    color: white;
+}
+
+/* HISTORIA - HASHIRAS */
+.hashira{
+    display: flex;
+}
+
+.img-hashira img{
+    width: 370px;
+}
+
+.hashira .hist-hashira{
+    display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+   padding: 20px;
+}
+
+.hist-hashira h2{
+    color: white;
+}
+
+.hashira .texto-hashira{
+    color: white;
+}
+
+.hashira .texto-tsuguko{
+    color:white;
+}
+
+/* HISTORIA - TREINADORES */
+.treinador{
+    display: flex;
+}
+
+.img-treinador img{
+    width: 370px;
+}
+
+.treinador .hist-treinador{
+    display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+   padding: 20px;
+}
+
+.hist-treinador h2{
+    color: white;
+}
+
+.treinador .texto-treinador{
+    color: white;
+}
+
+/* HISTORIA - KASUGAIGARASU */
+.kasugaigarasu{
+    display: flex;
+}
+
+.img-kasugaigarasu img{
+    width: 370px;
+}
+
+.kasugaigarasu .hist-kasugaigarasu{
+    display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+   padding: 20px;
+}
+
+.hist-kasugaigarasu h2{
+    color: white;
+}
+
+.kasugaigarasu .texto-kasugaigarasu{
+    color: white;
+}
+
+/* FUNÇÕES KISATSUTAI */
+.container-funcoes-kisatsutai{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* FUNÇÕES */ 
+.funcoes{
+    display: flex;
+}
+
+.img-funcoes img{
+    width: 370px;
+}
+
+.funcoes .hist-funcoes{
+    display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+   padding: 20px;
+}
+
+.hist-funcoes h2{
+    color: white;
+}
+
+.funcoes .texto-funcoes{
+    color: white;
+}
+
+/* Exterminadores */ 
+.exterminadores{
+    display: flex;
+}
+
+.img-exterminadores img{
+    width: 370px;
+}
+
+.exterminadores .hist-exterminadores{
+    display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+   padding: 20px;
+}
+
+.hist-exterminadores h2{
+    color: white;
+}
+
+.exterminadores .texto-exterminadores{
+    color: white;
+}
+
+/* Ferreiros */ 
+.ferreiros{
+    display: flex;
+}
+
+.img-ferreiros img{
+    width: 370px;
+}
+
+.ferreiros .hist-ferreiros{
+    display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+   padding: 20px;
+}
+
+.hist-ferreiros h2{
+    color: white;
+}
+
+.ferreiros .texto-ferreiros{
+    color: white;
+}
+
+/* Kakushi */ 
+.kakushi{
+    display: flex;
+}
+
+.img-kakushi img{
+    width: 370px;
+}
+
+.kakushi .hist-kakushi{
+    display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+   padding: 20px;
+}
+
+.hist-kakushi h2{
+    color: white;
+}
+
+.kakushi .texto-kakushi{
+    color: white;
+}
+
+/* Costureiros */ 
+.costureiros{
+    display: flex;
+}
+
+.img-costureiros img{
+    width: 370px;
+}
+
+.costureiros .hist-costureiros{
+    display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+   padding: 20px;
+}
+
+.hist-costureiros h2{
+    color: white;
+}
+
+.costureiros .texto-costureiros{
+    color: white;
+}
+
+/* PILAR DOS INSETOS - SHINOBU */ 
+.shinobu{
+    display: flex;
+}
+
+.img-shinobu img{
+    width: 370px;
+}
+
+.shinobu .hist-shinobu{
+    display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+   padding: 20px;
+}
+
+.hist-shinobu h2{
+    color: white;
+}
+
+.shinobu .texto-shinobu{
+    color: white;
+}
