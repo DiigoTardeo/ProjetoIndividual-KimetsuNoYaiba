@@ -1,0 +1,85 @@
+/* HEADER */
+.header-left{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    height: 100vh;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.74);
+    box-shadow: 0px 0px 20px 6px rgb(0 0 0 / 41%);
+
+    /* background-color: rgb(38, 80, 120); */
+    /* background-color: rgb(255, 192, 203); */
+}
+
+.btn_abrirAba{
+    display: none;
+}
+
+.btn_fecharAba{
+    display: relative;
+}
+
+.img_aba{
+    display: flex;
+    margin-top: 50px;
+}
+.img_logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+}
+
+.titulo_aba{
+    display: flex;
+    margin-top: 40px;
+    color: #FFF;
+}
+
+.botoes{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 50px 0px;
+}
+
+.botoes button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    background-color: #41B8D5;
+    color: #FFF;
+    padding: 15px 30px;
+    border-radius: 25px;
+    border: none;
+    cursor: pointer;
+}
+
+.botoes button:hover{
+    background-color: #ff6484;
+}
+
+.btn_abrirAba{
+    cursor: pointer;
+}
+
+.btn_fecharAba{
+    cursor: pointer;
+}
+
+/* DADOS USUARIO */
+.container-usuario .dados-pessoais{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 0px;
+}
