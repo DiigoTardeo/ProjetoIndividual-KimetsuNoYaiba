@@ -42,7 +42,7 @@
                 </div>
             </div>
         </div>
-      </div>
+    </div>
 
     <!-- TELA DADOS -->
     <div class="container-dados" id="container_dados">
@@ -65,6 +65,14 @@
         <h2>RESPONTER QUIZ</h2>
     </div>
 
+      <div class="container-usuario">
+            <div class="dados-pessoais">
+                <h2>Dados Pessoais</h2>
+                <span class="divisao"> Divisão: </span>
+                <span class="mestre"> Mestre: </span>
+                <span class="espada"> Espada: </span>
+            </div>
+      </div>
 </body>
 </html>
 
@@ -87,5 +95,18 @@
         container_dados.style.margin= "20px 20px 0px 120px";
         container_missoes.style.margin= "20px 20px 0px 120px";
         container_quiz.style.margin= "20px 20px 0px 120px";
+        aba_left.style.width="300px";
+        navegacaoBar.style.margin="0px 0px 0px 0px";
+        navegacaoBar.style.animation="1s";
+        btn_abreAba.style.display="none";
+        btn_fechaAba.style.display="block";
+    }
+
+    function fecharAba(){
+        aba_left.style.width="120px";
+        navegacaoBar.style.margin="0px 200vw 0px 0px"
+        navegacaoBar.style.animation="4s";
+        btn_abreAba.style.display="flex";
+        btn_fechaAba.style.display="none";
     }
 </script>
