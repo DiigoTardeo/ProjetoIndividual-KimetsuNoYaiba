@@ -267,16 +267,16 @@
     color: white;
 }
 
-/* PILAR DOS INSETOS - SHINOBU */ 
-.shinobu{
+/*  */ 
+.ranking-exterminadores{
     display: flex;
 }
 
-.img-shinobu img{
+.img-ranking img{
     width: 370px;
 }
 
-.shinobu .hist-shinobu{
+.ranking-exterminadores .text-ranking{
     display: flex;
    justify-content: center;
    align-items: center;
@@ -284,10 +284,10 @@
    padding: 20px;
 }
 
-.hist-shinobu h2{
+.text-ranking h2{
     color: white;
 }
 
-.shinobu .texto-shinobu{
+.ranking-exterminadores .ranking{
     color: white;
 }

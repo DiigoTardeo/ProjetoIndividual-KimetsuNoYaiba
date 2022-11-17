@@ -1,20 +1,29 @@
 .titulo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
     color: white;
+
 }
 
-/* Kagaya - Lider */
-.kagaya{
+.titulo .texto-espadas{
+    color: #FFF;
+}
+
+/* ESPADA VERMELHO CARMESIM */
+.espada-vermelho-carmesim{
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 }
 
-.img-kagaya img{
+.img-espada-vermelho-carmesim img{
     width: 370px;
 }
 
-.kagaya .hist-kagaya{
+.espada-vermelho-carmesim .hist-espada-vermelho-carmesim{
    display: flex;
    justify-content: center;
    align-items: center;
@@ -22,249 +31,402 @@
    padding: 20px;
 }
 
-.hist-kagaya h2{
+.hist-espada-vermelho-carmesim h2{
     color: white;
 }
 
-.kagaya .texto-kagaya{
+.espada-vermelho-carmesim .texto-espada-vermelho-carmesim{
     color: white;
 }
 
-/* HASHIRAS */
-.container-hashiras{    
+/* ESPADA PRETA - SOL */
+.espada-preta{
     display: flex;
     flex-direction: column;
-    margin: 50px 30px 30px 30px;
-}
-
-.container-hashiras h1{
-    display: flex;
     align-items: center;
     justify-content: center;
-    color: white;
 }
 
-/* PILAR DA PEDRA - GYOMEI */ 
-.gyomei{
-    display: flex;
-}
-
-.img-gyomei img{
+.img-espada-preta img{
     width: 370px;
 }
 
-.gyomei .hist-gyomei{
-    display: flex;
+.espada-preta .hist-espada-preta{
+   display: flex;
    justify-content: center;
    align-items: center;
    flex-direction: column;
    padding: 20px;
 }
 
-.hist-gyomei h2{
+.hist-espada-preta h2{
     color: white;
 }
 
-.gyomei .texto-gyomei{
+.espada-preta .texto-espada-preta{
     color: white;
 }
 
-/* PILAR DO VENTO - SANEMI */ 
-.sanemi{
+/* ESPADA AMARELO - TROVÃO */
+.espada-amarela{
     display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
-.img-sanemi img{
+.img-espada-amarela img{
     width: 370px;
 }
 
-.sanemi .hist-sanemi{
-    display: flex;
+.espada-amarela .hist-espada-amarela{
+   display: flex;
    justify-content: center;
    align-items: center;
    flex-direction: column;
    padding: 20px;
 }
 
-.hist-sanemi h2{
+.hist-espada-amarela h2{
     color: white;
 }
 
-.sanemi .texto-sanemi{
+.espada-amarela .texto-espada-amarela{
     color: white;
 }
 
-/* PILAR DA NÉVOA - MUICHIRO */ 
-.muichiro{
+/* ESPADA AZUL - ÁGUA */
+.espada-azul{
     display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
-.img-muichiro img{
+.img-espada-azul img{
     width: 370px;
 }
 
-.muichiro .hist-muichiro{
-    display: flex;
+.espada-azul .hist-espada-azul{
+   display: flex;
    justify-content: center;
    align-items: center;
    flex-direction: column;
    padding: 20px;
 }
 
-.hist-muichiro h2{
+.hist-espada-azul h2{
     color: white;
 }
 
-.muichiro .texto-muichiro{
+.espada-azul .texto-espada-azul{
     color: white;
 }
 
-/* PILAR DA ÁGUA - GIYU */ 
-.giyu{
+/* ESPADA AMBAR - SOM */
+.espada-ambar{
     display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
-.img-giyu img{
+.img-espada-ambar img{
     width: 370px;
 }
 
-.giyu .hist-giyu{
-    display: flex;
+.espada-ambar .hist-espada-ambar{
+   display: flex;
    justify-content: center;
    align-items: center;
    flex-direction: column;
    padding: 20px;
 }
 
-.hist-giyu h2{
+.hist-espada-ambar h2{
     color: white;
 }
 
-.giyu .texto-giyu{
+.espada-ambar .texto-espada-ambar{
     color: white;
 }
 
-/* PILAR DAS SERPENTES - OBANAIL */ 
-.obanail{
+/* ESPADA AZUL LAVANDA - INSETO */
+.espada-azul-lavanda{
     display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
-.img-obanail img{
+.img-espada-azul-lavanda img{
     width: 370px;
 }
 
-.obanail .hist-obanail{
-    display: flex;
+.espada-azul-lavanda .hist-espada-azul-lavanda{
+   display: flex;
    justify-content: center;
    align-items: center;
    flex-direction: column;
    padding: 20px;
 }
 
-.hist-obanail h2{
+.hist-espada-azul-lavanda h2{
     color: white;
 }
 
-.obanail .texto-obanail{
+.espada-azul-lavanda .texto-espada-azul-lavanda{
     color: white;
 }
 
-/* PILAR DO AMOR - MITSURI */ 
-.mitsuri{
+/* ESPADA BRANCA - NÉVOA */
+.espada-branca{
     display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
-.img-mitsuri img{
+.img-espada-branca img{
     width: 370px;
 }
 
-.mitsuri .hist-mitsuri{
-    display: flex;
+.espada-branca .hist-espada-branca{
+   display: flex;
    justify-content: center;
    align-items: center;
    flex-direction: column;
    padding: 20px;
 }
 
-.hist-mitsuri h2{
+.hist-espada-branca h2{
     color: white;
 }
 
-.mitsuri .texto-mitsuri{
+.espada-branca .texto-espada-branca{
     color: white;
 }
 
-/* PILAR DO SOM - TENGEN */ 
-.tengen{
+/* ESPADA CINZA - PEDRA */
+.espada-cinza{
     display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
-.img-tengen img{
+.img-espada-cinza img{
     width: 370px;
 }
 
-.tengen .hist-tengen{
-    display: flex;
+.espada-cinza .hist-espada-cinza{
+   display: flex;
    justify-content: center;
    align-items: center;
    flex-direction: column;
    padding: 20px;
 }
 
-.hist-tengen h2{
+.hist-espada-cinza h2{
     color: white;
 }
 
-.tengen .texto-tengen{
+.espada-cinza .texto-espada-cinza{
     color: white;
 }
 
-/* PILAR DAS CHAMAS - KYOJURO */ 
-.kyojuro{
+/* ESPADA INDIGO CINZA - FERA */
+.espada-indigo-cinza{
     display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
-.img-kyojuro img{
+.img-espada-indigo-cinza img{
     width: 370px;
 }
 
-.kyojuro .hist-kyojuro{
-    display: flex;
+.espada-indigo-cinza .hist-espada-indigo-cinza{
+   display: flex;
    justify-content: center;
    align-items: center;
    flex-direction: column;
    padding: 20px;
 }
 
-.hist-kyojuro h2{
+.hist-espada-indigo-cinza h2{
     color: white;
 }
 
-.kyojuro .texto-kyojuro{
+.espada-indigo-cinza .texto-espada-indigo-cinza{
     color: white;
 }
 
-/* PILAR DOS INSETOS - SHINOBU */ 
-.shinobu{
+/* ESPADA LAVANDA - SERPENTE */
+.espada-lavanda{
     display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
-.img-shinobu img{
+.img-espada-lavanda img{
     width: 370px;
 }
 
-.shinobu .hist-shinobu{
-    display: flex;
+.espada-lavanda .hist-espada-lavanda{
+   display: flex;
    justify-content: center;
    align-items: center;
    flex-direction: column;
    padding: 20px;
 }
 
-.hist-shinobu h2{
+.hist-espada-lavanda h2{
     color: white;
 }
 
-.shinobu .texto-shinobu{
+.espada-lavanda .texto-espada-lavanda{
+    color: white;
+}
+
+/* ESPADA ROSA - AMOR */
+.espada-rosa{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.img-espada-rosa img{
+    width: 370px;
+}
+
+.espada-rosa .hist-espada-rosa{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+   padding: 20px;
+}
+
+.hist-espada-rosa h2{
+    color: white;
+}
+
+.espada-rosa .texto-espada-rosa{
+    color: white;
+}
+
+/* ESPADA ROSA CLARO - FLOR */
+.espada-rosa-claro{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.img-espada-rosa-claro img{
+    width: 370px;
+}
+
+.espada-rosa-claro .hist-espada-rosa-claro{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+   padding: 20px;
+}
+
+.hist-espada-rosa-claro h2{
+    color: white;
+}
+
+.espada-rosa-claro .texto-espada-rosa-claro{
+    color: white;
+}
+
+/* ESPADA ROXO - LUA */
+.espada-roxo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.img-espada-roxo img{
+    width: 370px;
+}
+
+.espada-roxo .hist-espada-roxo{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+   padding: 20px;
+}
+
+.hist-espada-roxo h2{
+    color: white;
+}
+
+.espada-roxo .texto-espada-roxo{
+    color: white;
+}
+
+/* ESPADA VERDE - VENTO */
+.espada-verde{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.img-espada-verde img{
+    width: 370px;
+}
+
+.espada-verde .hist-espada-verde{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+   padding: 20px;
+}
+
+.hist-espada-verde h2{
+    color: white;
+}
+
+.espada-verde .texto-espada-verde{
+    color: white;
+}
+
+/* ESPADA VERMELHO - CHAMA */
+.espada-vermelho{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.img-espada-vermelho img{
+    width: 370px;
+}
+
+.espada-vermelho .hist-espada-vermelho{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+   padding: 20px;
+}
+
+.hist-espada-vermelho h2{
+    color: white;
+}
+
+.espada-vermelho .texto-espada-vermelho{
     color: white;
 }

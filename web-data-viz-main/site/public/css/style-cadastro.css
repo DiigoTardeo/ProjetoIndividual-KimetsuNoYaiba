@@ -2,14 +2,28 @@ body{
     background-image: url("../assets/img/Background/Background.png");
 }
 
+.fundo-preto{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    background-color: black;
+    opacity: 0.7;
+    height: 500px;
+    width: 450px;
+    margin-left: 450px;
+    margin-top: 90px;
+}
+
 .container-cadastro{
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    background-color: black;
-    margin: 100px 350px 0px 350px;
+    position: absolute;
+    margin: 100px 350px 0px 500px
 }
+
 
 .titulo{
     color: white;
@@ -22,7 +36,7 @@ body{
     flex-direction: column;
     background-color: #5e5e5d;
     width: 360px;
-    height: 250px;
+    height: 360px;
     margin-bottom: 30px;
 }
 
@@ -32,7 +46,7 @@ body{
 }
 
 .container-campos .campo-nome{
-    margin-top: 25px;
+    margin-top: 20px;
 }
 
 .container-campos .campo-nasc{
@@ -48,6 +62,18 @@ body{
 }
 
 .container-campos .campo-funcaoDesejada{
+    margin-top: 15px;
+}
+
+.container-campos .campo-email{
+    margin-top: 15px;
+}
+
+.container-campos .campo-senha{
+    margin-top: 15px;
+}
+
+.container-campos .campo-confirmarSenha{
     margin-top: 15px;
     margin-bottom: 20px;
 }

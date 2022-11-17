@@ -4,9 +4,88 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style-paginas-gerais.css">
+    <link rel="stylesheet" href="./css/style-login.css">
     <title>Login</title>
 </head>
 <body>
-    
+    <!-- HEADER LEFT -->
+    <div class="aba">
+        <div class="header-left" id="aba_left">
+            <button class="btn_abrirAba" id="btn_abreAba" onclick="abrirAba()">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-list-nested" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M4.5 11.5A.5.5 0 0 1 5 11h10a.5.5 0 0 1 0 1H5a.5.5 0 0 1-.5-.5zm-2-4A.5.5 0 0 1 3 7h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm-2-4A.5.5 0 0 1 1 3h10a.5.5 0 0 1 0 1H1a.5.5 0 0 1-.5-.5z"/>
+                  </svg>
+            </button>
+            <button class="btn_fecharAba" id="btn_fechaAba" onclick="fecharAba()">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-reply-fill" viewBox="0 0 16 16">
+                    <path d="M5.921 11.9 1.353 8.62a.719.719 0 0 1 0-1.238L5.921 4.1A.716.716 0 0 1 7 4.719V6c1.5 0 6 0 7 8-2.5-4.5-7-4-7-4v1.281c0 .56-.606.898-1.079.62z"/>
+                  </svg>
+            </button>
+            <div class="navecacao_header" id="navegar_header">
+                <div class="img_aba">
+                    <img class="img_logo" src="./assets/img/login/IconeBranco.png">
+                </div>
+                <h1 class="titulo_aba">Olá usuário!</h1>
+                <div class="botoes">
+                    <button class="b1" onclick="meus_dados()"> 
+                        <p> Meus Dados</p>
+                    </button>
+                    <button class="b2" onclick="missoes()"> 
+                        <p>Missões</p>
+                    </button>
+                    <a href="#cadastro_Funcionario">
+                        <button class="b4" onclick="quiz()">
+                            <p>Quiz</p>
+                        </button>
+                    </a>
+                </div>
+            </div>
+        </div>
+      </div>
+
+    <!-- TELA DADOS -->
+    <div class="container-dados" id="container_dados">
+        <h2>DADOS</h2>
+        <span class="status">Status: Aprovado.</span>
+        <span class="mestre">Mestre: </span>
+        <span class="espada">Espada: </span>
+    </div>
+
+    <!-- TELA MISSÕES -->
+    <div class="container-missoes" id="container_missoes">
+        <h2>MISSÕES</h2>
+        <span class="regiao">Região: </span>
+        <span class="nivelOni">Nível Oni: </span>
+        <span class="pessoasAtacadas">Pessoas Atacadas: </span>
+    </div>
+
+    <!-- QUIZ -->
+    <div class="container-quiz" id="container_quiz">
+        <h2>RESPONTER QUIZ</h2>
+    </div>
+
 </body>
 </html>
+
+<script>
+    function abrirAba(){
+        btn_abreAba.style.display= "none";
+        aba_left.style.width="300px";
+        btn_fechaAba.style.display= "flex";
+        navegar_header.style.margin= "0px 0px 0px 0px";
+        container_dados.style.margin= "20px 20px 0px 325px";
+        container_missoes.style.margin= "20px 20px 0px 325px";
+        container_quiz.style.margin= "20px 20px 0px 325px";
+    }
+
+    function fecharAba(){
+        btn_abreAba.style.display= "block";
+        aba_left.style.width="95px";
+        btn_fechaAba.style.display= "none";
+        navegar_header.style.margin=" 0px 0px 0px -100vw";
+        container_dados.style.margin= "20px 20px 0px 120px";
+        container_missoes.style.margin= "20px 20px 0px 120px";
+        container_quiz.style.margin= "20px 20px 0px 120px";
+    }
+</script>
