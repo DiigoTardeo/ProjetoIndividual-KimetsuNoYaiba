@@ -24,12 +24,13 @@
     margin-top: 20px;
 }
 
-.navecacao_header{
+/* BOTÕES ACESSO */
+.botoes_acesso{
     display: flex;
+    justify-content: space-between;
     align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    animation-duration: 1s;
+    flex: row;
+    margin-left: -200px;
 }
 
 /* FECHAR ABA */
@@ -44,7 +45,26 @@
     
 }
 
-.navecacao_header img{
+/* SAIR */
+.btn_exit{
+    display: block;
+    background-color: transparent;
+    border: none;
+    color: white;
+    cursor: pointer;
+    margin-top: 20px;
+    margin-left: 200px;
+}
+
+.navegacao_header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    animation-duration: 1s;
+}
+
+.navegacao_header img{
     height: 195px;
     margin-bottom: -70px;
 }

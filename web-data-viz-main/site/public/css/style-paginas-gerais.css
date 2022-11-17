@@ -9,6 +9,10 @@ body{
     background-color: #383837;
 }
 
+header .logo{
+    color: #FFF;
+}
+
 header .botoes-acesso button{
     background-color: black;
     color: white;
@@ -40,10 +44,24 @@ header button:hover{
     height: 35px;
 }
 
-.container-header .logo{
-    display: flex;
+.logo a{
+    text-decoration: none;
+    color: #FFF;
 }
 
-.botoes-acesso {
+.botoes-acesso ul{
     display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+    list-style: none;
+}
+
+.agora{
+    font-weight: 800;
+    margin-right: 10px;
+}
+
+.spn_hist{
+    margin-left:10px;
 }
