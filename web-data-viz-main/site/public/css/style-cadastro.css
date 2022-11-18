@@ -12,7 +12,7 @@ body{
     height: 500px;
     width: 450px;
     margin-left: 450px;
-    margin-top: 90px;
+    margin-top: 50px;
 }
 
 .container-cadastro{
@@ -21,7 +21,7 @@ body{
     align-items: center;
     flex-direction: column;
     position: absolute;
-    margin: 100px 350px 0px 500px
+    margin: 70px 350px 0px 500px
 }
 
 
