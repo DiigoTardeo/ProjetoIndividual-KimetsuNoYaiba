@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="./js/funcoes.js"></script>
+
     <link rel="stylesheet" href="./css/style-paginas-gerais.css">
     <link rel="stylesheet" href="./css/style-cadastro.css">
     <title>KnY - Cadastrar-se</title>
@@ -17,7 +20,7 @@
             </div>
             <div class="botoes-acesso">
                 <ul>
-                    <li><button onclick= "window.location.href = './sobre-mim'"> Sobre Mim </button></li>
+                    <li><button onclick= "window.location.href = './sobremim.html'"> Sobre Mim </button></li>
                     <li> | </li>
                     <li><button onclick= "window.location.href = './HistExterminadores.html'"> História Exterminadores </button></li>
                     <li><button onclick= "window.location.href = './PgOnis.html'"> Onis </button></li>
@@ -32,6 +35,11 @@
 
     <!-- MAIN -->
     <main>
+        <div class="alerta_erro">
+            <div class="card_erro" id="cardErro">
+                <span id="mensagem_erro"></span>
+            </div>
+        </div>
         <div class="fundo-preto"></div>
         <div class="container-cadastro">
             <div class="titulo">
@@ -47,7 +55,7 @@
                 
                 <div class="campo-nasc">
                     <span>Data de Nasc.:</span>
-                    <input type="text" name="data_nasc" id="ipt_data_nasc">
+                    <input type="date" name="data_nasc" id="ipt_data_nasc">
                 </div>
                 
                 <div class="campo-altura">
@@ -62,12 +70,12 @@
                 
                 <div class="campo-funcaoDesejada">
                     <span>Função desejada:</span>
-                    <select name="funcao" id="select_funcao">
-                        <option value="0">-- Selecionar uma função --</option>
-                        <option value="1">Exterminador</option>
-                        <option value="2">Ferreiro</option>
-                        <option value="3">Kakushi</option>
-                        <option value="4">Costureiro</option>
+                    <select name="funcao" id="slc_funcao">
+                        <option value="" disabled selected>-- Selecionar uma função --</option>
+                        <option value="Costureiro">Costureiro</option>
+                        <option value="Exterminador">Exterminador</option>
+                        <option value="Ferreiro">Ferreiro</option>
+                        <option value="Kakushi">Kakushi</option>
                     </select>
                 </div>
 
@@ -78,19 +86,109 @@
 
                 <div class="campo-senha">
                     <span>Senha:</span>
-                    <input type="text" name="senha" id="ipt_senha">
+                    <input type="password" name="senha" id="ipt_senha">
                 </div>
 
                 <div class="campo-confirmarSenha">
-                    <span>Confirmar Senha:</span>
-                    <input type="text" name="confirmar-senha" id="ipt_confirmar_senha">
+                    <span class="spn_confirmarSenha">Confirmar Senha:</span>
+                    <input type="password" name="confirmar-senha" id="ipt_confirmarSenha">
                 </div>
 
                 <div class="campo-btnEnviar">
-                    <button class="btn_enviar" onclick="enviar()"> ENVIAR </button>
+                    <button class="btn_cadastrar" onclick="cadastrar()"> CADASTRAR </button>
                 </div>
+
+                <div id="div_aguardar" class="loading-div">
+                    <img src="./assets/circle-loading.gif" id="loading-gif">
+                </div>
+
+                <div id="div_erros_login"></div>
             </div>
         </div> 
     </main>
 </body>
 </html>
+
+<script>
+    function cadastrar() {
+        aguardar();
+
+        //Recupere o valor da nova input pelo nome do id
+        // Agora vá para o método fetch logo abaixo
+        var nomeVar = ipt_nome.value;
+        var dtNascVar = ipt_data_nasc.value;
+        var alturaVar = ipt_altura.value;
+        var pesoVar = ipt_peso.value;
+        var funcaoVar = slc_funcao.value;
+        var emailVar = ipt_email.value;
+        var senhaVar = ipt_senha.value;
+        var confirmacaoSenhaVar = ipt_confirmarSenha.value;
+
+        if (nomeVar == "" || dtNascVar == "" || alturaVar == "" || pesoVar == "" || funcaoVar == ""|| emailVar == "" || senhaVar == "" || confirmacaoSenhaVar == "") {
+            cardErro.style.display = "block"
+            mensagem_erro.innerHTML = "(Mensagem de erro para todos os campos em branco)";
+
+            finalizarAguardar();
+            return false;
+        }
+        else {
+            setInterval(sumirMensagem, 5000)
+            dtNascVar = dtNascVar.replaceAll('/','-');
+            alturaVar = alturaVar.replaceAll(',','.');
+            pesoVar = pesoVar.replaceAll(',','.');
+        }
+
+        // if(dtNascVar != "" || alturaVar != "" || pesoVar != ""){
+        //     dtNascVar = dtNascVar.replaceAll('/','-');
+        //     alturaVar = alturaVar.replaceAll(',','.');
+        //     pesoVar = pesoVar.replaceAll(',','.');
+        // }
+
+        // Enviando o valor da nova input
+        fetch("/usuarios/cadastrar", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                // crie um atributo que recebe o valor recuperado aqui
+                // Agora vá para o arquivo routes/usuario.js
+                nomeServer: nomeVar,
+                dtNascServer: dtNascVar,
+                alturaServer: alturaVar,
+                pesoServer: pesoVar,
+                funcaoServer: funcaoVar,
+                emailServer: emailVar,
+                senhaServer: senhaVar
+            })
+        }).then(function (resposta) {
+
+            console.log("resposta: ", resposta);
+
+            if (resposta.ok) {
+                cardErro.style.display = "block";
+
+                mensagem_erro.innerHTML = "Cadastro realizado com sucesso! Redirecionando para tela de Login...";
+
+                setTimeout(() => {
+                    window.location = "login.html";
+                }, "2000")
+                
+                limparFormulario();
+                finalizarAguardar();
+            } else {
+                throw ("Houve um erro ao tentar realizar o cadastro!");
+            }
+        }).catch(function (resposta) {
+            console.log(`#ERRO: ${resposta}`);
+            finalizarAguardar();
+        });
+
+        return false;
+    }
+
+    function sumirMensagem() {
+        cardErro.style.display = "none"
+    }
+
+</script>

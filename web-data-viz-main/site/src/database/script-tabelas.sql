@@ -12,37 +12,26 @@ USE ;
 CREATE TABLE usuario (
 	idUsuario INT PRIMARY KEY AUTO_INCREMENT,
 	nome VARCHAR(50),
+	dtNasc DATE,
+	altura DECIMAL(3,2),
+	peso DECIMAL(4,1),
+	funcao VARCHAR(45),
 	email VARCHAR(50),
-	senha VARCHAR(50)
+	senha VARCHAR(50),
+	constraint tipoFuncao CHECK (funcao in('Costureiro', 'Exterminador', 'Ferreiro','Kakushi'))
 );
 
-CREATE TABLE aviso (
-	id INT PRIMARY KEY AUTO_INCREMENT,
-	titulo VARCHAR(100),
-	descricao VARCHAR(150),
-	fk_usuario INT,
-	FOREIGN KEY (fk_usuario) REFERENCES usuario(id)
+CREATE TABLE voto(
+	idVoto INT AUTO_INCREMENT,
+    personagem VARCHAR(45),
+    fkUsuario INT,
+    FOREIGN KEY (fkUsuario)
+		REFERENCES Usuario(idUsuario),
+	PRIMARY KEY(idVoto,fkUsuario)
 );
 
-create table aquario (
-/* em nossa regra de negócio, um aquario tem apenas um sensor */
-	id INT PRIMARY KEY AUTO_INCREMENT,
-	descricao VARCHAR(300)
-);
 
 /* esta tabela deve estar de acordo com o que está em INSERT de sua API do arduino - dat-acqu-ino */
-
-create table medida (
-	id INT PRIMARY KEY AUTO_INCREMENT,
-	dht11_umidade DECIMAL,
-	dht11_temperatura DECIMAL,
-	luminosidade DECIMAL,
-	lm35_temperatura DECIMAL,
-	chave TINYINT,
-	momento DATETIME,
-	fk_aquario INT,
-	FOREIGN KEY (fk_aquario) REFERENCES aquario(id)
-);
 
 
 /*

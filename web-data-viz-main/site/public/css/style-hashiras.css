@@ -145,15 +145,15 @@
 }
 
 /* PILAR DAS SERPENTES - OBANAIL */ 
-.obanail{
+.obanai{
     display: flex;
 }
 
-.img-obanail img{
+.img-obanai img{
     width: 370px;
 }
 
-.obanail .hist-obanail{
+.obanai .hist-obanai{
     display: flex;
    justify-content: center;
    align-items: center;
@@ -161,11 +161,11 @@
    padding: 20px;
 }
 
-.hist-obanail h2{
+.hist-obanai h2{
     color: white;
 }
 
-.obanail .texto-obanail{
+.obanai .texto-obanai{
     color: white;
 }
 

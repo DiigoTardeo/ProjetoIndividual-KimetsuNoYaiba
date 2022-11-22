@@ -267,7 +267,7 @@
     color: white;
 }
 
-/*  */ 
+/* RANK */ 
 .ranking-exterminadores{
     display: flex;
 }
@@ -289,5 +289,30 @@
 }
 
 .ranking-exterminadores .ranking{
+    color: white;
+}
+
+/* INTRODUÇÃO */ 
+.introducao-kimetsu{
+    display: flex;
+}
+
+.img-grupo img{
+    width: 370px;
+}
+
+.introducao-kimetsu .text-grupo{
+    display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+   padding: 20px;
+}
+
+.text-grupo h2{
+    color: white;
+}
+
+.introducao-kimetsu .grupo{
     color: white;
 }

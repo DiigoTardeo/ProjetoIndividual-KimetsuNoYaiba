@@ -109,3 +109,7 @@
   margin: 20px 20px 0px 325px;
   background-color: #FFF;
 }
+
+.img-personagens img{
+  display: none;
+}

@@ -71,6 +71,45 @@
     <!-- QUIZ -->
     <div class="container-quiz" id="container_quiz">
         <h2>RESPONTER QUIZ</h2>
+        <span class="txt-quiz">
+            Aqui você vai escolher o personagem que você mais gosta no Kimestsu no Yaiba e esses personagens pode estar tanto entre os exterminadores e onis
+        </span>
+        <select name="slc_personagem" id="slc_personagem" class="slc_personagem" onclick="personagem()">
+            <option value="" disabled selected>-- SELECIONE UM PERSONAGEM --</option>
+            <option value="Kagaya Ubuyashiki"> Kagaya Ubuyashiki </option>
+	        <option value="Sanemi Shinazugawa"> Sanemi Shinazugawa </option>
+	        <option value="Muichiro Tokito"> Muichiro Tokito </option>
+	        <option value="Giyu Tomioka"> Giyu Tomioka </option>
+	        <option value="Obanai Iguro"> Obanai Iguro </option>
+	        <option value="Mitsuri Kanroji"> Mitsuri Kanroji </option>
+	        <option value="Tengen Uzui"> Tengen Uzui </option>
+	        <option value="Kyojuro Rengoku"> Kyojuro Rengoku </option>
+	        <option value="Shinobu Kocho"> Shinobu Kocho </option>
+	        <option value="Tanjiro Kamado"> Tanjiro Kamado </option>
+	        <option value="Nezuko Kamado"> Nezuko Kamado </option>
+	        <option value="Inosuke Hashibira"> Inosuke Hashibira </option>
+	        <option value="Zenitsu Agatsuma"> Zenitsu Agatsuma </option>
+	        <option value="Muzan Kibutsuji"> Muzan Kibutsuji </option>
+	        <option value="Kokushibou"> Kokushibou </option>
+	        <option value="Douma"> Douma </option>
+	        <option value="Akaza"> Akaza </option>
+	        <option value="Hantengu"> Hantengu </option>
+	        <option value="Nakime"> Nakime </option>
+	        <option value="Gyokko"> Gyokko </option>
+	        <option value="Daki e Gyuutarou"> Daki e Gyuutarou </option>
+	        <option value="Kaigaku"> Kaigaku </option>
+	        <option value="Enmu"> Enmu </option>
+	        <option value="Hairo"> Hairo </option>
+	        <option value="Wakuraba"> Wakuraba </option>
+	        <option value="Mukago"> Mukago </option>
+	        <option value="Rui"> Rui </option>
+	        <option value="Kyogai"> Kyogai </option>
+	        <option value="Kamanue"> Kamanue </option>
+        </select>
+        <div id="div_resultado" class="img-personagens">
+            <div class="kagaya"><img id="kagaya" src="../assets/img/Hashiras/Kagaya_Ubuyashiki.jpg"></div>
+            <div class="hairo"><img id="hairo" src="../assets/img/Onis/Lua_Inferior2_Hairo.png" alt=""></div>
+        </div>
     </div>
 
 </body>
@@ -96,6 +135,23 @@
         container_dados.style.margin= "20px 20px 0px 120px";
         container_missoes.style.margin= "20px 20px 0px 120px";
         container_quiz.style.margin= "20px 20px 0px 120px";
+    }
+
+    function personagem(){
+        var personagem = slc_personagem.value;
+        if(personagem == "Kagaya Ubuyashiki"){
+            kagaya.style.display= "block";
+            hairo.style.display = "none";
+        } else if(personagem == "Hairo"){
+            hairo.style.display = "block";
+            kagaya.style.display= "none";
+        }
+
+        // if(personagem == "Kagaya Ubuyashiki"){
+        //     div_resultado = `
+        //         <div class="kagaya" id="kagaya"><img src="../assets/img/Hashiras/Kagaya_Ubuyashiki.jpg"></div>
+        //     `;
+        // }
     }
 
 </script>

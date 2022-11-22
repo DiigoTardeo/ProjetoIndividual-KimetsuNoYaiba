@@ -28,7 +28,7 @@ header button:hover{
     justify-content: center;
     flex-direction: column;
     background-color: black;
-    padding: 0px;
+    padding: 25px;
     margin: 20px 65px 50px 65px;
 }
 
@@ -69,3 +69,14 @@ header button:hover{
 .spn_cadastro{
     margin-left: 10px;
 }
+
+.loading-div {
+    width: 50px;
+    margin: auto;
+    display: none;
+  }
+  
+  .loading-div img {
+    height: 50px;
+    width: 50px;
+  }
