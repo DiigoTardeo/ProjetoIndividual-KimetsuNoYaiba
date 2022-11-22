@@ -137,8 +137,15 @@
         container_quiz.style.margin= "20px 20px 0px 120px";
     }
 
+
+    var validacao = 0
+    var personagemAnterior = "";
+
     function personagem(){
+        var listaPersonagem = []
+
         var personagem = slc_personagem.value;
+
         if(personagem == "Kagaya Ubuyashiki"){
             kagaya.style.display= "block";
             hairo.style.display = "none";
@@ -146,6 +153,10 @@
             hairo.style.display = "block";
             kagaya.style.display= "none";
         }
+
+        /* Utilizar um for para trocar o display dos personagens de block para none, 
+        criar campo de if de validação para trocar o display block para none do personagem anterior
+        */
 
         // if(personagem == "Kagaya Ubuyashiki"){
         //     div_resultado = `
