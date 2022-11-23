@@ -6,8 +6,8 @@
 comandos para mysql - banco local - ambiente de desenvolvimento
 */
 
-CREATE DATABASE ;
-USE ;
+CREATE DATABASE Kimetsu;
+USE Kimetsu;
 
 CREATE TABLE usuario (
 	idUsuario INT PRIMARY KEY AUTO_INCREMENT,
@@ -21,46 +21,85 @@ CREATE TABLE usuario (
 	constraint tipoFuncao CHECK (funcao in('Costureiro', 'Exterminador', 'Ferreiro','Kakushi'))
 );
 
-CREATE TABLE voto(
-	idVoto INT AUTO_INCREMENT,
-    nomePersonagem VARCHAR(45),
-    fkUsuario INT,
-    FOREIGN KEY (fkUsuario)
-		REFERENCES Usuario(idUsuario),
-	PRIMARY KEY(idVoto,fkUsuario)
+INSERT INTO usuario VALUES
+	(NULL, 'Enzzo', '2022-05-27', 1.69, 50.0, 'Ferreiro', 'enzzo.enzzo@enzzo.com', '123'),
+	(NULL, 'Rodrigo', '2022-05-27', 1.69, 50.0, 'Ferreiro', 'rodrigo.rodrigo@rodrigo.com', '123'),
+	(NULL, 'Enzzo', '2022-05-27', 1.69, 50.0, 'Ferreiro', 'enzzo.enzzo@enzzo.com', '123'),
+	(NULL, 'Rodrigo', '2022-05-27', 1.69, 50.0, 'Ferreiro', 'rodrigo.rodrigo@rodrigo.com', '123'),
+	(NULL, 'Enzzo', '2022-05-27', 1.69, 50.0, 'Ferreiro', 'enzzo.enzzo@enzzo.com', '123'),
+	(NULL, 'Rodrigo', '2022-05-27', 1.69, 50.0, 'Ferreiro', 'rodrigo.rodrigo@rodrigo.com', '123'),
+	(NULL, 'Enzzo', '2022-05-27', 1.69, 50.0, 'Ferreiro', 'enzzo.enzzo@enzzo.com', '123'),
+	(NULL, 'Rodrigo', '2022-05-27', 1.69, 50.0, 'Ferreiro', 'rodrigo.rodrigo@rodrigo.com', '123');
+
+CREATE TABLE personagem(
+	idPersonagem INT PRIMARY KEY AUTO_INCREMENT,
+    nomePersonagem VARCHAR(45)
 );
 
-INSERT INTO voto VALUES 
-	(NULL, 'Kagaya Ubuyashiki', 1),
-	(NULL, 'Gyomei Himejima', 1),
-	(NULL, 'Sanemi Shinazugawa', 1),
-	(NULL, 'Muichiro Tokito', 1),
-	(NULL, 'Giyu Tomioka', 1),
-	(NULL, 'Obanai Iguro', 1),
-	(NULL, 'Mitsuri Kanroji', 1),
-	(NULL, 'Tengen Uzui', 1),
-	(NULL, 'Kyojuro Rengoku', 1),
-	(NULL, 'Shinobu Kocho', 1),
-	(NULL, 'Tanjiro Kamado', 1),
-	(NULL, 'Nezuko Kamado', 1),
-	(NULL, 'Inosuke Hashibira', 1),
-	(NULL, 'Zenitsu Agatsuma', 1),
-	(NULL, 'Muzan', 1),
-	(NULL, 'Kokushibou', 1),
-	(NULL, 'Douma', 1),
-	(NULL, 'Akaza', 1),
-	(NULL, 'Hantengu', 1),
-	(NULL, 'Nakime', 1),
-	(NULL, 'Gyokko', 1),
-	(NULL, 'Daki e Gyuutarou', 1),
-	(NULL, 'Kaigaku', 1),
-	(NULL, 'Enmu', 1),
-	(NULL, 'Hairo', 1),
-	(NULL, 'Wakuraba', 1),
-	(NULL, 'Mukago', 1),
-	(NULL, 'Rui', 1),
-	(NULL, 'Kyogai', 1),
-	(NULL, 'Kamanue', 1);
+INSERT INTO personagem VALUES 
+	(NULL, 'Kagaya Ubuyashiki'),
+	(NULL, 'Gyomei Himejima'),
+	(NULL, 'Sanemi Shinazugawa'),
+	(NULL, 'Muichiro Tokito'),
+	(NULL, 'Giyu Tomioka'),
+	(NULL, 'Obanai Iguro'),
+	(NULL, 'Mitsuri Kanroji'),
+	(NULL, 'Tengen Uzui'),
+	(NULL, 'Kyojuro Rengoku'),
+	(NULL, 'Shinobu Kocho'),
+	(NULL, 'Tanjiro Kamado'),
+	(NULL, 'Nezuko Kamado'),
+	(NULL, 'Inosuke Hashibira'),
+	(NULL, 'Zenitsu Agatsuma'),
+	(NULL, 'Muzan'),
+	(NULL, 'Kokushibou'),
+	(NULL, 'Douma'),
+	(NULL, 'Akaza'),
+	(NULL, 'Hantengu'),
+	(NULL, 'Nakime'),
+	(NULL, 'Gyokko'),
+	(NULL, 'Daki e Gyuutarou'),
+	(NULL, 'Kaigaku'),
+	(NULL, 'Enmu'),
+	(NULL, 'Hairo'),
+	(NULL, 'Wakuraba'),
+	(NULL, 'Mukago'),
+	(NULL, 'Rui'),
+	(NULL, 'Kyogai'),
+	(NULL, 'Kamanue');
+    
+CREATE TABLE voto(
+	fkUsuario INT,
+    FOREIGN KEY (fkUsuario)
+		REFERENCES usuario(idUsuario),
+	fkPersonagem INT,
+    FOREIGN KEY (fkPersonagem)
+		REFERENCES personagem(idPersonagem),
+	PRIMARY KEY (fkUsuario,fkPersonagem)
+);
+select * from usuario;
+drop table voto;
+INSERT INTO voto VALUES
+	(1, 5),
+    (2, 5),
+    (3, 5),
+    (4, 5),
+    (5, 5),
+    (6, 5),
+    (7, 5),
+    (8, 25),
+    (9, 25),
+    (10, 22),
+    (1, 23),
+    (2, 24);
+
+SELECT count(fkPersonagem), fkPersonagem FROM voto
+	group by fkPersonagem;
+    
+SELECT count(fkPersonagem), 
+	fkPersonagem FROM voto
+		GROUP BY fkPersonagem
+        ORDER BY count(fkPersonagem) desc limit 3;
 
 
 /* esta tabela deve estar de acordo com o que está em INSERT de sua API do arduino - dat-acqu-ino */

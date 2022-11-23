@@ -78,7 +78,7 @@
             Aqui você vai escolher o personagem que você mais gosta no Kimestsu no Yaiba e esses personagens pode estar tanto entre os exterminadores e onis
         </span>
         <select name="slc_personagem" id="slc_personagem" class="slc_personagem" onclick="personagem()">
-            <option value="null" disabled selected>-- SELECIONE UM PERSONAGEM --</option>
+            <option value="select" disabled selected>-- SELECIONE UM PERSONAGEM --</option>
             <option value="1"> Kagaya Ubuyashiki </option>
             <option value="2"> Gyomei Himejima </option>
 	        <option value="3"> Sanemi Shinazugawa </option>
@@ -231,6 +231,9 @@
                 <img  id="kamanue" src="../assets/img/Onis/Lua_Inferior6_substituto_Kamanue.jpg" alt="">
             </div>
         </div>
+        <div class="btn-voto">
+            <button onclick="computarVoto()">Votar</button>
+        </div>
     </div>
 
     <!-- SUGESTÕES -->
@@ -296,12 +299,12 @@
     var personagemAnterior = 0;
     function personagem(){
 
-        var listaPersonagem = [kagaya, gyomei, sanemi, muichiro, giyu, obanai, mitsuri, tengen, kyojuro, shinobu, tanjiro, nezuko, inosuke, zenitsu, muzan, kokushibou, douma, akaza, hantengu, nakime, gyokko, dakiegyuutarou, kaigaku, enmu, hairo, wakuraba]
+        var listaPersonagem = [kagaya, gyomei, sanemi, muichiro, giyu, obanai, mitsuri, tengen, kyojuro, shinobu, tanjiro, nezuko, inosuke, zenitsu, muzan, kokushibou, douma, akaza, hantengu, nakime, gyokko, dakiegyuutarou, kaigaku, enmu, hairo, wakuraba, mukago, rui, kyogai, kamanue]
 
+        
         var personagem = slc_personagem.value;
-
+        
         listaPersonagem[personagemAnterior].style.display = "none";  
-
         for(var contador = 0; contador <= listaPersonagem.length; contador ++){
             if(contador == personagem){
                 listaPersonagem[contador-1].style.display = "block";
@@ -322,6 +325,13 @@
                 <div class="kagaya" id="kagaya"><img src="../assets/img/Hashiras/Kagaya_Ubuyashiki.jpg"></div>
             `;
         } */ 
+
+        function votar(){
+            var personagem = {
+                nomePersonagem: kagaya,
+            
+            }
+        }
     }
 
 </script> 
