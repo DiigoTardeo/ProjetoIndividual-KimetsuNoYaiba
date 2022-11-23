@@ -43,10 +43,13 @@
                         <p>Missões</p>
                     </button>
                     <a href="#cadastro_Funcionario">
-                        <button class="b4" onclick="quiz()">
-                            <p>Quiz</p>
+                        <button class="b43" onclick="voto()">
+                            <p>Voto Rank</p>
                         </button>
                     </a>
+                    <button class="b4" onclick="sugestao()"> 
+                        <p>Sugestões</p>
+                    </button>
                 </div>
             </div>
         </div>
@@ -68,14 +71,14 @@
         <span class="pessoasAtacadas">Pessoas Atacadas: </span>
     </div>
 
-    <!-- QUIZ -->
-    <div class="container-quiz" id="container_quiz">
-        <h2>RESPONTER QUIZ</h2>
-        <span class="txt-quiz">
+    <!-- VOTOS -->
+    <div class="container-voto" id="container_voto">
+        <h2> VOTO RANKING: </h2>
+        <span class="txt-voto">
             Aqui você vai escolher o personagem que você mais gosta no Kimestsu no Yaiba e esses personagens pode estar tanto entre os exterminadores e onis
         </span>
         <select name="slc_personagem" id="slc_personagem" class="slc_personagem" onclick="personagem()">
-            <option value="" disabled selected>-- SELECIONE UM PERSONAGEM --</option>
+            <option value="null" disabled selected>-- SELECIONE UM PERSONAGEM --</option>
             <option value="1"> Kagaya Ubuyashiki </option>
             <option value="2"> Gyomei Himejima </option>
 	        <option value="3"> Sanemi Shinazugawa </option>
@@ -132,104 +135,114 @@
                 <img  id="obanai" src="../assets/img/Hashiras/ObanaiIguro_Hashira_Serpentes.jpg" alt="">
             </div>
 
-            <div class="">
-                <img  id="" src="" alt="">
+            <div class="mitsuri">
+                <img  id="mitsuri" src="../assets/img/Hashiras/MitsuriKanroji_Hashira_Amor.jpg" alt="">
             </div>
 
-            <div class="">
-                <img  id="" src="" alt="">
+            <div class="tengen">
+                <img  id="tengen" src="../assets/img/Hashiras/TengenUzui_Hashira_Som.jfif" alt="">
             </div>
 
-            <div class="">
-                <img  id="" src="" alt="">
+            <div class="kyojuro">
+                <img  id="kyojuro" src="../assets/img/Hashiras/KyojuroRengoku_Hashira_Chamas.jpg" alt="">
             </div>
 
-            <div class="">
-                <img  id="" src="" alt="">
+            <div class="shinobu">
+                <img  id="shinobu" src="../assets/img/Hashiras/ShinobuKocho_Hashira_Inseto.jfif" alt="">
             </div>
 
-            <div class="">
-                <img  id="" src="" alt="">
+            <div class="tanjiro">
+                <img  id="tanjiro" src="../assets/img/tanjiroKamado.jpg" alt="">
             </div>
 
-            <div class="">
-                <img  id="" src="" alt="">
+            <div class="nezuko">
+                <img  id="nezuko" src="../assets/img/nezuko.jpeg" alt="">
             </div>
 
-            <div class="">
-                <img  id="" src="" alt="">
+            <div class="inosuke">
+                <img  id="inosuke" src="../assets/img/inosuke.png" alt="">
             </div>
 
-            <div class="">
-                <img  id="" src="" alt="">
+            <div class="zenitsu">
+                <img  id="zenitsu" src="../assets/img/zenitsu.jpg" alt="">
             </div>
 
-            <div class="">
-                <img  id="" src="" alt="">
+            <div class="muzan">
+                <img  id="muzan" src="../assets/img/Onis/Muzan_Kibutsuji.jpg" alt="">
             </div>
 
-            <div class="">
-                <img  id="" src="" alt="">
+            <div class="kokushibou">
+                <img  id="kokushibou" src="../assets/img/Onis/Lua_Superior1_Kokushibou.jpg" alt="">
             </div>
 
-            <div class="">
-                <img  id="" src="" alt="">
+            <div class="douma">
+                <img  id="douma" src="../assets/img/Onis/Lua_Superior2_Douma.jpg" alt="">
             </div>
 
-            <div class="">
-                <img  id="" src="" alt="">
+            <div class="akaza">
+                <img  id="akaza" src="../assets/img/Onis/Lua_Superior3_Akaza.jpg" alt="">
             </div>
 
-            <div class="">
-                <img  id="" src="" alt="">
+            <div class="hantengu">
+                <img  id="hantengu" src="../assets/img/Onis/Lua_Superior4_Hantengu.jpg" alt="">
             </div>
 
-            <div class="">
-                <img  id="" src="" alt="">
+            <div class="nakime">
+                <img  id="nakime" src="../assets/img/Onis/Lua_Superior4_substituto_Nakime.png" alt="">
             </div>
 
-            <div class="">
-                <img  id="" src="" alt="">
+            <div class="gyokko">
+                <img  id="gyokko" src="../assets/img/Onis/Lua_Superior5_Gyokko.jpg" alt="">
             </div>
 
-            <div class="">
-                <img  id="" src="" alt="">
+            <div class="dakiegyuutarou">
+                <img  id="dakiegyuutarou" src="../assets/img/Onis/Lua_Superior6_DakieGyuutarou.jpg" alt="">
             </div>
 
-            <div class="">
-                <img  id="" src="" alt="">
+            <div class="kaigaku">
+                <img  id="kaigaku" src="../assets/img/Onis/Lua_Superior6_substituto_Kaigaku.jpg" alt="">
             </div>
-
+            
+            <div class="enmu">
+                <img  id="enmu" src="../assets/img/Onis/Lua_Inferior1_Enmu.jpg" alt="">
+            </div>
+            
             <div class="hairo">
                 <img id="hairo" src="../assets/img/Onis/Lua_Inferior2_Hairo.png" alt="">
             </div>
 
-            <div class="">
-                <img  id="" src="" alt="">
+            <div class="wakuraba">
+                <img  id="wakuraba" src="../assets/img/Onis/Lua_Inferior3_Wakuraba.png" alt="">
             </div>
 
-            <div class="">
-                <img  id="" src="" alt="">
+            <div class="mukago">
+                <img  id="mukago" src="../assets/img/Onis/Lua_Inferior4_Mukago.png" alt="">
             </div>
 
-            <div class="">
-                <img  id="" src="" alt="">
+            <div class="rui">
+                <img  id="rui" src="../assets/img/Onis/Lua_Inferior5_Rui.png" alt="">
             </div>
 
-            <div class="">
-                <img  id="" src="" alt="">
+            <div class="kyogai">
+                <img  id="kyogai" src="../assets/img/Onis/Lua_Inferior6_2_Kyogai.jpg" alt="">
             </div>
-
-            <div class="">
-                <img  id="" src="" alt="">
+            
+            <div class="kamanue">
+                <img  id="kamanue" src="../assets/img/Onis/Lua_Inferior6_substituto_Kamanue.jpg" alt="">
             </div>
         </div>
+    </div>
+
+    <!-- SUGESTÕES -->
+    <div class="container-sugestao" id="container_sugestao"> 
+        <h2> SUGESTÕES </h2>
     </div>
 
 </body>
 </html>
 
 <script>
+    /* ABRIR E FECHAR O HEADER*/
     function abrirAba(){
         btn_abreAba.style.display= "none";
         aba_left.style.width="300px";
@@ -251,16 +264,52 @@
         container_quiz.style.margin= "20px 20px 0px 120px";
     }
 
+    /* BOTÕES DO HEADER  */ 
+    function meus_dados(){
+        container_dados.style.display = "flex";
+        container_missoes.style.display = "none";
+        container_voto.style.display = "none";
+        container_sugestao.style.display = "none";
+    }
 
-    var validacao = 0
-    var personagemAnterior = "";
+    function missoes(){
+        container_dados.style.display = "none";
+        container_missoes.style.display = "flex";
+        container_voto.style.display = "none";
+        container_sugestao.style.display = "none";
+    }
 
+    function voto(){
+        container_dados.style.display = "none";
+        container_missoes.style.display = "none";
+        container_voto.style.display = "flex";
+        container_sugestao.style.display = "none";
+    }
+
+    function sugestao(){
+        container_dados.style.display = "none";
+        container_missoes.style.display = "none";
+        container_voto.style.display = "none";
+        container_sugestao.style.display = "flex";
+    }
+
+    var personagemAnterior = 0;
     function personagem(){
-        var listaPersonagem = []
+
+        var listaPersonagem = [kagaya, gyomei, sanemi, muichiro, giyu, obanai, mitsuri, tengen, kyojuro, shinobu, tanjiro, nezuko, inosuke, zenitsu, muzan, kokushibou, douma, akaza, hantengu, nakime, gyokko, dakiegyuutarou, kaigaku, enmu, hairo, wakuraba]
 
         var personagem = slc_personagem.value;
 
-        if(personagem == 1){
+        listaPersonagem[personagemAnterior].style.display = "none";  
+
+        for(var contador = 0; contador <= listaPersonagem.length; contador ++){
+            if(contador == personagem){
+                listaPersonagem[contador-1].style.display = "block";
+                personagemAnterior = contador-1;
+            }
+        }
+
+        /*if(personagem == 1){
             kagaya.style.display= "block";
             hairo.style.display = "none";
         } else if(personagem == "Hairo"){
@@ -268,15 +317,11 @@
             kagaya.style.display= "none";
         }
 
-        /* Utilizar um for para trocar o display dos personagens de block para none, 
-        criar campo de if de validação para trocar o display block para none do personagem anterior
-        */
-
-        // if(personagem == "Kagaya Ubuyashiki"){
-        //     div_resultado = `
-        //         <div class="kagaya" id="kagaya"><img src="../assets/img/Hashiras/Kagaya_Ubuyashiki.jpg"></div>
-        //     `;
-        // }
+        /* if(personagem == 1){
+            div_resultado.innerHTML = `
+                <div class="kagaya" id="kagaya"><img src="../assets/img/Hashiras/Kagaya_Ubuyashiki.jpg"></div>
+            `;
+        } */ 
     }
 
-</script>
+</script> 

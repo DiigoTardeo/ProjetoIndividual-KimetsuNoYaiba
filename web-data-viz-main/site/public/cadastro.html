@@ -27,7 +27,6 @@
                     <li><button onclick= "window.location.href = './PgHashiras.html'"> Hashiras </button></li>
                     <li><button onclick= "window.location.href = './PgEspadas.html'"> Espadas </button></li>
                     <li> | </li> 
-                    <li class="agora"><span class="spn_cadastro"> Cadastro </span></li>
                     <li><button onclick= "window.location.href = './login.html'"> Login </button></li>
                 </ul>
         </div>
@@ -99,7 +98,7 @@
                 </div>
 
                 <div id="div_aguardar" class="loading-div">
-                    <img src="./assets/circle-loading.gif" id="loading-gif">
+                    <img src="./assets/loading-1.gif" id="loading-gif">
                 </div>
 
                 <div id="div_erros_login"></div>
@@ -185,6 +184,9 @@
         });
 
         return false;
+
+        /* Criar campo onde a partir de um Math.random() encontrar um mestre para caso o usuario selecionar a funcao de 
+        exterminador, fazendo com que assim que ele entre no login, mostre o mestre e sua espada na área de Dados */ 
     }
 
     function sumirMensagem() {

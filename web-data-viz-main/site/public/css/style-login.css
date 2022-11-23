@@ -54,3 +54,13 @@ body{
 .container-campos .campo-btnEntrar{
     margin-top: 25px;
 }
+
+.cadastrar{
+    margin-top: 20px;
+}
+
+.cadastrar a{
+    margin-top: 10px;
+    color: blue;
+    text-decoration: none;
+}

@@ -58,16 +58,16 @@ header button:hover{
 }
 
 .agora{
-    font-weight: 800;
-    margin-right: 10px;
+    font-weight: 900;
+    font-size: 20px;
 }
 
-.spn_hist{
+.spn-left{
     margin-left:10px;
 }
 
-.spn_cadastro{
-    margin-left: 10px;
+.spn-right{
+    margin-right: 10px;
 }
 
 .loading-div {

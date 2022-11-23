@@ -35,6 +35,8 @@
     display: flex;
     flex-direction: column;
     margin: 50px 30px 30px 30px;
+    padding: 5px 15px;
+    background-color: rgb(102, 6, 16);
 }
 
 .container-luas-superiores h1{
@@ -47,10 +49,14 @@
 /* Kokushibou - 1ª Lua Superior */ 
 .kokushibou{
     display: flex;
+    background-color: gray;
+    padding: 10px;
+    margin: 0px 0px 20px 0px;
 }
 
 .img-kokushibou img{
     width: 370px;
+    border: #FFF solid;
 }
 
 .kokushibou .hist-kokushibou{
@@ -72,10 +78,14 @@
 /* Douma - 2ª Lua Superior */ 
 .douma{
     display: flex;
+    background-color: gray;
+    padding: 10px;
+    margin: 0px 0px 20px 0px;
 }
 
 .img-douma img{
     width: 370px;
+    border: black solid;
 }
 
 .douma .hist-douma{
@@ -97,6 +107,9 @@
 /* Akaza - 3ª Lua Superior */ 
 .akaza{
     display: flex;
+    background-color: gray;
+    padding: 10px;
+    margin: 0px 0px 20px 0px;
 }
 
 .img-akaza img{
@@ -122,6 +135,9 @@
 /* Hantengu - 4ª Lua Superior */ 
 .hantengu{
     display: flex;
+    background-color: gray;
+    padding: 10px;
+    margin: 0px 0px 20px 0px;
 }
 
 .img-hantengu img{
@@ -147,6 +163,9 @@
 /* Nakime - 4ª Lua Superior Substituto */ 
 .nakime{
     display: flex;
+    background-color: gray;
+    padding: 10px;
+    margin: 0px 0px 20px 0px;
 }
 
 .img-nakime img{
@@ -172,6 +191,9 @@
 /* Gyokko - 5ª Lua Superior */ 
 .gyokko{
     display: flex;
+    background-color: gray;
+    padding: 10px;
+    margin: 0px 0px 20px 0px;
 }
 
 .img-gyokko img{
@@ -197,6 +219,9 @@
 /* Daki e Gyuutarou - 6ª Lua Superior */ 
 .daki_gyuutarou{
     display: flex;
+    background-color: gray;
+    padding: 10px;
+    margin: 0px 0px 20px 0px;
 }
 
 .img-daki_gyuutarou img{
@@ -222,6 +247,9 @@
 /* Kaigaku - 6ª Lua Superior Substituto */ 
 .kaigaku{
     display: flex;
+    background-color: gray;
+    padding: 10px;
+    margin: 0px 0px 20px 0px;
 }
 
 .img-kaigaku img{

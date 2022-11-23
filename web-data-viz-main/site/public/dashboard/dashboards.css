@@ -1,3 +1,11 @@
+body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #383837;
+}
+
 /* HEADER */
 .header-left{
   position: fixed;
@@ -80,6 +88,14 @@
   flex-direction: column;
 }
 
+.botoes button{
+  cursor: pointer;
+}
+
+.botoes button:hover{
+  background-color: #ffff00;
+}
+
 /* TELA DADOS */
 .container-dados{
   display: flex;
@@ -88,28 +104,48 @@
   flex-direction: column;
   margin: 20px 20px 0px 325px;
   background-color: #FFF;
+  width: 550px;
+  height: 620px;
 }
+
 
 /* TELA MISSÕES */
 .container-missoes{
-  display: flex;
+  display: none;
   align-items: center;
   justify-content: center;
   flex-direction: column;
   margin: 20px 20px 0px 325px;
   background-color: #FFF;
+  width: 550px;
+  height: 620px;
 }
 
-/* TELA QUIZ */
-.container-quiz{
-  display: flex;
+/* TELA VOTOS */
+.container-voto{
+  display: none;
   align-items: center;
   justify-content: center;
   flex-direction: column;
   margin: 20px 20px 0px 325px;
   background-color: #FFF;
+  width: 550px;
+  height: 620px;
 }
 
 .img-personagens img{
   display: none;
+  width: 550px;
+}
+
+/* TELA SUGESTÕES */
+.container-sugestao{
+  display: none;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin: 20px 20px 0px 325px;
+  background-color: #FFF;
+  width: 550px;
+  height: 620px;
 }
