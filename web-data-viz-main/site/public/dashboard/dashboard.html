@@ -287,13 +287,8 @@
         container_missoes.style.display = "none";
         container_voto.style.display = "flex";
         container_sugestao.style.display = "none";
-    }
 
-    function sugestao(){
-        container_dados.style.display = "none";
-        container_missoes.style.display = "none";
-        container_voto.style.display = "none";
-        container_sugestao.style.display = "flex";
+
     }
 
     var personagemAnterior = 0;
@@ -311,6 +306,7 @@
                 personagemAnterior = contador-1;
             }
         }
+    }
 
         /*if(personagem == 1){
             kagaya.style.display= "block";
@@ -326,12 +322,20 @@
             `;
         } */ 
 
-        function votar(){
-            var personagem = {
-                nomePersonagem: kagaya,
-            
-            }
+    function votar(){
+        var personagem = {
+        nomePersonagem: kagaya,
+
         }
+    }
+    
+    function sugestao(){
+        container_dados.style.display = "none";
+        container_missoes.style.display = "none";
+        container_voto.style.display = "none";
+        container_sugestao.style.display = "flex";
+    }
+
     }
 
 </script> 
