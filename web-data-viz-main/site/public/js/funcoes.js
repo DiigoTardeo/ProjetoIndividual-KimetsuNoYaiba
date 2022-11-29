@@ -61,7 +61,7 @@ function fecharModal() {
         navegar_header.style.margin= "0px 0px 0px 0px";
         container_dados.style.margin= "20px 20px 0px 325px";
         container_missoes.style.margin= "20px 20px 0px 325px";
-        container_quiz.style.margin= "20px 20px 0px 325px";
+        container_voto.style.margin= "20px 20px 0px 325px";
         btn_sair.style.display="flex";
     }
 
@@ -72,7 +72,7 @@ function fecharModal() {
         navegar_header.style.margin=" 0px 0px 0px -100vw";
         container_dados.style.margin= "20px 20px 0px 120px";
         container_missoes.style.margin= "20px 20px 0px 120px";
-        container_quiz.style.margin= "20px 20px 0px 120px";
+        container_voto.style.margin= "20px 20px 0px 120px";
     }
 
     // /* BOTÕES DO HEADER  */ 

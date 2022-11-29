@@ -8,12 +8,12 @@ router.get("/", function (req, res) {
 });
 
 //Recebendo os dados do html e direcionando para a função votar de usuarioController.js
-router.get("/votar", function (req, res) {
+router.put("/votar/:idUsuario", function (req, res) {
     votoController.votar(req, res);
 });
 
 router.put("/editar/:idUsuario", function (req, res) {
     votoController.editar(req, res);
 });
-
+                                                                                                
 module.exports = router;

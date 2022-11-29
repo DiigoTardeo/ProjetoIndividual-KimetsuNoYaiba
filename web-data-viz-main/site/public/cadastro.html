@@ -124,6 +124,7 @@
         var senhaVar = ipt_senha.value;
         var confirmacaoSenhaVar = ipt_confirmarSenha.value;
         var personagemVar = "";
+        var mestreVar = Math.floor(Math.random() * 10);
 
         if (nomeVar == "" || dtNascVar == "" || alturaVar == "" || pesoVar == "" || funcaoVar == ""|| emailVar == "" || senhaVar == "" || confirmacaoSenhaVar == "") {
             cardErro.style.display = "block"
@@ -161,7 +162,8 @@
                 funcaoServer: funcaoVar,
                 emailServer: emailVar,
                 senhaServer: senhaVar,
-                personagemServer: personagemVar
+                personagemServer: personagemVar,
+                mestreServer: mestreVar
             })
         }).then(function (resposta) {
 

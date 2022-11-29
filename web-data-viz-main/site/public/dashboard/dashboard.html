@@ -49,7 +49,7 @@
                     <button class="b2" onclick="missoes()"> 
                         <p>Missões</p>
                     </button>
-                    <a href="#cadastro_Funcionario">
+                    <a href="#votar_rank">
                         <button class="b43" onclick="voto()">
                             <p>Voto Rank</p>
                         </button>
@@ -84,7 +84,7 @@
         <span class="txt-voto">
             Aqui você vai escolher o personagem que você mais gosta no Kimestsu no Yaiba e esses personagens pode estar tanto entre os exterminadores e onis
         </span>
-        <select name="slc_personagem" id="slc_personagem" class="slc_personagem" onclick="personagem()">
+        <select name="slc_personagem" id="slc_personagemAtual" class="slc_personagem" onclick="personagem()">
             <option value="select" disabled selected>-- SELECIONE UM PERSONAGEM --</option>
             <option value="1"> Kagaya Ubuyashiki </option>
             <option value="2"> Gyomei Himejima </option>
@@ -243,6 +243,10 @@
         </div>
     </div>
 
+    <div id="div_aguardar" class="loading-div">
+        <img src="" id="loading-gif">
+    </div>
+
     <!-- SUGESTÕES
     <div class="container-sugestao" id="container_sugestao"> 
         <h2> SUGESTÕES </h2>
@@ -254,12 +258,18 @@
 <script>
     usuario.innerHTML = sessionStorage.NOME_USUARIO;
     var personagemAnterior = 0;
+
+    function teste() {
+    var idUsuarioVar =    sessionStorage.getItem("ID_USUARIO")
+    alert(idUsuarioVar)
+    }
+    
     function personagem(){
 
-        var listaPersonagem = [kagaya, gyomei, sanemi, muichiro, giyu, obanai, mitsuri, tengen, kyojuro, shinobu, tanjiro, nezuko, inosuke, zenitsu, muzan, kokushibou, douma, akaza, hantengu, nakime, gyokko, dakiegyuutarou, kaigaku, enmu, hairo, wakuraba, mukago, rui, kyogai, kamanue]
+        var listaPersonagem = [kagaya, gyomei, sanemi, muichiro, giyu, obanai, mitsuri, tengen, kyojuro, shinobu, tanjiro, nezuko, inosuke, zenitsu, muzan, kokushibou, douma, akaza, hantengu, nakime, gyokko, dakiegyuutarou, kaigaku, enmu, hairo, wakuraba, mukago, rui, kyogai, kamanue];
 
         
-        var personagem = slc_personagem.value;
+        var personagem = slc_personagemAtual.value;
         
         listaPersonagem[personagemAnterior].style.display = "none";  
         for(var contador = 0; contador <= listaPersonagem.length; contador ++){
@@ -284,9 +294,11 @@
             `;
         } */ 
     
-        var idUsuarioVar = sessionStorage.ID_USUARIO
+    var idUsuarioVar = sessionStorage.ID_USUARIO
+   
     function votar(){
-        var fkPersonagemVar = slc_personagem.value;
+        var fkPersonagemVar = slc_personagemAtual.value;
+        var idUsuario = sessionStorage.getItem("ID_USUARIO")
 
         //Recupere o valor da nova input pelo nome do id
         // Agora vá para o método fetch logo abaixo
@@ -294,52 +306,43 @@
             cardErro.style.display = "flex"
             mensagem_erro.innerHTML = "(Mensagem de erro para todos os campos em branco)";
             
-            setInterval(sumirMensagem,2000);
-            return false;
+            setInterval(sumirMensagem,4000);
+        }
 
-
-            // Enviando o valor da nova input
-            fetch(`/votos/votar/${sessionStorage.getItem("FKPERSONAGEM_USARIO")}`, {
-                method: "PUT",
-                headers: {
-                    "Content-Type": "application/json"
-                },
-                body: JSON.stringify({
-                    // crie um atributo que recebe o valor recuperado aqui
-                    // Agora vá para o arquivo routes/usuario.js
-
-                    fkPersonagemServer: fkPersonagemVar,
-                    idUsuarioServer: idUsuarioVar
-                })
-                }).then(function (resposta) {
-
-                console.log("resposta: ", resposta);
-
-                if (resposta.ok) {
-                    cardErro.style.display = "block";
-
-                    mensagem_erro.innerHTML = "Voto realizado com sucesso! Redirecionando para tela de Rank...";
-
-                    setTimeout(() => {
-                        window.location = "../rank.html";
-                    }, "2000")
-
-                    limparFormulario();
-                    finalizarAguardar();
-                } else {
-                    throw ("Houve um erro ao tentar realizar o voto!");
-                }
-        
+        // Enviando o valor da nova input
+        fetch(`/votos/votar/${idUsuario}`, {
+            method: "PUT",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                // crie um atributo que recebe o valor recuperado aqui
+                // Agora vá para o arquivo routes/usuario.js
+                fkPersonagemServer: fkPersonagemVar,
+                idUsuarioServer: idUsuario
+            })
+            }).then(function (resposta) {
+            console.log("resposta: ", resposta);
+            if (resposta.ok) {
+                cardErro.style.display = "block";
+                mensagem_erro.innerHTML = "Voto realizado com sucesso! Redirecionando para tela de Rank...";
+                setTimeout(() => {
+                    window.location = "../rank.html";
+                }, "2000")
+                limparFormulario();
+                finalizarAguardar();
+            } else {
+                throw ("Houve um erro ao tentar realizar o voto!");
+            }
+    
             }).catch(function (resposta) {
             console.log(`#ERRO: ${resposta}`);
             finalizarAguardar();
             });
-
         return false;
-
         /* Criar campo onde a partir de um Math.random() encontrar um mestre para caso o usuario selecionar a funcao de 
         exterminador, fazendo com que assim que ele entre no login, mostre o mestre e sua espada na área de Dados */   
-        }
+        
     }
     
     function sugestao(){
