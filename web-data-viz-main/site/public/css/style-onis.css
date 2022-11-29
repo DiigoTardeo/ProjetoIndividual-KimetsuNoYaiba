@@ -36,7 +36,7 @@
     flex-direction: column;
     margin: 50px 30px 30px 30px;
     padding: 5px 15px;
-    background-color: rgb(102, 6, 16);
+    background-color: rgb(78 64 91);
 }
 
 .container-luas-superiores h1{
@@ -50,7 +50,8 @@
 .kokushibou{
     display: flex;
     background-color: gray;
-    padding: 10px;
+    border-radius: 15px;
+    padding: 13px;
     margin: 0px 0px 20px 0px;
 }
 
@@ -79,7 +80,8 @@
 .douma{
     display: flex;
     background-color: gray;
-    padding: 10px;
+    border-radius: 15px;
+    padding: 13px;
     margin: 0px 0px 20px 0px;
 }
 
@@ -107,13 +109,16 @@
 /* Akaza - 3ª Lua Superior */ 
 .akaza{
     display: flex;
+    align-items: center;
     background-color: gray;
-    padding: 10px;
+    border-radius: 15px;
+    padding: 13px;
     margin: 0px 0px 20px 0px;
 }
 
 .img-akaza img{
     width: 370px;
+    height: 320px;
 }
 
 .akaza .hist-akaza{
@@ -136,7 +141,8 @@
 .hantengu{
     display: flex;
     background-color: gray;
-    padding: 10px;
+    border-radius: 15px;
+    padding: 13px;
     margin: 0px 0px 20px 0px;
 }
 
@@ -164,7 +170,8 @@
 .nakime{
     display: flex;
     background-color: gray;
-    padding: 10px;
+    border-radius: 15px;
+    padding: 13px;
     margin: 0px 0px 20px 0px;
 }
 
@@ -192,7 +199,8 @@
 .gyokko{
     display: flex;
     background-color: gray;
-    padding: 10px;
+    border-radius: 15px;
+    padding: 13px;
     margin: 0px 0px 20px 0px;
 }
 
@@ -220,7 +228,8 @@
 .daki_gyuutarou{
     display: flex;
     background-color: gray;
-    padding: 10px;
+    border-radius: 15px;
+    padding: 13px;
     margin: 0px 0px 20px 0px;
 }
 
@@ -248,7 +257,8 @@
 .kaigaku{
     display: flex;
     background-color: gray;
-    padding: 10px;
+    border-radius: 15px;
+    padding: 13px;
     margin: 0px 0px 20px 0px;
 }
 
@@ -276,7 +286,9 @@
 .container-luas-inferiores{
     display: flex;
     flex-direction: column;
-    margin: 50px 30px 30px 30px;
+    margin: 14px 30px 30px 30px;
+    padding: 5px 15px;
+    background-color: rgb(126 149 180);
 }
 
 .container-luas-inferiores h1{
@@ -289,6 +301,10 @@
 /* Enmu - 1ª Lua Inferior */ 
 .enmu{
     display: flex;
+    background-color: gray;
+    border-radius: 15px;
+    padding: 13px;
+    margin: 0px 0px 20px 0px;
 }
 
 .img-enmu img{
@@ -314,6 +330,10 @@
 /* Hairo - 2ª Lua Inferior */ 
 .hairo{
     display: flex;
+    background-color: gray;
+    border-radius: 15px;
+    padding: 13px;
+    margin: 0px 0px 20px 0px;
 }
 
 .img-hairo img{
@@ -339,6 +359,10 @@
 /* Wakuraba - 3ª Lua Inferior */ 
 .wakuraba{
     display: flex;
+    background-color: gray;
+    border-radius: 15px;
+    padding: 13px;
+    margin: 0px 0px 20px 0px;
 }
 
 .img-wakuraba img{
@@ -363,6 +387,10 @@
 /* Mukago - 4ª Lua Inferior */ 
 .mukago{
     display: flex;
+    background-color: gray;
+    border-radius: 15px;
+    padding: 13px;
+    margin: 0px 0px 20px 0px;
 }
 
 .img-mukago img{
@@ -388,6 +416,10 @@
 /* Rui - 5ª Lua Inferior */ 
 .rui{
     display: flex;
+    background-color: gray;
+    border-radius: 15px;
+    padding: 13px;
+    margin: 0px 0px 20px 0px;
 }
 
 .img-rui img{
@@ -413,6 +445,10 @@
 /* Kyogai - EX-6ª Lua Inferior */ 
 .kyogai{
     display: flex;
+    background-color: gray;
+    border-radius: 15px;
+    padding: 13px;
+    margin: 0px 0px 20px 0px;
 }
 
 .img-kyogai img{
@@ -438,6 +474,10 @@
 /* Kyogai - 6ª Lua Inferior SUBSTITUTA */ 
 .kamanue{
     display: flex;
+    background-color: gray;
+    border-radius: 15px;
+    padding: 13px;
+    margin: 0px 0px 20px 0px;
 }
 
 .img-kamanue img{

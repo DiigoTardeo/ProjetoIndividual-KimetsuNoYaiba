@@ -6,9 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/style-paginas-gerais.css">
     <link rel="stylesheet" href="./dashboards.css">
-    <title>Login</title>
+    <script src="../js/funcoes.js"></script>
+    <title>KNY| Perfil</title>
 </head>
 <body>
+    <div class="alerta_erro">
+        <div class="card_erro" id="cardErro">
+            <span id="mensagem_erro"></span>
+        </div>
+    </div>
+
     <!-- HEADER LEFT -->
     <div class="aba">
         <div class="header-left" id="aba_left">
@@ -34,7 +41,7 @@
                 <div class="img_aba">
                     <img class="img_logo" src="../assets/img/login/IconeBranco.png">
                 </div>
-                <h1 class="titulo_aba">Olá usuário!</h1>
+                <h1 class="titulo_aba">Olá <span id="usuario">usuário</span>!</h1>
                 <div class="botoes">
                     <button class="b1" onclick="meus_dados()"> 
                         <p> Meus Dados</p>
@@ -47,8 +54,8 @@
                             <p>Voto Rank</p>
                         </button>
                     </a>
-                    <button class="b4" onclick="sugestao()"> 
-                        <p>Sugestões</p>
+                    <button class="b4" onclick="window.location.href = './mural.html'">
+                        <a href="./mural.html"><p>Sugestões</p></a>
                     </button>
                 </div>
             </div>
@@ -232,69 +239,20 @@
             </div>
         </div>
         <div class="btn-voto">
-            <button onclick="computarVoto()">Votar</button>
+            <button onclick="votar()">Votar</button>
         </div>
     </div>
 
-    <!-- SUGESTÕES -->
+    <!-- SUGESTÕES
     <div class="container-sugestao" id="container_sugestao"> 
         <h2> SUGESTÕES </h2>
-    </div>
+    </div> -->
 
 </body>
 </html>
 
 <script>
-    /* ABRIR E FECHAR O HEADER*/
-    function abrirAba(){
-        btn_abreAba.style.display= "none";
-        aba_left.style.width="300px";
-        btn_fechaAba.style.display= "flex";
-        navegar_header.style.margin= "0px 0px 0px 0px";
-        container_dados.style.margin= "20px 20px 0px 325px";
-        container_missoes.style.margin= "20px 20px 0px 325px";
-        container_quiz.style.margin= "20px 20px 0px 325px";
-        btn_sair.style.display="flex";
-    }
-
-    function fecharAba(){
-        btn_abreAba.style.display= "block";
-        aba_left.style.width="95px";
-        btn_fechaAba.style.display= "none";
-        navegar_header.style.margin=" 0px 0px 0px -100vw";
-        container_dados.style.margin= "20px 20px 0px 120px";
-        container_missoes.style.margin= "20px 20px 0px 120px";
-        container_quiz.style.margin= "20px 20px 0px 120px";
-    }
-
-    /* BOTÕES DO HEADER  */ 
-    function meus_dados(){
-        container_dados.style.display = "flex";
-        container_missoes.style.display = "none";
-        container_voto.style.display = "none";
-        container_sugestao.style.display = "none";
-    }
-
-    function missoes(){
-        container_dados.style.display = "none";
-        container_missoes.style.display = "flex";
-        container_voto.style.display = "none";
-        container_sugestao.style.display = "none";
-    }
-
-    function voto(){
-        container_dados.style.display = "none";
-        container_missoes.style.display = "none";
-        container_voto.style.display = "flex";
-        container_sugestao.style.display = "none";
-    }
-
-    function sugestao(){
-        container_dados.style.display = "none";
-        container_missoes.style.display = "none";
-        container_voto.style.display = "none";
-        container_sugestao.style.display = "flex";
-    }
+    usuario.innerHTML = sessionStorage.NOME_USUARIO;
 
     var personagemAnterior = 0;
     function personagem(){
@@ -325,13 +283,67 @@
                 <div class="kagaya" id="kagaya"><img src="../assets/img/Hashiras/Kagaya_Ubuyashiki.jpg"></div>
             `;
         } */ 
-
-        function votar(){
-            var personagem = {
-                nomePersonagem: kagaya,
-            
-            }
-        }
     }
+    var idUsuarioVar = sessionStorage.ID_USUARIO
+    function votar(){
+
+        var fkPersonagemVar = slc_personagem.value;
+
+        //Recupere o valor da nova input pelo nome do id
+        // Agora vá para o método fetch logo abaixo
+        if (fkPersonagemVar == "select") {
+            cardErro.style.display = "flex"
+            mensagem_erro.innerHTML = "(Mensagem de erro para todos os campos em branco)";
+            
+            setInterval(sumirMensagem,2000);
+            return false;
+        }
+
+        // Enviando o valor da nova input
+        fetch(`/votos/votar/${sessionStorage.getItem("FKPERSONAGEM_USARIO")}`, {
+            method: "PUT",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                // crie um atributo que recebe o valor recuperado aqui
+                // Agora vá para o arquivo routes/usuario.js
+
+                fkPersonagemServer: fkPersonagemVar,
+                idUsuarioServer: idUsuarioVar
+            })
+        }).then(function (resposta) {
+
+            console.log("resposta: ", resposta);
+
+            if (resposta.ok) {
+                cardErro.style.display = "block";
+
+                mensagem_erro.innerHTML = "Voto realizado com sucesso! Redirecionando para tela de Rank...";
+
+                setTimeout(() => {
+                    window.location = "../rank.html";
+                }, "2000")
+                
+                limparFormulario();
+                finalizarAguardar();
+            } else {
+                throw ("Houve um erro ao tentar realizar o voto!");
+            }
+        }).catch(function (resposta) {
+            console.log(`#ERRO: ${resposta}`);
+            finalizarAguardar();
+        });
+
+        return false;
+
+        /* Criar campo onde a partir de um Math.random() encontrar um mestre para caso o usuario selecionar a funcao de 
+        exterminador, fazendo com que assim que ele entre no login, mostre o mestre e sua espada na área de Dados */   
+    }
+
+       function sumirMensagem() {
+        cardErro.style.display = "none"
+    }
+
 
 </script> 

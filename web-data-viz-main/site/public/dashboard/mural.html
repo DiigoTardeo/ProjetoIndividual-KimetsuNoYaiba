@@ -6,9 +6,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AquaTech | Avisos</title>
+    <title>KNY | Deixe sua opnião</title>
 
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/style-paginas-gerais.css">
     <link rel="stylesheet" href="./dashboards.css">
     <script src="../js/funcoes.js"></script>
 
@@ -18,47 +18,67 @@
         rel="stylesheet">
 </head>
 
-<body onload="validarSessao(), atualizarFeed()" style="background-color: #161618;">
+<body onload="validarSessao(), atualizarFeed()" style="background-color: #383837;">
     <!-- <body onload="validarSessao()"> -->
 
     <div class="janela">
 
 
-        <div class="header-left">
-
-            <h1>AquaTech</h1>
-
-            <div class="hello">
-                <h3>Olá, <span id="b_usuario">usuário</span>!</h3>
+          <!-- HEADER LEFT -->
+        <div class="aba">
+            <div class="header-left" id="aba_left">
+                <button class="btn_abrirAba" id="btn_abreAba" onclick="abrirAba()">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-list-nested" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M4.5 11.5A.5.5 0 0 1 5 11h10a.5.5 0 0 1 0 1H5a.5.5 0 0 1-.5-.5zm-2-4A.5.5 0 0 1 3 7h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm-2-4A.5.5 0 0 1 1 3h10a.5.5 0 0 1 0 1H1a.5.5 0 0 1-.5-.5z"/>
+                      </svg>
+                </button>
+                <div class="botoes_acesso">
+                    <button class="btn_exit" id="btn_sair" onclick= "window.location.href = '../index.html'">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-door-open" viewBox="0 0 16 16">
+                            <path d="M8.5 10c-.276 0-.5-.448-.5-1s.224-1 .5-1 .5.448.5 1-.224 1-.5 1z"/>
+                            <path d="M10.828.122A.5.5 0 0 1 11 .5V1h.5A1.5 1.5 0 0 1 13 2.5V15h1.5a.5.5 0 0 1 0 1h-13a.5.5 0 0 1 0-1H3V1.5a.5.5 0 0 1 .43-.495l7-1a.5.5 0 0 1 .398.117zM11.5 2H11v13h1V2.5a.5.5 0 0 0-.5-.5zM4 1.934V15h6V1.077l-6 .857z"/>
+                        </svg>
+                    </button>
+                    <button class="btn_fecharAba" id="btn_fechaAba" onclick="fecharAba()">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-reply-fill" viewBox="0 0 16 16">
+                            <path d="M5.921 11.9 1.353 8.62a.719.719 0 0 1 0-1.238L5.921 4.1A.716.716 0 0 1 7 4.719V6c1.5 0 6 0 7 8-2.5-4.5-7-4-7-4v1.281c0 .56-.606.898-1.079.62z"/>
+                        </svg>
+                    </button>
+                </div>
+                <div class="navegacao_header" id="navegar_header">
+                    <div class="img_aba">
+                        <img class="img_logo" src="../assets/img/login/IconeBranco.png">
+                    </div>
+                    <h1 class="titulo_aba">Olá <span id="usuario">usuário</span>!</h1>
+                    <div class="botoes">
+                        <button class="b1" onclick="window.location.href = './dashboard.html'"> 
+                            <a href="./dashboard.html">
+                                <p> Meus Dados</p>
+                            </a>
+                        </button>
+                        <button class="b2" onclick="window.location.href = './dashboard.html'"> 
+                                <p>Missões</p>
+                        </button>
+                        <a href="#cadastro_Funcionario">
+                            <button class="b43" onclick="window.location.href = './dashboard.html'">
+                                <a href="./dashboard.html">
+                                    <p>Voto Rank</p>
+                                </a>
+                            </button>
+                        </a>
+                        <button class="b4" onclick="sugestao()"> 
+                            <p>Sugestões</p>
+                        </button>
+                    </div>
+                </div>
             </div>
-
-            <div class="btn-nav-white">
-                <a href="cards.html">
-                    <h3>Aquários</h3>
-                </a>
-            </div>
-
-            <div class="btn-nav-white">
-                <a href="./dashboard.html">
-                    <h3>Gráficos</h3>
-                </a>
-            </div>
-
-            <div class="btn-nav">
-                <h3>Mural de Avisos</h3>
-            </div>
-
-            <div class="btn-logout" onclick="limparSessao()">
-                <h3>Sair</h3>
-            </div>
-
         </div>
 
         <div class="dash-right">
 
-            <div class="avisos">
+            <div class="sugestoes">
                 <div class="container">
-                    <h1>Publicar um aviso</h1>
+                    <h1>Publicar uma Sugestões</h1>
                     <div class="div-form">
                         <form id="form_postagem" method="post" onsubmit="return publicar()">
                             <label>
@@ -76,7 +96,7 @@
                             <button>Enviar</button>
                         </form>
                     </div>
-                    <h1>Mural de Avisos</h1>
+                    <h1>Sugestões</h1>
                     <div class="div-results">
                         <div id="feed_container" class="feed-container">
                         </div>
@@ -103,7 +123,7 @@
 
         </div>
     </div>
-
+<a href="../dashboard/edicao-sugestao.html"></a>
 
 
 
@@ -113,7 +133,7 @@
 
 <script>
     
-    b_usuario.innerHTML = sessionStorage.NOME_USUARIO;
+    usuario.innerHTML = sessionStorage.NOME_USUARIO;
 
     function limparFormulario() {
         document.getElementById("form_postagem").reset();
@@ -127,7 +147,7 @@
             descricao: form_postagem.descricao.value
         }
 
-        fetch(`/avisos/publicar/${idUsuario}`, {
+        fetch(`/sugestoes/publicar/${idUsuario}`, {
             method: "post",
             headers: {
                 "Content-Type": "application/json"
@@ -139,7 +159,7 @@
 
             if (resposta.ok) {
                 window.alert("Post realizado com sucesso pelo usuario de ID: " + idUsuario + "!");
-                window.location = "/dashboard/mural.html";
+                window.location = "../dashboard/mural.html";
                 limparFormulario();
                 finalizarAguardar();
             } else if (resposta.status == 404) {
@@ -156,17 +176,17 @@
 
     }
 
-    function editar(idAviso) {
-        sessionStorage.ID_POSTAGEM_EDITANDO = idAviso;
-        console.log("cliquei em editar - " + idAviso);
-        window.alert("Você será redirecionado à página de edição do aviso de id número: " + idAviso);
-        window.location = "/dashboard/edicao-aviso.html"
+    function editar(idSugestao) {
+        sessionStorage.ID_POSTAGEM_EDITANDO = idSugestao;
+        console.log("cliquei em editar - " + idSugestao);
+        window.alert("Você será redirecionado à página de edição do sugestao de id número: " + idSugestao);
+        window.location = "../dashboard/edicao-sugestao.html"
 
     }
 
-    function deletar(idAviso) {
-        console.log("Criar função de apagar post escolhido - ID" + idAviso);
-        fetch(`/avisos/deletar/${idAviso}`, {
+    function deletar(idSugestao) {
+        console.log("Criar função de apagar post escolhido - ID" + idSugestao);
+        fetch(`/sugestoes/deletar/${idSugestao}`, {
             method: "DELETE",
             headers: {
                 "Content-Type": "application/json"
@@ -175,7 +195,7 @@
 
             if (resposta.ok) {
                 window.alert("Post deletado com sucesso pelo usuario de email: " + sessionStorage.getItem("EMAIL_USUARIO") + "!");
-                window.location = "/dashboard/mural.html"
+                window.location = "../dashboard/mural.html"
             } else if (resposta.status == 404) {
                 window.alert("Deu 404!");
             } else {
@@ -188,7 +208,7 @@
 
     function atualizarFeed() {
         //aguardar();
-        fetch("/avisos/listar").then(function (resposta) {
+        fetch("/sugestoes/listar").then(function (resposta) {
             if (resposta.ok) {
                 if (resposta.status == 204) {
                     var feed = document.getElementById("feed_container");
@@ -217,7 +237,7 @@
                         var btnDeletar = document.createElement("button");
 
 
-                        spanID.innerHTML = "ID: <b>" + publicacao.idAviso + "</b>";
+                        spanID.innerHTML = "ID: <b>" + publicacao.idSugestao + "</b>";
                         spanTitulo.innerHTML = "Título: <b>" + publicacao.titulo + "</b>";
                         spanNome.innerHTML = "Autor: <b>" + publicacao.nome + "</b>";
                         divDescricao.innerHTML = "Descrição: <b>" + publicacao.descricao + "</b>";
@@ -225,7 +245,7 @@
                         btnDeletar.innerHTML = "Deletar";
 
                         divPublicacao.className = "publicacao";
-                        spanTitulo.id = "inputNumero" + publicacao.idAviso;
+                        spanTitulo.id = "inputNumero" + publicacao.idSugestao;
                         spanNome.className = "publicacao-nome";
                         spanTitulo.className = "publicacao-titulo";
                         divDescricao.className = "publicacao-descricao";
@@ -233,12 +253,12 @@
                         divButtons.className = "div-buttons"
 
                         btnEditar.className = "publicacao-btn-editar"
-                        btnEditar.id = "btnEditar" + publicacao.idAviso;
-                        btnEditar.setAttribute("onclick", `editar(${publicacao.idAviso})`);
+                        btnEditar.id = "btnEditar" + publicacao.idSugestao;
+                        btnEditar.setAttribute("onclick", `editar(${publicacao.idSugestao})`);
 
                         btnDeletar.className = "publicacao-btn-editar"
-                        btnDeletar.id = "btnDeletar" + publicacao.idAviso;
-                        btnDeletar.setAttribute("onclick", `deletar(${publicacao.idAviso})`);
+                        btnDeletar.id = "btnDeletar" + publicacao.idSugestao;
+                        btnDeletar.setAttribute("onclick", `deletar(${publicacao.idSugestao})`);
 
                         divPublicacao.appendChild(spanID);
                         divPublicacao.appendChild(spanNome);

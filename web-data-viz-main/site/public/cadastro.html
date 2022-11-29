@@ -9,7 +9,7 @@
 
     <link rel="stylesheet" href="./css/style-paginas-gerais.css">
     <link rel="stylesheet" href="./css/style-cadastro.css">
-    <title>KnY - Cadastrar-se</title>
+    <title>KNY| Cadastrar-se</title>
 </head>
 <body>
     <!-- HEADER -->
@@ -28,6 +28,7 @@
                     <li><button onclick= "window.location.href = './PgEspadas.html'"> Espadas </button></li>
                     <li> | </li> 
                     <li><button onclick= "window.location.href = './login.html'"> Login </button></li>
+                    <li><button onclick= "window.location.href = './rank.html'"> Rank </button></li>
                 </ul>
         </div>
     </header>
@@ -110,7 +111,7 @@
 
 <script>
     function cadastrar() {
-        aguardar();
+        //aguardar();
 
         //Recupere o valor da nova input pelo nome do id
         // Agora vá para o método fetch logo abaixo
@@ -122,6 +123,7 @@
         var emailVar = ipt_email.value;
         var senhaVar = ipt_senha.value;
         var confirmacaoSenhaVar = ipt_confirmarSenha.value;
+        var personagemVar = "";
 
         if (nomeVar == "" || dtNascVar == "" || alturaVar == "" || pesoVar == "" || funcaoVar == ""|| emailVar == "" || senhaVar == "" || confirmacaoSenhaVar == "") {
             cardErro.style.display = "block"
@@ -158,7 +160,8 @@
                 pesoServer: pesoVar,
                 funcaoServer: funcaoVar,
                 emailServer: emailVar,
-                senhaServer: senhaVar
+                senhaServer: senhaVar,
+                personagemServer: personagemVar
             })
         }).then(function (resposta) {
 

@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/style-paginas-gerais.css">
     <link rel="stylesheet" href="./css/style-login.css">
-    <title>KnY - Login</title>
+    <title>KNY| Login</title>
 </head>
 <body>
     <!-- HEADER -->
@@ -25,6 +25,7 @@
                     <li><button onclick= "window.location.href = './PgEspadas.html'"> Espadas </button></li>
                     <li> | </li> 
                     <li class="agora"><span class="spn-left"> Login </span></li>
+                    <li><button onclick= "window.location.href = './rank.html'"> Rank </button></li>
                 </ul>
         </div>
     </header>
@@ -74,10 +75,8 @@
 </html>
 
 <script>
-
-
     function entrar() {
-        // aguardar();
+        //aguardar();
 
         var emailVar = ipt_email.value;
         var senhaVar = ipt_senha.value;
@@ -85,7 +84,7 @@
         if (emailVar == "" || senhaVar == "") {
             cardErro.style.display = "flex"
             mensagem_erro.innerHTML = "(Mensagem de erro para todos os campos em branco)";
-            // finalizarAguardar();
+            finalizarAguardar();
             return false;
         }
         else {
@@ -116,7 +115,8 @@
 
                     sessionStorage.EMAIL_USUARIO = json.email;
                     sessionStorage.NOME_USUARIO = json.nome;
-                    sessionStorage.ID_USUARIO = json.id;
+                    sessionStorage.ID_USUARIO = json.idUsuario;
+                    sessionStorage.FKPERSONAGEM_USARIO = json.fkPersonagem;
 
                     setTimeout(function () {
                         window.location = "./dashboard/dashboard.html";
@@ -130,7 +130,7 @@
 
                 resposta.text().then(texto => {
                     console.error(texto);
-                    // finalizarAguardar(texto);
+                    finalizarAguardar(texto);
                 });
             }
 
