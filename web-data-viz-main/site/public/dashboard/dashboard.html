@@ -253,6 +253,51 @@
 
 <script>
     usuario.innerHTML = sessionStorage.NOME_USUARIO;
+    /* ABRIR E FECHAR O HEADER*/
+    function abrirAba(){
+        btn_abreAba.style.display= "none";
+        aba_left.style.width="300px";
+        btn_fechaAba.style.display= "flex";
+        navegar_header.style.margin= "0px 0px 0px 0px";
+        container_dados.style.margin= "20px 20px 0px 325px";
+        container_missoes.style.margin= "20px 20px 0px 325px";
+        container_quiz.style.margin= "20px 20px 0px 325px";
+        btn_sair.style.display="flex";
+    }
+
+    function fecharAba(){
+        btn_abreAba.style.display= "block";
+        aba_left.style.width="95px";
+        btn_fechaAba.style.display= "none";
+        navegar_header.style.margin=" 0px 0px 0px -100vw";
+        container_dados.style.margin= "20px 20px 0px 120px";
+        container_missoes.style.margin= "20px 20px 0px 120px";
+        container_quiz.style.margin= "20px 20px 0px 120px";
+    }
+
+    /* BOTÕES DO HEADER  */ 
+    function meus_dados(){
+        container_dados.style.display = "flex";
+        container_missoes.style.display = "none";
+        container_voto.style.display = "none";
+        container_sugestao.style.display = "none";
+    }
+
+    function missoes(){
+        container_dados.style.display = "none";
+        container_missoes.style.display = "flex";
+        container_voto.style.display = "none";
+        container_sugestao.style.display = "none";
+    }
+
+    function voto(){
+        container_dados.style.display = "none";
+        container_missoes.style.display = "none";
+        container_voto.style.display = "flex";
+        container_sugestao.style.display = "none";
+
+
+    }
 
     var personagemAnterior = 0;
     function personagem(){
@@ -269,6 +314,7 @@
                 personagemAnterior = contador-1;
             }
         }
+    }
 
         /*if(personagem == 1){
             kagaya.style.display= "block";
@@ -283,10 +329,9 @@
                 <div class="kagaya" id="kagaya"><img src="../assets/img/Hashiras/Kagaya_Ubuyashiki.jpg"></div>
             `;
         } */ 
-    }
-    var idUsuarioVar = sessionStorage.ID_USUARIO
+    
+        var idUsuarioVar = sessionStorage.ID_USUARIO
     function votar(){
-
         var fkPersonagemVar = slc_personagem.value;
 
         //Recupere o valor da nova input pelo nome do id
@@ -297,53 +342,61 @@
             
             setInterval(sumirMensagem,2000);
             return false;
-        }
 
-        // Enviando o valor da nova input
-        fetch(`/votos/votar/${sessionStorage.getItem("FKPERSONAGEM_USARIO")}`, {
-            method: "PUT",
-            headers: {
-                "Content-Type": "application/json"
-            },
-            body: JSON.stringify({
-                // crie um atributo que recebe o valor recuperado aqui
-                // Agora vá para o arquivo routes/usuario.js
 
-                fkPersonagemServer: fkPersonagemVar,
-                idUsuarioServer: idUsuarioVar
-            })
-        }).then(function (resposta) {
+            // Enviando o valor da nova input
+            fetch(`/votos/votar/${sessionStorage.getItem("FKPERSONAGEM_USARIO")}`, {
+                method: "PUT",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({
+                    // crie um atributo que recebe o valor recuperado aqui
+                    // Agora vá para o arquivo routes/usuario.js
 
-            console.log("resposta: ", resposta);
+                    fkPersonagemServer: fkPersonagemVar,
+                    idUsuarioServer: idUsuarioVar
+                })
+                }).then(function (resposta) {
 
-            if (resposta.ok) {
-                cardErro.style.display = "block";
+                console.log("resposta: ", resposta);
 
-                mensagem_erro.innerHTML = "Voto realizado com sucesso! Redirecionando para tela de Rank...";
+                if (resposta.ok) {
+                    cardErro.style.display = "block";
 
-                setTimeout(() => {
-                    window.location = "../rank.html";
-                }, "2000")
-                
-                limparFormulario();
-                finalizarAguardar();
-            } else {
-                throw ("Houve um erro ao tentar realizar o voto!");
-            }
-        }).catch(function (resposta) {
+                    mensagem_erro.innerHTML = "Voto realizado com sucesso! Redirecionando para tela de Rank...";
+
+                    setTimeout(() => {
+                        window.location = "../rank.html";
+                    }, "2000")
+
+                    limparFormulario();
+                    finalizarAguardar();
+                } else {
+                    throw ("Houve um erro ao tentar realizar o voto!");
+                }
+        
+            }).catch(function (resposta) {
             console.log(`#ERRO: ${resposta}`);
             finalizarAguardar();
-        });
+            });
 
         return false;
 
         /* Criar campo onde a partir de um Math.random() encontrar um mestre para caso o usuario selecionar a funcao de 
         exterminador, fazendo com que assim que ele entre no login, mostre o mestre e sua espada na área de Dados */   
+        }
+    }
+    
+    function sugestao(){
+        container_dados.style.display = "none";
+        container_missoes.style.display = "none";
+        container_voto.style.display = "none";
+        container_sugestao.style.display = "flex";
     }
 
-       function sumirMensagem() {
+    
+    function sumirMensagem() {
         cardErro.style.display = "none"
     }
-
-
-</script> 
+</script>
