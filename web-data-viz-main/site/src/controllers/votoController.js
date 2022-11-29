@@ -19,65 +19,16 @@ function listar(req, res) {
     });
 }
 
-function listarPorUsuario(req, res) {
-    var idUsuario = req.params.idUsuario;
+function votar(req, res) {
+    var fkPersonagem = req.body.fkPersonagemServer;
+    var idUsuario = req.body.idUsuarioServer;
 
-    votoModel.listarPorUsuario(idUsuario)
-        .then(
-            function (resultado) {
-                if (resultado.length > 0) {
-                    res.status(200).json(resultado);
-                } else {
-                    res.status(204).send("Nenhum resultado encontrado!");
-                }
-            }
-        )
-        .catch(
-            function (erro) {
-                console.log(erro);
-                console.log(
-                    "Houve um erro ao buscar os votos: ",
-                    erro.sqlMessage
-                );
-                res.status(500).json(erro.sqlMessage);
-            }
-        );
-}
-
-function pesquisarDescricao(req, res) {
-    var descricao = req.params.descricao;
-
-    votoModel.pesquisarDescricao(descricao)
-        .then(
-            function (resultado) {
-                if (resultado.length > 0) {
-                    res.status(200).json(resultado);
-                } else {
-                    res.status(204).send("Nenhum resultado encontrado!");
-                }
-            }
-        ).catch(
-            function (erro) {
-                console.log(erro);
-                console.log("Houve um erro ao buscar os votos: ", erro.sqlMessage);
-                res.status(500).json(erro.sqlMessage);
-            }
-        );
-}
-
-function publicar(req, res) {
-    var titulo = req.body.titulo;
-    var descricao = req.body.descricao;
-    var idUsuario = req.params.idUsuario;
-
-    if (titulo == undefined) {
-        res.status(400).send("O título está indefinido!");
-    } else if (descricao == undefined) {
-        res.status(400).send("A descrição está indefinido!");
+    if (fkPersonagem == "select") {
+        res.status(400).send("O personagem está indefinido");
     } else if (idUsuario == undefined) {
         res.status(403).send("O id do usuário está indefinido!");
     } else {
-        votoModel.publicar(titulo, descricao, idUsuario)
+        votoModel.votar(fkPersonagem, idUsuario)
             .then(
                 function (resultado) {
                     res.json(resultado);
@@ -91,13 +42,14 @@ function publicar(req, res) {
                 }
             );
     }
+    
 }
 
 function editar(req, res) {
-    var novaDescricao = req.body.descricao;
-    var idvoto = req.params.idvoto;
+    var novoPersonagem = req.body.fkPersonagem;
+    var idUsuario = req.params.idUsuario;
 
-    votoModel.editar(novaDescricao, idvoto)
+    votoModel.editar(novoPersonagem, idUsuario)
         .then(
             function (resultado) {
                 res.json(resultado);
@@ -113,30 +65,9 @@ function editar(req, res) {
 
 }
 
-function deletar(req, res) {
-    var idvoto = req.params.idvoto;
-
-    votoModel.deletar(idvoto)
-        .then(
-            function (resultado) {
-                res.json(resultado);
-            }
-        )
-        .catch(
-            function (erro) {
-                console.log(erro);
-                console.log("Houve um erro ao deletar o post: ", erro.sqlMessage);
-                res.status(500).json(erro.sqlMessage);
-            }
-        );
-}
-
 module.exports = {
     testar,
     listar,
-    listarPorUsuario,
-    pesquisarDescricao,
-    publicar,
-    editar,
-    deletar
+    votar,
+    editar
 }
