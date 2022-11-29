@@ -1,8 +1,6 @@
 #TAREFAS:
 
 ================ ESSENCIAL ====================
-• Criação da modelagem e do script da tabela para inseção dos dados de usuário
-• Fazer a tela de login e sobstituir a atual para pagina de usuário
 • Tela de ranking
 
 =============== IMPORTANTES ===================
