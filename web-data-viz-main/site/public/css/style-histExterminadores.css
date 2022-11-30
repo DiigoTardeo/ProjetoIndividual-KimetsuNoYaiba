@@ -1,3 +1,7 @@
+body{
+    background-image: url("../assets/img/PossiveisFundos/casaNoite.png");
+}
+
 .titulo{
     color: white;
 }
@@ -20,6 +24,7 @@
    align-items: center;
    flex-direction: column;
    padding: 20px;
+   margin-left: 280px;
 }
 
 .hist-historia h2{
@@ -33,10 +38,12 @@
 /* HISTORIA - ONIS */
 .hist-onis{
     display: flex;
+    margin: -125px 0px 0px 0px
 }
 
 .img-hist-onis img{
-    width: 370px;
+    width: 230px;
+    margin-left: 10px;
 }
 
 .hist-onis .hist-hist-onis{
@@ -45,6 +52,7 @@
    align-items: center;
    flex-direction: column;
    padding: 20px;
+   margin-left: 45px;
 }
 
 .hist-hist-onis h2{

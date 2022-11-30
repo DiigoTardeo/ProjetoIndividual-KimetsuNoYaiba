@@ -1,3 +1,9 @@
+body{
+    background-image: url("../assets/img/PossiveisFundos/Casa_Cerejeira.jpg");
+    background-repeat: no-repeat;
+    background-size: 110vw;
+}
+
 .titulo{
     color: white;
 }

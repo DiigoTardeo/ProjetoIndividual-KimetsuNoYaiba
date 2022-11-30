@@ -4,6 +4,7 @@ body{
   align-items: center;
   flex-direction: column;
   background-color: #383837;
+  background-image: url("../assets/img/PossiveisFundos/campo.png");
 }
 
 /* HEADER */

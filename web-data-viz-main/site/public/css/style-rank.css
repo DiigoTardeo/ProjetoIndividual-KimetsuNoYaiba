@@ -1,501 +1,73 @@
+body{
+    background-image: url("../assets/img/PossiveisFundos/casaNoite1.png");
+}
+
 .titulo{
     color: white;
 }
 
-/* Muzan - Lider */
-.muzan{
+.tabela-rank{
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
 }
 
-.img-muzan img{
-    width: 370px;
-}
-
-.muzan .hist-muzan{
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   flex-direction: column;
-   padding: 20px;
-}
-
-.hist-muzan h2{
-    color: white;
-}
-
-.muzan .texto-muzan{
-    color: white;
-}
-
-/* LUAS SUPERIORES */
-.container-luas-superiores{    
-    display: flex;
-    flex-direction: column;
-    margin: 50px 30px 30px 30px;
-    padding: 5px 15px;
-    background-color: rgb(78 64 91);
-}
-
-.container-luas-superiores h1{
+.posicao{
     display: flex;
     align-items: center;
     justify-content: center;
-    color: white;
+    flex-direction: column;
+    color: #FFF;
 }
 
-/* Kokushibou - 1ª Lua Superior */ 
-.kokushibou{
+.borda-posicao{
     display: flex;
-    background-color: gray;
-    border-radius: 15px;
-    padding: 13px;
-    margin: 0px 0px 20px 0px;
-}
-
-.img-kokushibou img{
-    width: 370px;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
     border: #FFF solid;
 }
 
-.kokushibou .hist-kokushibou{
-    display: flex;
-   justify-content: center;
-   align-items: center;
-   flex-direction: column;
-   padding: 20px;
+.borda-posicao span{
+    margin: 0px 25px;
 }
 
-.hist-kokushibou h2{
-    color: white;
-}
-
-.kokushibou .texto-kokushibou{
-    color: white;
-}
-
-/* Douma - 2ª Lua Superior */ 
-.douma{
-    display: flex;
-    background-color: gray;
-    border-radius: 15px;
-    padding: 13px;
-    margin: 0px 0px 20px 0px;
-}
-
-.img-douma img{
-    width: 370px;
-    border: black solid;
-}
-
-.douma .hist-douma{
-    display: flex;
-   justify-content: center;
-   align-items: center;
-   flex-direction: column;
-   padding: 20px;
-}
-
-.hist-douma h2{
-    color: white;
-}
-
-.douma .texto-douma{
-    color: white;
-}
-
-/* Akaza - 3ª Lua Superior */ 
-.akaza{
-    display: flex;
-    align-items: center;
-    background-color: gray;
-    border-radius: 15px;
-    padding: 13px;
-    margin: 0px 0px 20px 0px;
-}
-
-.img-akaza img{
-    width: 370px;
-    height: 320px;
-}
-
-.akaza .hist-akaza{
-    display: flex;
-   justify-content: center;
-   align-items: center;
-   flex-direction: column;
-   padding: 20px;
-}
-
-.hist-akaza h2{
-    color: white;
-}
-
-.akaza .texto-akaza{
-    color: white;
-}
-
-/* Hantengu - 4ª Lua Superior */ 
-.hantengu{
-    display: flex;
-    background-color: gray;
-    border-radius: 15px;
-    padding: 13px;
-    margin: 0px 0px 20px 0px;
-}
-
-.img-hantengu img{
-    width: 370px;
-}
-
-.hantengu .hist-hantengu{
-    display: flex;
-   justify-content: center;
-   align-items: center;
-   flex-direction: column;
-   padding: 20px;
-}
-
-.hist-hantengu h2{
-    color: white;
-}
-
-.hantengu .texto-hantengu{
-    color: white;
-}
-
-/* Nakime - 4ª Lua Superior Substituto */ 
-.nakime{
-    display: flex;
-    background-color: gray;
-    border-radius: 15px;
-    padding: 13px;
-    margin: 0px 0px 20px 0px;
-}
-
-.img-nakime img{
-    width: 370px;
-}
-
-.nakime .hist-nakime{
-    display: flex;
-   justify-content: center;
-   align-items: center;
-   flex-direction: column;
-   padding: 20px;
-}
-
-.hist-nakime h2{
-    color: white;
-}
-
-.nakime .texto-nakime{
-    color: white;
-}
-
-/* Gyokko - 5ª Lua Superior */ 
-.gyokko{
-    display: flex;
-    background-color: gray;
-    border-radius: 15px;
-    padding: 13px;
-    margin: 0px 0px 20px 0px;
-}
-
-.img-gyokko img{
-    width: 370px;
-}
-
-.gyokko .hist-gyokko{
-    display: flex;
-   justify-content: center;
-   align-items: center;
-   flex-direction: column;
-   padding: 20px;
-}
-
-.hist-gyokko h2{
-    color: white;
-}
-
-.gyokko .texto-gyokko{
-    color: white;
-}
-
-/* Daki e Gyuutarou - 6ª Lua Superior */ 
-.daki_gyuutarou{
-    display: flex;
-    background-color: gray;
-    border-radius: 15px;
-    padding: 13px;
-    margin: 0px 0px 20px 0px;
-}
-
-.img-daki_gyuutarou img{
-    width: 370px;
-}
-
-.daki_gyuutarou .hist-daki_gyuutarou{
-    display: flex;
-   justify-content: center;
-   align-items: center;
-   flex-direction: column;
-   padding: 20px;
-}
-
-.hist-daki_gyuutarou h2{
-    color: white;
-}
-
-.daki_gyuutarou .texto-daki_gyuutarou{
-    color: white;
-}
-
-/* Kaigaku - 6ª Lua Superior Substituto */ 
-.kaigaku{
-    display: flex;
-    background-color: gray;
-    border-radius: 15px;
-    padding: 13px;
-    margin: 0px 0px 20px 0px;
-}
-
-.img-kaigaku img{
-    width: 370px;
-}
-
-.kaigaku .hist-kaigaku{
-    display: flex;
-   justify-content: center;
-   align-items: center;
-   flex-direction: column;
-   padding: 20px;
-}
-
-.hist-kaigaku h2{
-    color: white;
-}
-
-.kaigaku .texto-kaigaku{
-    color: white;
-}
-
-/* LUAS INFERIORES */
-.container-luas-inferiores{
-    display: flex;
-    flex-direction: column;
-    margin: 14px 30px 30px 30px;
-    padding: 5px 15px;
-    background-color: rgb(126 149 180);
-}
-
-.container-luas-inferiores h1{
+.nome{
     display: flex;
     align-items: center;
     justify-content: center;
-    color: white;
+    flex-direction: column;
+    color: #FFF;
 }
 
-/* Enmu - 1ª Lua Inferior */ 
-.enmu{
+.borda-nome{
     display: flex;
-    background-color: gray;
-    border-radius: 15px;
-    padding: 13px;
-    margin: 0px 0px 20px 0px;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border: #FFF solid;
+    margin-left: -6px;
 }
 
-.img-enmu img{
-    width: 370px;
+.borda-nome span{
+    margin: 0px 60px;
 }
 
-.enmu .hist-enmu{
+.votos{
     display: flex;
-   justify-content: center;
-   align-items: center;
-   flex-direction: column;
-   padding: 20px;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: #FFF;
 }
 
-.hist-enmu h2{
-    color: white;
-}
-
-.enmu .texto-enmu{
-    color: white;
-}
-
-/* Hairo - 2ª Lua Inferior */ 
-.hairo{
+.borda-votos{
     display: flex;
-    background-color: gray;
-    border-radius: 15px;
-    padding: 13px;
-    margin: 0px 0px 20px 0px;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border: #FFF solid;
+    margin-left: -9px;
 }
 
-.img-hairo img{
-    width: 370px;
-}
-
-.hairo .hist-hairo{
-    display: flex;
-   justify-content: center;
-   align-items: center;
-   flex-direction: column;
-   padding: 20px;
-}
-
-.hist-hairo h2{
-    color: white;
-}
-
-.hairo .texto-hairo{
-    color: white;
-}
-
-/* Wakuraba - 3ª Lua Inferior */ 
-.wakuraba{
-    display: flex;
-    background-color: gray;
-    border-radius: 15px;
-    padding: 13px;
-    margin: 0px 0px 20px 0px;
-}
-
-.img-wakuraba img{
-    width: 370px;
-}
-
-.wakuraba .hist-wakuraba{
-    display: flex;
-   justify-content: center;
-   align-items: center;
-   flex-direction: column;
-   padding: 20px;
-}
-
-.hist-wakuraba h2{
-    color: white;
-}
-
-.wakuraba .texto-wakuraba{
-    color: white;
-}
-/* Mukago - 4ª Lua Inferior */ 
-.mukago{
-    display: flex;
-    background-color: gray;
-    border-radius: 15px;
-    padding: 13px;
-    margin: 0px 0px 20px 0px;
-}
-
-.img-mukago img{
-    width: 370px;
-}
-
-.mukago .hist-mukago{
-    display: flex;
-   justify-content: center;
-   align-items: center;
-   flex-direction: column;
-   padding: 20px;
-}
-
-.hist-mukago h2{
-    color: white;
-}
-
-.mukago .texto-mukago{
-    color: white;
-}
-
-/* Rui - 5ª Lua Inferior */ 
-.rui{
-    display: flex;
-    background-color: gray;
-    border-radius: 15px;
-    padding: 13px;
-    margin: 0px 0px 20px 0px;
-}
-
-.img-rui img{
-    width: 370px;
-}
-
-.rui .hist-rui{
-    display: flex;
-   justify-content: center;
-   align-items: center;
-   flex-direction: column;
-   padding: 20px;
-}
-
-.hist-rui h2{
-    color: white;
-}
-
-.rui .texto-rui{
-    color: white;
-}
-
-/* Kyogai - EX-6ª Lua Inferior */ 
-.kyogai{
-    display: flex;
-    background-color: gray;
-    border-radius: 15px;
-    padding: 13px;
-    margin: 0px 0px 20px 0px;
-}
-
-.img-kyogai img{
-    width: 370px;
-}
-
-.kyogai .hist-kyogai{
-    display: flex;
-   justify-content: center;
-   align-items: center;
-   flex-direction: column;
-   padding: 20px;
-}
-
-.hist-kyogai h2{
-    color: white;
-}
-
-.kyogai .texto-kyogai{
-    color: white;
-}
-
-/* Kyogai - 6ª Lua Inferior SUBSTITUTA */ 
-.kamanue{
-    display: flex;
-    background-color: gray;
-    border-radius: 15px;
-    padding: 13px;
-    margin: 0px 0px 20px 0px;
-}
-
-.img-kamanue img{
-    width: 370px;
-}
-
-.kamanue .hist-kamanue{
-    display: flex;
-   justify-content: center;
-   align-items: center;
-   flex-direction: column;
-   padding: 20px;
-}
-
-.hist-kamanue h2{
-    color: white;
-}
-
-.kamanue .texto-kamanue{
-    color: white;
+.borda-votos span{
+    margin: 0px 20px;
 }
