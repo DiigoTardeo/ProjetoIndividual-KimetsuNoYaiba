@@ -43,17 +43,20 @@
                 </div>
                 <h1 class="titulo_aba">Olá <span id="usuario">usuário</span>!</h1>
                 <div class="botoes">
-                    <button class="b1" onclick="meus_dados()"> 
+                    <button class="b1" id="meusDados" onclick="meus_dados()"> 
                         <p> Meus Dados</p>
                     </button>
-                    <button class="b2" onclick="missoes()"> 
+                    <button class="b2" id="minhasMissoes" onclick="missoes()"> 
                         <p>Missões</p>
                     </button>
-                    <a href="#votar_rank">
-                        <button class="b43" onclick="voto()">
+                    <button class="abrirDados" id="abreDados" onclick="dadosA()"> <p>DADOS ></p></button>
+                    <button class="fecharDados" id="fechaDados" onclick="dadosF()"> <p>DADOS .</p></button>
+                    
+                  
+                        <button class="b3" id="votoRank" onclick="voto()">
                             <p>Voto Rank</p>
                         </button>
-                    </a>
+
                     <button class="b4" onclick="window.location.href = './mural.html'">
                         <a href="./mural.html"><p>Sugestões</p></a>
                     </button>
@@ -65,7 +68,6 @@
     <!-- TELA DADOS -->
     <div class="container-dados" id="container_dados">
         <h2>DADOS</h2>
-        <span class="status">Status: Aprovado.</span>
         <span class="mestre">Mestre: </span>
         <span class="espada">Espada: </span>
     </div>
@@ -254,13 +256,8 @@
 
 <script>
     usuario.innerHTML = sessionStorage.NOME_USUARIO;
-    var personagemAnterior = 0;
 
-    function teste() {
-    var idUsuarioVar =    sessionStorage.getItem("ID_USUARIO")
-    alert(idUsuarioVar)
-    }
-    
+    var personagemAnterior = 0;    
     function personagem(){
 
         var listaPersonagem = [kagaya, gyomei, sanemi, muichiro, giyu, obanai, mitsuri, tengen, kyojuro, shinobu, tanjiro, nezuko, inosuke, zenitsu, muzan, kokushibou, douma, akaza, hantengu, nakime, gyokko, dakiegyuutarou, kaigaku, enmu, hairo, wakuraba, mukago, rui, kyogai, kamanue];
@@ -277,20 +274,6 @@
         }
     }
 
-        /*if(personagem == 1){
-            kagaya.style.display= "block";
-            hairo.style.display = "none";
-        } else if(personagem == "Hairo"){
-            hairo.style.display = "block";
-            kagaya.style.display= "none";
-        }
-
-        /* if(personagem == 1){
-            div_resultado.innerHTML = `
-                <div class="kagaya" id="kagaya"><img src="../assets/img/Hashiras/Kagaya_Ubuyashiki.jpg"></div>
-            `;
-        } */ 
-    
     var idUsuarioVar = sessionStorage.ID_USUARIO
    
     function votar(){
@@ -342,15 +325,21 @@
         
     }
     
-    function sugestao(){
-        container_dados.style.display = "none";
-        container_missoes.style.display = "none";
-        container_voto.style.display = "none";
-        container_sugestao.style.display = "flex";
-    }
-
-    
     function sumirMensagem() {
         cardErro.style.display = "none"
     }
+
+
+    /*if(personagem == 1){
+        kagaya.style.display= "block";
+        hairo.style.display = "none";
+    } else if(personagem == "Hairo"){
+        hairo.style.display = "block";
+        kagaya.style.display= "none";
+    }
+    /* if(personagem == 1){
+        div_resultado.innerHTML = `
+            <div class="kagaya" id="kagaya"><img src="../assets/img/Hashiras/Kagaya_Ubuyashiki.jpg"></div>
+        `;
+    } */ 
 </script>

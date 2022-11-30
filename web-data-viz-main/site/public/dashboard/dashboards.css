@@ -54,6 +54,17 @@ body{
   
 }
 
+.abrirDados{
+  display: flex;
+  margin-top: -95px;
+}
+
+.fecharDados{
+  display: none;
+  margin-top: -95px;
+}
+
+
 /* SAIR */
 .btn_exit{
   display: block;

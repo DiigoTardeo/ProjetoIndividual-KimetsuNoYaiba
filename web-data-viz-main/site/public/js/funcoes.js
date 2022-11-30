@@ -75,6 +75,25 @@ function fecharModal() {
         container_voto.style.margin= "20px 20px 0px 120px";
     }
 
+    
+    function dadosA(){
+        abreDados.style.display = "none";
+        fechaDados.style.display = "block";
+        fechaDados.style.margin = "-148px 0px 0px 0px";
+        meusDados.style.margin = "40px 0px 0px 0px";
+        minhasMissoes.style.margin = "3px 0px 0px 0px";  
+        votoRank.style.margin = "103px 0px 0px 0px";
+    }
+
+    function dadosF(){
+        abreDados.style.display = "block";
+        fechaDados.style.display = "none";
+        abreDados.style.margin = "-48px 0px 0px 0px";
+        meusDados.style.margin = "0px 0px 0px 0px";
+        minhasMissoes.style.margin = "-47px 0px 0px 0px";
+        votoRank.style.margin = "3px 0px 0px 0px";
+    }
+
     // /* BOTÕES DO HEADER  */ 
     function meus_dados(){
         container_dados.style.display = "flex";
