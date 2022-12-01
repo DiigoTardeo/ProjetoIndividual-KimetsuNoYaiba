@@ -68,8 +68,8 @@
     <!-- TELA DADOS -->
     <div class="container-dados" id="container_dados">
         <h2>DADOS</h2>
-        <span class="mestre">Mestre: </span>
-        <span class="espada">Espada: </span>
+        <span class="mestre" id="meuMestre">Mestre: </span>
+        <span class="espada" id="minhaEspada">Espada: </span>
     </div>
 
     <!-- TELA MISSÕES -->
@@ -249,6 +249,8 @@
         <img src="" id="loading-gif">
     </div>
 
+    <!-- <img src="../assets/img/Espadas/Espada_Vermelha_Chama.png"> -->
+
   
 
 </body>
@@ -256,6 +258,55 @@
 
 <script>
     usuario.innerHTML = sessionStorage.NOME_USUARIO;
+    var mestre = sessionStorage.FKMESTRE;
+    // var mestre = 1;
+
+    if(mestre == 1){
+        meuMestre.innerHTML = `
+            <img src="../assets/img/hist_Exterminadores/Urokodaki.jpg">
+            <h2>Sakonji Urokodaki</h2>
+            <span> Respiração: Água </span>
+        `;
+        minhaEspada.innerHTML = `
+        <img src="../assets/img/Espadas/Espada_Azul_Agua.png">
+        `;
+    } else if(mestre == 2){
+        meuMestre.innerHTML = `
+            <img src="../assets/img/login/JigoroKuwajima.jpg"">
+            <h2>Jigoeo Kuwajima</h2>
+            <span> Respiração: Trovão </span>
+        `;
+        minhaEspada.innerHTML = `
+        <img src="../assets/img/Espadas/Espada_Amarela_Trovao.png">
+        `;
+    } else if(mestre == 3){
+        meuMestre.innerHTML = `
+            <img src="../assets/img/login/GyomeiHimejima.jpg">
+            <h2>Gyomei Himejima</h2>
+            <span> Respiração: Pedra </span>
+        `;
+        minhaEspada.innerHTML = `
+        <img src="../assets/img/Espadas/Espada_Cinza_Pedra.png">
+        `;
+    } else if(mestre == 4){
+        meuMestre.innerHTML = `
+            <img src="../assets/img/login/Kanae Kocho.jpg">
+            <h2>Kanae Kocho</h2>
+            <span> Respiração: Flor </span>
+        `;
+        minhaEspada.innerHTML = `
+        <img src="../assets/img/Espadas/Espada_RosaClaro_Flor.png">
+        `;
+    } else{
+        meuMestre.innerHTML = `
+            <img src="../assets/img/login/Shinjuro Rengoku.jpg">
+            <h2>Shinjuro Rengoku</h2>
+            <span> Respiração: Chama </span>
+        `;
+        minhaEspada.innerHTML = `
+        <img src="../assets/img/Espadas/Espada_Vermelha_Chama.png">
+        `;
+    }
 
     var personagemAnterior = 0;    
     function personagem(){

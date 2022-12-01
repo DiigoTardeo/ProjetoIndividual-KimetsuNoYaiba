@@ -94,13 +94,12 @@ main .kny-cruzada{
     border: 2px solid red;
 }
 
-
 .choices {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
     max-width: 80rem;
-    margin: 0 auto;
+    margin: 0px 0px 15px 0px;
     padding: 1rem 0 0 0;
 
     user-select: none;
@@ -110,6 +109,9 @@ main .kny-cruzada{
 }
 
 .choice {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
     width: 12rem;
     text-align: center;
     font-size: 2rem;
@@ -117,9 +119,6 @@ main .kny-cruzada{
     padding: 0.5rem 1rem;
     transition: all 0.2s ease;
     color: #ff9900;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
 }
 
 .choice:hover {
