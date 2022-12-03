@@ -3,12 +3,27 @@ body{
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  background-color: #383837;
   background-image: url("../assets/img/PossiveisFundos/campo.png");
   background-size: 1560px;
 }
 
 /* HEADER */
+.fundo-header-left{
+position: fixed;
+top: 0;
+left: 0;
+z-index: 999;
+height: 100vh;
+width: 300px;
+display: flex;
+flex-direction: column;
+justify-content: start;
+align-items: center;
+background-color: black;
+opacity: 0.6;
+box-shadow: 0px 0px 20px 6px rgb(0 0 0 / 41%);
+}
+
 .header-left{
   position: fixed;
   top: 0;
@@ -20,7 +35,7 @@ body{
   flex-direction: column;
   justify-content: start;
   align-items: center;
-  background-color: black;
+  /* background-color: black; */
   box-shadow: 0px 0px 20px 6px rgb(0 0 0 / 41%);
 }
 
@@ -55,17 +70,6 @@ body{
   
 }
 
-.abrirDados{
-  display: flex;
-  margin-top: -95px;
-}
-
-.fecharDados{
-  display: none;
-  margin-top: -95px;
-}
-
-
 /* SAIR */
 .btn_exit{
   display: block;
@@ -86,12 +90,13 @@ body{
 }
 
 .navegacao_header img{
-  height: 195px;
+  height: 200px;
   margin-bottom: -70px;
 }
 
 .titulo_aba{
   color: white;
+  font-size: 60px;
 }
 
 .botoes{
@@ -103,10 +108,66 @@ body{
 
 .botoes button{
   cursor: pointer;
+  border: none;
+  background: none;
+}
+
+button .bamboo{
+  height: 40px;
+  margin-left: -50px;
+}
+.abrirDados, .b1, .b2, .b3, .b4, .b5{
+  display: flex;
 }
 
 .botoes button:hover{
-  background-color: #ffff00;
+  opacity: 0.7;
+}
+
+.botoes p{
+  color: #FFF;
+  margin-left: -100px;
+  font-size: 25px;
+}
+
+.fecharDados{
+  display: none;
+}
+
+.b1, .b2{
+  display: none;
+}
+
+.b1{
+  margin-left: 17px;
+}
+
+.b1 p{
+  margin-left: -111px;
+}
+
+.b2{
+  margin-left: 1px;
+}
+
+.b3{
+  margin-left: 11px;
+}
+
+.b4{
+  margin-left: 11px;
+}
+
+.b4 p{
+  margin-left: -109px;
+}
+
+.b5{
+  margin-left: 21px;
+}
+
+.b5 a{
+  margin-left: -17px;
 }
 
 /* TELA DADOS */
@@ -150,6 +211,11 @@ body{
   display: none;
   width: 550px;
 }
+
+/* JOGO - CRUZADINHA */
+.cruzadinha{
+  display: none;
+} 
 
 /* TELA SUGESTÕES */
 .container-sugestao{

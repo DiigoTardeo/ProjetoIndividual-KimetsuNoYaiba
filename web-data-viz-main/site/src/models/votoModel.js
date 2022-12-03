@@ -3,17 +3,11 @@ var database = require("../database/config");
 function listar() {
     console.log("ACESSEI O voto  MODEL \n \n\t\t >> Se aqui der erro de 'Error: connect ECONNREFUSED',\n \t\t >> verifique suas credenciais de acesso ao banco\n \t\t >> e se o servidor de seu BD está rodando corretamente. \n\n function listar()");
     var instrucao = `
-        SELECT 
-            v.idPersonagem,
-            v.nomePersonagem,
-            u.idUsuario,
-            u.nome,
-            u.email,
-            u.senha
-            v.fkPersonagem
-        FROM personagem v
-            INNER JOIN usuario u
-                ON v.idPersonagem = u.fkPersonagem;
+        SELECT p.nomePersonagem, count(fkPersonagem) as votos 
+        FROM Personagem p 
+            LEFT JOIN Usuario u ON u.fkPersonagem = p.idPersonagem
+            GROUP BY p.idPersonagem
+            ORDER BY count(u.fkPersonagem) Desc limit 10;
     `;
     console.log("Executando a instrução SQL: \n" + instrucao);
     return database.executar(instrucao);

@@ -1,14 +1,16 @@
-<!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/style-paginas-gerais.css">
+    <link rel="stylesheet" href="../css/style-cruzadinha.css">
     <link rel="stylesheet" href="./dashboards.css">
     <script src="../js/funcoes.js"></script>
     <title>KNY| Perfil</title>
 </head>
+
 <body>
     <div class="alerta_erro">
         <div class="card_erro" id="cardErro">
@@ -18,6 +20,7 @@
 
     <!-- HEADER LEFT -->
     <div class="aba">
+        <div class="fundo-header-left" id="fundo_aba_left"></div>
         <div class="header-left" id="aba_left">
             <button class="btn_abrirAba" id="btn_abreAba" onclick="abrirAba()">
                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-list-nested" viewBox="0 0 16 16">
@@ -41,24 +44,24 @@
                 <div class="img_aba">
                     <img class="img_logo" src="../assets/img/login/IconeBranco.png">
                 </div>
-                <h1 class="titulo_aba">Olá <span id="usuario">usuário</span>!</h1>
+                <h1 class="titulo_aba">Olá, <span id="usuario">usuário</span>!</h1>
                 <div class="botoes">
+                    <button class="abrirDados" id="abreDados" onclick="dadosA()"><img src="../assets/img/login/Bamboo.png" class="bamboo"> <p>DADOS ></p></button>
+                    <button class="fecharDados" id="fechaDados" onclick="dadosF()"><img src="../assets/img/login/Bamboo.png" class="bamboo"> <p>DADOS .</p></button>
                     <button class="b1" id="meusDados" onclick="meus_dados()"> 
-                        <p> Meus Dados</p>
+                        <img src="../assets/img/login/Bamboo.png" class="bamboo"> <p> Meus Dados</p>
                     </button>
                     <button class="b2" id="minhasMissoes" onclick="missoes()"> 
-                        <p>Missões</p>
+                        <img src="../assets/img/login/Bamboo.png" class="bamboo"> <p>Missões</p>
                     </button>
-                    <button class="abrirDados" id="abreDados" onclick="dadosA()"> <p>DADOS ></p></button>
-                    <button class="fecharDados" id="fechaDados" onclick="dadosF()"> <p>DADOS .</p></button>
-                    
-                  
-                        <button class="b3" id="votoRank" onclick="voto()">
-                            <p>Voto Rank</p>
-                        </button>
-
-                    <button class="b4" onclick="window.location.href = './mural.html'">
-                        <a href="./mural.html"><p>Sugestões</p></a>
+                    <button class="b3" id="votoRank" onclick="voto()">
+                        <img src="../assets/img/login/Bamboo.png" class="bamboo"> <p>Voto Rank</p>
+                    </button>
+                    <button class="b4" id="cruzadinha" onclick="jogo()">
+                        <img src="../assets/img/login/Bamboo.png" class="bamboo"> <p>Cruzadinhak</p>
+                    </button>
+                    <button class="b5" id="sugestoes" onclick="window.location.href = './mural.html'">
+                        <img src="../assets/img/login/Bamboo.png" class="bamboo"><a href="./mural.html"><p>Sugestões</p></a>
                     </button>
                 </div>
             </div>
@@ -72,6 +75,7 @@
         <span class="espada" id="minhaEspada">Espada: </span>
     </div>
 
+
     <!-- TELA MISSÕES -->
     <div class="container-missoes" id="container_missoes">
         <h2>MISSÕES</h2>
@@ -79,6 +83,7 @@
         <span class="nivelOni">Nível Oni: </span>
         <span class="pessoasAtacadas">Pessoas Atacadas: </span>
     </div>
+
 
     <!-- VOTOS -->
     <div class="container-voto" id="container_voto">
@@ -244,68 +249,570 @@
             <button onclick="votar()">Votar</button>
         </div>
     </div>
+    
+<div class="cruzadinha" id="container_cruzadinha">
+    <main>
+        <div class="main">
 
+            <h1 class="cruzada">CRUZADINHA</h1>
+            <span style="color:white;">VAMOS VER O QUANTO VOCÊ CONHECE DE DEMON SLAYER?</span>
+            <div class="kny-cruzada">
+                <div id="perguntas" class="perguntas">
+                    <div class="bloco1">
+                        <p> 1 - KAGAYA UBUYASHIKI </p>
+                        <p> 2 - MUZAN KIBUTSUJI</p>
+                        <p> 3 - TANJIRO</p>
+                        <p> 4 - EXTERMINADORES</p>
+                        <p> 5 - ONIS</p>
+                        <p> 6 - JUTSU DE SANGUE</p>
+                        <p> 7 - HASHIRAS</p>
+                        <p> 8 - ESPADAS</p>
+                        <p> 9 - LUA INFERIOR</p>
+                        <p> 10 - LUA SUPERIOR</p>
+                        <p> 11 - RESPIRAÇAO</p>
+                    </div>
+                </div>
+
+                <div class="div_linha">
+                    <div class="column" id="2">
+                        <span class="span_nada"></span>
+                        <span class="span_nada"></span>
+                        <span class="span_nada"></span>
+                        <span class="span_nada"></span>
+                        <span class="span_nada"></span>
+                        <input placeholder="3" id="tanjiro_t" class="ipt">
+                        <span class="span_nada"></span>
+                        <span class="span_nada"></span>
+                        <span class="span_nada"></span>
+                        <span class="span_nada"></span>
+                        <span class="span_nada"></span>
+                        <span class="span_nada"></span>
+                        <span class="span_nada"></span>
+                        <span class="span_nada"></span>
+                        <span class="span_nada"></span>
+                        <span class="span_nada"></span>
+                        <span class="span_nada"></span>
+                        <span class="span_nada"></span>
+                        <span class="span_nada"></span>
+                    </div>
+                    <div class="column" id="2">
+                        <span class="span_nada"></span>
+                        <span class="span_nada"></span>
+                        <span class="span_nada"></span>
+                        <span class="span_nada"></span>
+                        <span class="span_nada"></span>
+                        <input class="ipt" id="tanjiro_a" >
+                        <span class="span_nada"></span>
+                        <span class="span_nada"></span>
+                        <span class="span_nada"></span>
+                        <span class="span_nada"></span>
+                        <span class="span_nada"></span>
+                        <span class="span_nada"></span>
+                        <span class="span_nada"></span>
+                        <span class="span_nada"></span>
+                        <span class="span_nada"></span>
+                        <span class="span_nada"></span>
+                        <span class="span_nada"></span>
+                        <span class="span_nada"></span>
+                        <span class="span_nada"></span>
+                    </div>
+                    <div class="column" id="2">
+                        <span class="span_nada"></span>
+                        <input placeholder="2" id="muzan_m" class="ipt">
+                        <input class="ipt" id="muzan_u">
+                        <input class="ipt" id="muzan_z">
+                        <input class="ipt" id="muzan_a">
+                        <input class="ipt" id="muzan_n">
+                        <input class="ipt" id="muzan_k">
+                        <input class="ipt" id="muzan_i">
+                        <input class="ipt" id="muzan_b">
+                        <input class="ipt" id="muzan_u2">
+                        <input class="ipt" id="muzan_t">
+                        <input class="ipt" id="muzan_s">
+                        <input class="ipt" id="muzan_u3">
+                        <input class="ipt" id="muzan_j">
+                        <input class="ipt" id="muzan_i2">
+                        <span class="span_nada"></span>
+                        <span class="span_nada"></span>
+                        <span class="span_nada"></span>
+                        <span class="span_nada"></span>
+                    </div>
+                    <div class="column" id="2">
+                        <span class="span_nada"></span>
+                        <span class="span_nada"></span>
+                        <span class="span_nada"></span>
+                        <span class="span_nada"></span>
+                        <span class="span_nada"></span>
+                        <input class="ipt" id="tanjiro_j" >
+                        <span class="span_nada"></span>
+                        <span class="span_nada"></span>
+                        <span class="span_nada"></span>
+                        <span class="span_nada"></span>
+                        <span class="span_nada"></span>
+                        <span class="span_nada"></span>
+                        <span class="span_nada"></span>
+                        <span class="span_nada"></span>
+                        <span class="span_nada"></span>
+                        <span class="span_nada"></span>
+                        <span class="span_nada"></span>
+                        <span class="span_nada"></span>
+                        <span class="span_nada"></span>
+                    </div>
+                    <div class="column" id="2">
+                        <span class="span_nada"></span>
+                        <span class="span_nada"></span>
+                        <span class="span_nada"></span>
+                        <span class="span_nada"></span>
+                        <span class="span_nada"></span>
+                        <input class="ipt" id="tanjiro_i" >
+                        <span class="span_nada"></span>
+                        <span class="span_nada"></span>
+                        <span class="span_nada"></span>
+                        <span class="span_nada"></span>
+                        <span class="span_nada"></span>
+                        <span class="span_nada"></span>
+                        <span class="span_nada"></span>
+                        <span class="span_nada"></span>
+                        <span class="span_nada"></span>
+                        <span class="span_nada"></span>
+                        <span class="span_nada"></span>
+                        <span class="span_nada"></span>
+                        <span class="span_nada"></span>
+                    </div>
+                    <div class="column" id="2">
+                        <span class="span_nada"></span>
+                        <input placeholder="4" class="ipt" id="exter_e" >
+                        <input class="ipt" id="exter_x" >
+                        <input class="ipt" id="exter_t" >
+                        <input class="ipt" id="exter_e2" >
+                        <input class="ipt" id="tanjiro_r" >
+                        <input class="ipt" id="exter_m" >
+                        <input class="ipt" id="exter_i" >
+                        <input class="ipt" id="exter_n" >
+                        <input class="ipt" id="exter_a" >
+                        <input class="ipt" id="exter_d" >
+                        <input placeholder="5" class="ipt" id="onis_o" >
+                        <input class="ipt" id="exter_r" >
+                        <input class="ipt" id="exter_e3" >
+                        <input class="ipt" id="exter_s" >
+                        <span class="span_nada"></span>
+                        <span class="span_nada"></span>
+                        <span class="span_nada"></span>
+                        <span class="span_nada"></span>
+                    </div>
+                    <div class="column" id="2">
+                        <span class="span_nada"></span>
+                        <span class="span_nada"></span>
+                        <span class="span_nada"></span>
+                        <span class="span_nada"></span>
+                        <span class="span_nada"></span>
+                        <input class="ipt" id="tanjiro_o" >
+                        <span class="span_nada"></span>
+                        <span class="span_nada"></span>
+                        <span class="span_nada"></span>
+                        <span class="span_nada"></span>
+                        <span class="span_nada"></span>
+                        <input class="ipt" id="onis_n" >
+                        <span class="span_nada"></span>
+                        <span class="span_nada"></span>
+                        <span class="span_nada"></span>
+                        <span class="span_nada"></span>
+                        <span class="span_nada"></span>
+                        <span class="span_nada"></span>
+                        <span class="span_nada"></span>
+                    </div>
+                    <div class="column" id="2">
+                        <span class="span_nada"></span>
+                        <span class="span_nada"></span>
+                        <span class="span_nada"></span>
+                        <span class="span_nada"></span>
+                        <span class="span_nada"></span>
+                        <span class="span_nada"></span>
+                        <span class="span_nada"></span>
+                        <span class="span_nada"></span>
+                        <span class="span_nada"></span>
+                        <span class="span_nada"></span>
+                        <span class="span_nada"></span>
+                        <input class="ipt" id="onis_i" >
+                        <span class="span_nada"></span>
+                        <span class="span_nada"></span>
+                        <span class="span_nada"></span>
+                        <span class="span_nada"></span>
+                        <span class="span_nada"></span>
+                        <span class="span_nada"></span>
+                        <span class="span_nada"></span>
+                    </div>
+                    <div class="column" id="2">
+                        <span class="span_nada"></span>
+                        <span class="span_nada"></span>
+                        <span class="span_nada"></span>
+                        <span class="span_nada"></span>
+                        <input placeholder="6" class="ipt" id="jutsu_j">
+                        <input class="ipt" id="jutsu_u">
+                        <input class="ipt" id="jutsu_t">
+                        <input class="ipt" id="jutsu_s">
+                        <input class="ipt" id="jutsu_u2">
+                        <input class="ipt" id="jutsu_d">
+                        <input placeholder="8" class="ipt" id="espad_e">
+                        <input class="ipt" id="onis_s">
+                        <input class="ipt" id="jutsu_a">
+                        <input class="ipt" id="jutsu_n">
+                        <input class="ipt" id="jutsu_g">
+                        <input class="ipt" id="jutsu_u3">
+                        <input class="ipt" id="jutsu_e">
+                        <span class="span_nada"></span>
+                        <span class="span_nada"></span>
+                    </div>
+                    <div class="column" id="2">
+                        <span class="span_nada"></span>
+                        <span class="span_nada"></span>
+                        <span class="span_nada"></span>
+                        <span class="span_nada"></span>
+                        <span class="span_nada"></span>
+                        <span class="span_nada"></span>
+                        <span class="span_nada"></span>
+                        <span class="span_nada"></span>
+                        <span class="span_nada"></span>
+                        <span class="span_nada"></span>
+                        <input class="ipt" id="espad_s">
+                        <span class="span_nada"></span>
+                        <span class="span_nada"></span>
+                        <span class="span_nada"></span>
+                        <span class="span_nada"></span>
+                        <span class="span_nada"></span>
+                        <span class="span_nada"></span>
+                        <span class="span_nada"></span>
+                        <span class="span_nada"></span>
+                    </div>
+                    <div class="column" id="2">
+                        <span class="span_nada"></span>
+                        <span class="span_nada"></span>
+                        <span class="span_nada"></span>
+                        <span class="span_nada"></span>
+                        <span class="span_nada"></span>
+                        <span class="span_nada"></span>
+                        <span class="span_nada"></span>
+                        <span class="span_nada"></span>
+                        <span class="span_nada"></span>
+                        <span class="span_nada"></span>
+                        <input class="ipt" id="espad_p">
+                        <span class="span_nada"></span>
+                        <span class="span_nada"></span>
+                        <span class="span_nada"></span>
+                        <span class="span_nada"></span>
+                        <input placeholder="9" class="ipt" id="lua_l">
+                        <span class="span_nada"></span>
+                        <span class="span_nada"></span>
+                        <span class="span_nada"></span>
+
+                    </div>
+                    <div class="column" id="2">
+                        <span class="span_nada"></span>
+                        <span class="span_nada"></span>
+                        <input placeholder="11" class="ipt" id="resp_r">
+                        <input class="ipt" id="resp_e">
+                        <input class="ipt" id="resp_s">
+                        <input class="ipt" id="resp_p">
+                        <input class="ipt" id="resp_i">
+                        <input class="ipt" id="resp_r2">
+                        <input class="ipt" id="resp_a">
+                        <input class="ipt" id="resp_ç">
+                        <input class="ipt" id="espad_a">
+                        <input class="ipt" id="resp_o">
+                        <span class="span_nada"></span>
+                        <span class="span_nada"></span>
+                        <span class="span_nada"></span>
+                        <input class="ipt" id="lua_u">
+                        <span class="span_nada"></span>
+                        <span class="span_nada"></span>
+                        <span class="span_nada"></span>
+
+                    </div>
+                    <div class="column" id="2">
+                        <span class="span_nada"></span>
+                        <span class="span_nada"></span>
+                        <span class="span_nada"></span>
+                        <span class="span_nada"></span>
+                        <span class="span_nada"></span>
+                        <span class="span_nada"></span>
+                        <span class="span_nada"></span>
+                        <span class="span_nada"></span>
+                        <span class="span_nada"></span>
+                        <span class="span_nada"></span>
+                        <input class="ipt" id="espad_d">
+                        <span class="span_nada"></span>
+                        <span class="span_nada"></span>
+                        <span class="span_nada"></span>
+                        <span class="span_nada"></span>
+                        <input class="ipt" id="lua_a">
+                        <span class="span_nada"></span>
+                        <span class="span_nada"></span>
+                        <input placeholder="7" class="ipt" id="hashi_h">
+                    </div>
+                    <div class="column" id="2">
+                        <input placeholder="1" class="ipt" id="kagaya_k">
+                        <input class="ipt" id="kagaya_a">
+                        <input class="ipt" id="kagaya_g">
+                        <input class="ipt" id="kagaya_a2">
+                        <input class="ipt" id="kagaya_y">
+                        <input class="ipt" id="kagaya_a3">
+                        <input class="ipt" id="kagaya_u">
+                        <input class="ipt" id="kagaya_b">
+                        <input class="ipt" id="kagaya_u2">
+                        <input class="ipt" id="kagaya_y2">
+                        <input class="ipt" id="kagaya_a4">
+                        <input class="ipt" id="kagaya_s">
+                        <input class="ipt" id="kagaya_h">
+                        <input class="ipt" id="kagaya_i">
+                        <input class="ipt" id="kagaya_k2">
+                        <input class="ipt" id="kagaya_i2">
+                        <span class="span_nada"></span>
+                        <span class="span_nada"></span>
+                        <input class="ipt" id="hashi_a">
+                    </div>
+                    <div class="column" id="2">
+                        <span class="span_nada"></span>
+                        <span class="span_nada"></span>
+                        <span class="span_nada"></span>
+                        <span class="span_nada"></span>
+                        <span class="span_nada"></span>
+                        <span class="span_nada"></span>
+                        <span class="span_nada"></span>
+                        <span class="span_nada"></span>
+                        <span class="span_nada"></span>
+                        <span class="span_nada"></span>
+                        <input class="ipt" id="espad_s2">
+                        <span class="span_nada"></span>
+                        <span class="span_nada"></span>
+                        <span class="span_nada"></span>
+                        <span class="span_nada"></span>
+                        <input class="ipt" id="lua_n">
+                        <span class="span_nada"></span>
+                        <span class="span_nada"></span>
+                        <input class="ipt" id="hashi_s">
+                    </div>
+                    <div class="column" id="2">
+                        <span class="span_nada"></span>
+                        <span class="span_nada"></span>
+                        <span class="span_nada"></span>
+                        <span class="span_nada"></span>
+                        <span class="span_nada"></span>
+                        <span class="span_nada"></span>
+                        <span class="span_nada"></span>
+                        <span class="span_nada"></span>
+                        <span class="span_nada"></span>
+                        <span class="span_nada"></span>
+                        <span class="span_nada"></span>
+                        <span class="span_nada"></span>
+                        <span class="span_nada"></span>
+                        <span class="span_nada"></span>
+                        <span class="span_nada"></span>
+                        <input class="ipt" id="lua_f">
+                        <span class="span_nada"></span>
+                        <span class="span_nada"></span>
+                        <input class="ipt" id="hashi_h2">
+                    </div>
+                    <div class="column" id="2">
+                        <span class="span_nada"></span>
+                        <span class="span_nada"></span>
+                        <span class="span_nada"></span>
+                        <span class="span_nada"></span>
+                        <span class="span_nada"></span>
+                        <span class="span_nada"></span>
+                        <span class="span_nada"></span>
+                        <span class="span_nada"></span>
+                        <span class="span_nada"></span>
+                        <span class="span_nada"></span>
+                        <span class="span_nada"></span>
+                        <span class="span_nada"></span>
+                        <span class="span_nada"></span>
+                        <span class="span_nada"></span>
+                        <span class="span_nada"></span>
+                        <input class="ipt" id="lua_e">
+                        <span class="span_nada"></span>
+                        <span class="span_nada"></span>
+                        <input class="ipt" id="hashi_i">
+                    </div>
+                    <div class="column" id="2">
+                        <span class="span_nada"></span>
+                        <span class="span_nada"></span>
+                        <span class="span_nada"></span>
+                        <span class="span_nada"></span>
+                        <span class="span_nada"></span>
+                        <span class="span_nada"></span>
+                        <span class="span_nada"></span>
+                        <span class="span_nada"></span>
+                        <input placeholder="10" class="ipt" id="luaS_l">
+                        <input class="ipt" id="luaS_u">
+                        <input class="ipt" id="luaS_a">
+                        <input class="ipt" id="luaS_s">
+                        <input class="ipt" id="luaS_u2">
+                        <input class="ipt" id="luaS_p">
+                        <input class="ipt" id="luaS_e">
+                        <input class="ipt" id="lua_r">
+                        <input class="ipt" id="luaS_i">
+                        <input class="ipt" id="luaS_o">
+                        <input class="ipt" id="hashi_r">
+                    </div>
+                    <div class="column" id="2">
+                        <span class="span_nada"></span>
+                        <span class="span_nada"></span>
+                        <span class="span_nada"></span>
+                        <span class="span_nada"></span>
+                        <span class="span_nada"></span>
+                        <span class="span_nada"></span>
+                        <span class="span_nada"></span>
+                        <span class="span_nada"></span>
+                        <span class="span_nada"></span>
+                        <span class="span_nada"></span>
+                        <span class="span_nada"></span>
+                        <span class="span_nada"></span>
+                        <span class="span_nada"></span>
+                        <span class="span_nada"></span>
+                        <span class="span_nada"></span>
+                        <input class="ipt" id="lua_i">
+                        <span class="span_nada"></span>
+                        <span class="span_nada"></span>
+                        <input class="ipt" id="hashi_a2">
+                    </div>
+                    <div class="column" id="2">
+                        <span class="span_nada"></span>
+                        <span class="span_nada"></span>
+                        <span class="span_nada"></span>
+                        <span class="span_nada"></span>
+                        <span class="span_nada"></span>
+                        <span class="span_nada"></span>
+                        <span class="span_nada"></span>
+                        <span class="span_nada"></span>
+                        <span class="span_nada"></span>
+                        <span class="span_nada"></span>
+                        <span class="span_nada"></span>
+                        <span class="span_nada"></span>
+                        <span class="span_nada"></span>
+                        <span class="span_nada"></span>
+                        <span class="span_nada"></span>
+                        <input class="ipt" id="lua_o">
+                        <span class="span_nada"></span>
+                        <span class="span_nada"></span>
+                        <input class="ipt" id="hashi_s2">
+                    </div>
+                    <div class="column" id="2">
+                        <span class="span_nada"></span>
+                        <span class="span_nada"></span>
+                        <span class="span_nada"></span>
+                        <span class="span_nada"></span>
+                        <span class="span_nada"></span>
+                        <span class="span_nada"></span>
+                        <span class="span_nada"></span>
+                        <span class="span_nada"></span>
+                        <span class="span_nada"></span>
+                        <span class="span_nada"></span>
+                        <span class="span_nada"></span>
+                        <span class="span_nada"></span>
+                        <span class="span_nada"></span>
+                        <span class="span_nada"></span>
+                        <span class="span_nada"></span>
+                        <input class="ipt" id="lua_r2">
+                        <span class="span_nada"></span>
+                        <span class="span_nada"></span>
+                        <span class="span_nada"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <div class="choices">
+        <div class="choice fight">
+            <i class="fa fa-cut"></i>
+            <span onclick="verificar()"> VERIFICAR <span>
+        </div>
+    </div>
+</div>
+        
+    
     <div id="div_aguardar" class="loading-div">
         <img src="" id="loading-gif">
     </div>
 
-    <!-- <img src="../assets/img/Espadas/Espada_Vermelha_Chama.png"> -->
-
-  
 
 </body>
-</html>
 
+</html>
 <script>
     usuario.innerHTML = sessionStorage.NOME_USUARIO;
     var mestre = sessionStorage.FKMESTRE;
-    // var mestre = 1;
+    // var mestre = 4;
 
     if(mestre == 1){
         meuMestre.innerHTML = `
-            <img src="../assets/img/hist_Exterminadores/Urokodaki.jpg">
+            <span> SEU MESTRE: </span><br>
+            <img id="mestre1" src="../assets/img/hist_Exterminadores/Urokodaki.jpg">
             <h2>Sakonji Urokodaki</h2>
             <span> Respiração: Água </span>
         `;
+        mestre1.style.width = "250px";
         minhaEspada.innerHTML = `
-        <img src="../assets/img/Espadas/Espada_Azul_Agua.png">
+            <span> SUA ESPADA: </span><br>
+            <img id="espada" src="../assets/img/Espadas/Espada_Azul_Agua.png">
         `;
+        espada.style.width = "250px";
+
     } else if(mestre == 2){
         meuMestre.innerHTML = `
-            <img src="../assets/img/login/JigoroKuwajima.jpg"">
-            <h2>Jigoeo Kuwajima</h2>
+            <span> SEU MESTRE: </span><br>
+            <img id="mestre2" src="../assets/img/login/JigoroKuwajima.jpg"">
+            <h2>Jigoro Kuwajima</h2>
             <span> Respiração: Trovão </span>
         `;
+        mestre2.style.width = "360px";
         minhaEspada.innerHTML = `
-        <img src="../assets/img/Espadas/Espada_Amarela_Trovao.png">
+            <span id="spn_espada"> SUA ESPADA: </span><br>
+            <img id="espada" src="../assets/img/Espadas/Espada_Amarela_Trovao.png">
         `;
+        espada.style.width = "170px";
+        spn_espada.style.margin = "0px 0px 0px -95px";
+
     } else if(mestre == 3){
         meuMestre.innerHTML = `
-            <img src="../assets/img/login/GyomeiHimejima.jpg">
+            <span> SEU MESTRE: </span><br>
+            <img id="mestre3" src="../assets/img/login/GyomeiHimejima.jpg">
             <h2>Gyomei Himejima</h2>
             <span> Respiração: Pedra </span>
         `;
+        mestre3.style.width = "360px";
         minhaEspada.innerHTML = `
-        <img src="../assets/img/Espadas/Espada_Cinza_Pedra.png">
+            <span> SUA ESPADA: </span><br>
+            <img id="espada" src="../assets/img/Espadas/Espada_Cinza_Pedra.png">
         `;
+        espada.style.width = "333px";
+
     } else if(mestre == 4){
         meuMestre.innerHTML = `
-            <img src="../assets/img/login/Kanae Kocho.jpg">
+            <span> SEU MESTRE: </span><br>
+            <img id="mestre4" src="../assets/img/login/Kanae Kocho.jpg">
             <h2>Kanae Kocho</h2>
             <span> Respiração: Flor </span>
         `;
+        mestre4.style.width = "230px";
         minhaEspada.innerHTML = `
-        <img src="../assets/img/Espadas/Espada_RosaClaro_Flor.png">
+            <span> SUA ESPADA: </span><br>
+            <img id="espada" src="../assets/img/Espadas/Espada_RosaClaro_Flor.png">
         `;
+        espada.style.width = "250px";
+
     } else{
         meuMestre.innerHTML = `
-            <img src="../assets/img/login/Shinjuro Rengoku.jpg">
+            <span> SEU MESTRE: </span><br>
+            <img id="mestre5" src="../assets/img/login/Shinjuro Rengoku.jpg">
             <h2>Shinjuro Rengoku</h2>
             <span> Respiração: Chama </span>
         `;
+        mestre5.style.width = "225px";
         minhaEspada.innerHTML = `
-        <img src="../assets/img/Espadas/Espada_Vermelha_Chama.png">
+            <span> SUA ESPADA: </span><br>
+            <img id="espada" src="../assets/img/Espadas/Espada_Vermelha_Chama.png">
         `;
+        espada.style.width = "250px";
     }
 
     var personagemAnterior = 0;    
@@ -379,6 +886,8 @@
     function sumirMensagem() {
         cardErro.style.display = "none"
     }
+
+    lista_item = ['k', 'a', 'g', 'a', 'y', 'a', 'u', 'b', 'u', 'y', 'a', 's', 'h', 'i', 'k', 'i', 'm', 'u', 'z', 'a', 'n', 'k', 'i', 'b', 'u', 't', 's', 'u', 'j', 'i', 't', 'a', 'j', 'i', 'r', 'o', 'e', 'x', 't', 'e', 'm', 'i', 'n', 'a', 'd', 'o', 'r', 'e', 's', 'n', 'i', 's', 'j', 'u', 't', 's', 'u', 'd', 'e', 'a', 'n', 'g', 'u', 'e', 'h', 'a', 's', 'h', 'i', 'r', 'a', 's', 's', 'p', 'a', 'd', 's', 'l', 'u', 'a', 'n', 'f', 'e', 'r', 'i', 'o', 'r', 'l', 'u', 'a', 's', 'u', 'p', 'e', 'i', 'o', 'r', 'e', 's','p', 'i', 'r', 'a', 'ç', 'o'];
 
 
     /*if(personagem == 1){

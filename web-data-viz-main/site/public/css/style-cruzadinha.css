@@ -9,9 +9,7 @@
 body {
     height: 100%;
     width: 100%;
-    background: #383837;
-    color: #ff9900;
-    font-family: "VT323", monospace;
+    /* background: #383837; */
     letter-spacing: 2px;
 }
 
@@ -20,6 +18,10 @@ body {
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    color: #ff9900;
+    font-family: "VT323", monospace;
+    margin-top: 45px;
+
 }
 
 h1 .cruzada{
@@ -31,15 +33,6 @@ h1 .cruzada{
 main .kny-cruzada{
     display: flex;
     font-size: 12px;
-}
-
-.container, .container-interativo {
-    width: 50%;
-    display: flex;
-    margin: 0 auto;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
 }
 
 .perguntas {
@@ -60,18 +53,18 @@ main .kny-cruzada{
     font-size: 2em;
 }
 
-.ipt {
-    height: 30px;
-    width: 30px;
-    margin: 1px;
-}
-
 .div_linha {
     width: 700px;
     border: 2px solid green;
     display: flex;
     flex-direction: row;
     margin: 1%;
+}
+
+.ipt {
+    height: 30px;
+    width: 30px;
+    margin: 1px;
 }
 
 .column {
@@ -98,10 +91,8 @@ main .kny-cruzada{
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    max-width: 80rem;
+    max-width: 70rem;
     margin: 0px 0px 15px 0px;
-    padding: 1rem 0 0 0;
-
     user-select: none;
     -moz-user-select: none;
     -webkit-user-select: none;
@@ -112,7 +103,7 @@ main .kny-cruzada{
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    width: 12rem;
+    width: 7rem;
     text-align: center;
     font-size: 2rem;
     border: 2px solid #ff9900;

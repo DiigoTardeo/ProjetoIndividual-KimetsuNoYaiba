@@ -38,7 +38,58 @@
                 <h1> RANK </h1>
             </div>
 
-            <div class="tabela-rank">
+            <style>
+               table.table-rank {
+                    border: 1px solid #1C6EA4;
+                    background-color: transparent;
+                    width: 100%;
+                    text-align: center;
+                    border-collapse: collapse;
+                    width: 40%;
+                    margin: auto;
+                    color: #fff;
+                }
+                table.table-rank td, table.table-rank th {
+                /* border: 1px solid #FFFFFF; */
+                    padding: 3px 2px;
+                }
+                table.table-rank tbody td {
+                    font-size: 24 px;
+                }
+                table.table-rank thead th {
+                    font-size: 27px;
+                    font-weight: bold;
+                    color: #FFFFFF;
+                    text-align: center;
+                }
+                table.table-rank tfoot td {
+                font-size: 14px;
+                }
+                table.table-rank tfoot .links {
+                text-align: right;
+                }
+                table.table-rank tfoot .links a{
+                display: inline-block;
+                background: #1C6EA4;
+                color: #FFFFFF;
+                padding: 2px 8px;
+                border-radius: 5px;
+                }
+
+            </style>
+            <table class="table-rank">
+                <thead>
+                    <tr>
+                        <th>POSIÇÃO</th>
+                        <th>NOME</th>
+                        <th>VOTOS</th>
+                    </tr>
+                </thead>
+                <tbody id="dados">
+                    
+                </tbody>
+            </table>
+            <!-- <div class="tabela-rank">
                 <div class="posicao">
                     <h3 class="titulo-posicao"> POSIÇÃO </h3>
                     <div class="borda-posicao">
@@ -58,7 +109,7 @@
                 <div class="nome">
                     <h3 class="nome-posicao"> NOME </h3>
                     <div class="borda-nome">
-                        <span class="primeiro-nome"> EU </span>
+                        <span class="primeiro-nome" id="1"> EU </span>
                         <span class="segundo-nome"> SO </span>
                         <span class="terceiro-nome"> QUERIA </span>
                         <span class="quarto-nome"> TER </span>
@@ -86,9 +137,59 @@
                         <span class="decimo-votos"> 1 </span>
                     </div>
                 </div>
-            </div>
+            </div> -->
              
         </div> 
     </main>
 </body>
 </html>
+<script>
+     listar();
+     function listar(){
+        fetch(`/votos/listar`, {
+                method: "GET",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+            }).then(function (resposta) {
+            //console.log("resposta: ", resposta.body);
+
+            if(resposta.ok){
+                resposta.json().then(json => {
+                    console.log(json)
+
+                    for(let i = 0; i < json.length; i++){
+                        document.getElementById("dados").innerHTML += "<tr>"+
+                                "<td>#"+ (i+1) +"</td>"+
+                                "<td>"+  json[i].nomePersonagem + "</td>"+
+                                "<td>"+  json[i].votos + "</td>"+
+                            "</tr>";
+                    }
+                    dados.style.fontSize = "24px";
+                });
+            }
+    
+            }).catch(function (resposta) {
+            console.log(`#ERRO: ${resposta}`);
+            //finalizarAguardar();
+            });
+     }
+</script>
+
+<!-- 
+    COMO FAZER DOM
+
+    let table = document.createElement("table");
+    let tr = document.createElement("tr");
+    table.appeend(tr);
+    let td_position = document.createElement("td");
+    td_position.text = i;
+    tr.append(td_position);
+    let td_name = document.createElement("td");
+    td_name.text = json[i].nomePersonagem;
+    tr.append(td_name);
+    let td_votos = document.createElement("td");
+    td_votos.text = json[i].votos;
+    tr.append(td_votos);
+
+-->

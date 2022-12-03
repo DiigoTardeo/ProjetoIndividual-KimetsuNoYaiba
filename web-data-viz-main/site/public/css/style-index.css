@@ -5,9 +5,10 @@
 body {
   margin: 0;
   padding: 0;
-  background-image: url("../assets/img/Background/Smoke4.jpg");
+  background-image: url("../assets/img/Background/esse1.gif");
   background-repeat: no-repeat;
-  background-size: 1366px 663px;
+  background-size: 1853px 806px;
+  background-position: -310px -8px;
 }
 
 .container-principal{
@@ -17,22 +18,12 @@ body {
   flex-direction: row;
 }
 
-.container-principal .fumaca-fundo{
-  display: flex;
-  position: relative;
-  height: 666px;
-  width: 892px;
-  left: 85px;
-  top: 0px;
-  opacity: 0.5;
-}
-
 .home-Book{
   display: flex;
   width: 475px;
   position: relative;
-  top: -12px;
-  left: -450px;
+  top: 40px;
+  left: 52px;
 }
 
  ul{
