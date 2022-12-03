@@ -1,6 +1,18 @@
 CREATE DATABASE kimetsunoyaiba;
 USE kimetsunoyaiba;
 
+CREATE TABLE personagem(
+	idPersonagem INT PRIMARY KEY AUTO_INCREMENT,
+    nomePersonagem VARCHAR(45)
+);
+
+CREATE TABLE mestre(
+	idMestre INT PRIMARY KEY AUTO_INCREMENT,
+	nomeMestre VARCHAR(50),
+	respiracao VARCHAR(50),
+	CONSTRAINT tipoRespiracao CHECK (respiracao in('Chama', 'Sol', 'Água', 'Vento', 'Pedra', 'Amor', 'Inseto', 'Trovão', 'Som', 'Névoa', 'Fera', 'Serpente', 'Flor', 'Lua'))
+);
+
 CREATE TABLE usuario (
 	idUsuario INT PRIMARY KEY AUTO_INCREMENT,
 	nome VARCHAR(50),
@@ -19,11 +31,6 @@ CREATE TABLE usuario (
 	constraint tipoFuncao CHECK (funcao in('Costureiro', 'Exterminador', 'Ferreiro','Kakushi'))
 );
 
-CREATE TABLE personagem(
-	idPersonagem INT PRIMARY KEY AUTO_INCREMENT,
-    nomePersonagem VARCHAR(45)
-);
-
 CREATE TABLE sugestao(
 	idSugestao INT PRIMARY KEY AUTO_INCREMENT,
 	titulo VARCHAR(100),
@@ -33,23 +40,15 @@ CREATE TABLE sugestao(
 		REFERENCES usuario(idUsuario)
 );
 
-CREATE TABLE mestre(
-	idMestre INT PRIMARY KEY AUTO_INCREMENT,
-	nomeMestre VARCHAR(50),
-	respiracao VARCHAR(50),
-	CONSTRAINT tipoRespiracao CHECK (respiracao in('Chama', 'Sol', 'Água', 'Vento', 'Pedra', 'Amor', 'Inseto', 'Trovão', 'Som', 'Névoa', 'Fera', 'Serpente', 'Flor', 'Lua'))
-);
-
-
 INSERT INTO usuario VALUES
-(NULL, 'Enzzo', '2022-05-27', 1.69, 50.0, 'Ferreiro', 'enzzo.enzzo@enzzo.com', '123', NULL), 
-(NULL, 'Rodrigo', '2022-05-27', 1.69, 50.0, 'Ferreiro', 'rodrigo.rodrigo@rodrigo.com', '123', NULL), 
-(NULL, 'Enzzo', '2022-05-27', 1.69, 50.0, 'Ferreiro', 'enzzo.enzzo@enzzo.com', '123', NULL), 
-(NULL, 'Rodrigo', '2022-05-27', 1.69, 50.0, 'Ferreiro', 'rodrigo.rodrigo@rodrigo.com', '123', NULL), 
-(NULL, 'Enzzo', '2022-05-27', 1.69, 50.0, 'Ferreiro', 'enzzo.enzzo@enzzo.com', '123', NULL), 
-(NULL, 'Rodrigo', '2022-05-27', 1.69, 50.0, 'Ferreiro', 'rodrigo.rodrigo@rodrigo.com', '123', NULL), 
-(NULL, 'Enzzo', '2022-05-27', 1.69, 50.0, 'Ferreiro', 'enzzo.enzzo@enzzo.com', '123', NULL), 
-(NULL, 'Rodrigo', '2022-05-27', 1.69, 50.0, 'Ferreiro', 'rodrigo.rodrigo@rodrigo.com', '123', NULL); 
+(NULL, 'Enzzo', '2022-05-27', 1.69, 50.0, 'Ferreiro', 'enzzo.enzzo@enzzo.com', '123', NULL, NULL), 
+(NULL, 'Rodrigo', '2022-05-27', 1.69, 50.0, 'Ferreiro', 'rodrigo.rodrigo@rodrigo.com', '123', NULL, NULL), 
+(NULL, 'Enzzo', '2022-05-27', 1.69, 50.0, 'Ferreiro', 'enzzo.enzzo@enzzo.com', '123', NULL, NULL), 
+(NULL, 'Rodrigo', '2022-05-27', 1.69, 50.0, 'Ferreiro', 'rodrigo.rodrigo@rodrigo.com', '123', NULL, NULL), 
+(NULL, 'Enzzo', '2022-05-27', 1.69, 50.0, 'Ferreiro', 'enzzo.enzzo@enzzo.com', '123', NULL, NULL),
+(NULL, 'Rodrigo', '2022-05-27', 1.69, 50.0, 'Ferreiro', 'rodrigo.rodrigo@rodrigo.com', '123', NULL, NULL), 
+(NULL, 'Enzzo', '2022-05-27', 1.69, 50.0, 'Ferreiro', 'enzzo.enzzo@enzzo.com', '123', NULL, NULL), 
+(NULL, 'Rodrigo', '2022-05-27', 1.69, 50.0, 'Ferreiro', 'rodrigo.rodrigo@rodrigo.com', '123', NULL, NULL); 
 
 INSERT INTO personagem VALUES 
 	(NULL, 'Kagaya Ubuyashiki'),
@@ -85,7 +84,7 @@ INSERT INTO personagem VALUES
     
 INSERT INTO mestre VALUES
 	(NULL, 'Sakonji Urokodaki', 'Água'),
-	(NULL, 'Jigoro Kuwajina', 'Trovão'),
+	(NULL, 'Jigoro Kuwajima', 'Trovão'),
 	(NULL, 'Gyomei Himejima', 'Pedra'),
 	(NULL, 'Kanae Kocho', 'Flor'),
 	(NULL, 'Shinjuro Rengoku', 'Chama');
