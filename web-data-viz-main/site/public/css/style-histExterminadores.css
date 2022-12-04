@@ -77,7 +77,7 @@ body{
    justify-content: center;
    align-items: center;
    flex-direction: column;
-   padding: 20px;
+   padding: 20px 90px;
 }
 
 .hist-hashira h2{
@@ -97,8 +97,15 @@ body{
     display: flex;
 }
 
+.img-treinador{
+    margin-left: 25px;
+}
+
 .img-treinador img{
-    width: 370px;
+    width: 340px;
+    height: 360px;
+    margin-top: 45px;
+
 }
 
 .treinador .hist-treinador{
@@ -115,6 +122,7 @@ body{
 
 .treinador .texto-treinador{
     color: white;
+    padding: 0px 90px;
 }
 
 /* HISTORIA - KASUGAIGARASU */
@@ -123,7 +131,8 @@ body{
 }
 
 .img-kasugaigarasu img{
-    width: 370px;
+    width: 345px;
+    height: 240px;
 }
 
 .kasugaigarasu .hist-kasugaigarasu{
@@ -140,14 +149,18 @@ body{
 
 .kasugaigarasu .texto-kasugaigarasu{
     color: white;
+    padding: 0px 90px;
 }
 
 /* FUNÇÕES KISATSUTAI */
-.container-funcoes-kisatsutai{
+.funcoes-kisatsutai{
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
     flex-direction: column;
+    background-color: #4e4a4a;
+    padding: 20px;
+    margin: 15px 0px;
 }
 
 /* FUNÇÕES */ 
@@ -172,16 +185,25 @@ body{
 }
 
 .funcoes .texto-funcoes{
+    display: flex;
+    align-items: center;
+    justify-content: center;
     color: white;
+    text-align: center;
+    padding: 0px 200px;
 }
 
 /* Exterminadores */ 
 .exterminadores{
     display: flex;
+    background-color: #4b2941;
+    padding: 15px;
+    width: 1270px;
 }
 
 .img-exterminadores img{
     width: 370px;
+    height: 400px;
 }
 
 .exterminadores .hist-exterminadores{
@@ -203,6 +225,9 @@ body{
 /* Ferreiros */ 
 .ferreiros{
     display: flex;
+    background-color: #4b2941;
+    padding: 15px;
+    margin-top: 15px;
 }
 
 .img-ferreiros img{
@@ -228,6 +253,9 @@ body{
 /* Kakushi */ 
 .kakushi{
     display: flex;
+    background-color: #4b2941;
+    padding: 15px;
+    margin-top: 15px;
 }
 
 .img-kakushi img{
@@ -253,10 +281,14 @@ body{
 /* Costureiros */ 
 .costureiros{
     display: flex;
+    background-color: #4b2941;
+    padding: 15px;
+    margin-top: 15px;
+    margin-bottom: 15px;
 }
 
 .img-costureiros img{
-    width: 370px;
+    width: 280px;
 }
 
 .costureiros .hist-costureiros{
@@ -323,4 +355,12 @@ body{
 
 .introducao-kimetsu .grupo{
     color: white;
+}
+
+.introducao-kimetsu .grupo a{
+    color: #FFF;
+}
+
+.grupo a:hover{
+    color: red;
 }
