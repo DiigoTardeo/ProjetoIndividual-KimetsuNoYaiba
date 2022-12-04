@@ -50,8 +50,15 @@ body{
     color: white;
 }
 
-.sobre-mim{
+.container-valores .valores{
     display: flex;
-    color: white;
-
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 }
+
+.sobre-mim, .valores h1{
+    color: #FFF;
+}
+
+

@@ -158,7 +158,7 @@ body{
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    background-color: #4e4a4a;
+    /* background-color: #4e4a4a; */
     padding: 20px;
     margin: 15px 0px;
 }
@@ -196,9 +196,9 @@ body{
 /* Exterminadores */ 
 .exterminadores{
     display: flex;
-    background-color: #4b2941;
     padding: 15px;
     width: 1270px;
+    background: linear-gradient(85deg, rgb(144 66 33), rgb(167 71 166));
 }
 
 .img-exterminadores img{
@@ -225,9 +225,9 @@ body{
 /* Ferreiros */ 
 .ferreiros{
     display: flex;
-    background-color: #4b2941;
     padding: 15px;
     margin-top: 15px;
+    background: linear-gradient(85deg, rgb(144 66 33), rgb(167 71 166));
 }
 
 .img-ferreiros img{
@@ -253,9 +253,9 @@ body{
 /* Kakushi */ 
 .kakushi{
     display: flex;
-    background-color: #4b2941;
     padding: 15px;
     margin-top: 15px;
+    background: linear-gradient(85deg, rgb(144 66 33), rgb(167 71 166));
 }
 
 .img-kakushi img{
@@ -281,10 +281,10 @@ body{
 /* Costureiros */ 
 .costureiros{
     display: flex;
-    background-color: #4b2941;
     padding: 15px;
     margin-top: 15px;
     margin-bottom: 15px;
+    background: linear-gradient(85deg, rgb(144 66 33), rgb(167 71 166));
 }
 
 .img-costureiros img{
