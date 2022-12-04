@@ -9,8 +9,8 @@ body{
     position: absolute;
     background-color: black;
     opacity: 0.7;
-    height: 500px;
-    width: 450px;
+    height: 540px;
+    width: 470px;
     margin-left: 520px;
     margin-top: 70px;
 }
@@ -34,8 +34,8 @@ body{
     display: flex;
     justify-content: center;
     background-color: #5e5e5d;
-    width: 360px;
-    height: 407px;
+    width: 375px;
+    height: 450px;
 }
 
 .campos input, .campos span{
@@ -100,16 +100,11 @@ body{
     flex-direction: column;
 }
 
-/* .campo-senha p{
-    color: #FFF;
-} */
-
 .container-campos .campo-confirmarSenha{
     display: flex;
     justify-content: center;
     align-items: flex-start;
     flex-direction: column;
-    margin-bottom: 20px;
 }
 
 .campo-btnEnviar button{

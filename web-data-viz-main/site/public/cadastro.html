@@ -77,19 +77,19 @@
                 
                 <div class="campo-email">
                     <span>E-mail</span>
-                    <input type="email" name="email" id="ipt_email" onkeyup="verificar_email()" placeholder="email@email.com">
+                    <input type="email" name="email" id="ipt_email" placeholder="email@email.com">
                     <span id="campo_confirmar_email"></span>
                 </div>
                 
                 <div class="campo-senha">
                     <span>Senha:</span>
-                    <input type="password" name="senha" id="ipt_senha" onkeyup="validar_senha()" placeholder="********">
-                    <p id="campo_validar_senha">(pelo menos 8 caracteres)</p>
+                    <input type="password" name="senha" id="ipt_senha" placeholder="********">
+                    <p id="campo_validar_senha" style="font-weight: bold; font-size: 12px;">(pelo menos 8 caracteres)</p>
                 </div>
                 
                 <div class="campo-confirmarSenha">
                     <span class="spn_confirmarSenha">Confirmar Senha:</span>
-                    <input type="password" name="confirmar-senha" id="ipt_confirmarSenha" onkeyup="validar_senha()" placeholder="********">>
+                    <input type="password" name="confirmar-senha" id="ipt_confirmarSenha" placeholder="********">
                     <span id="campo_confirmar_senha"></span>
                 </div>
                 
@@ -115,69 +115,6 @@
 </html>
 
 <script>
-    function verificar_email() {
-        var email = ipt_email.value.trim()
-        /* Verificar se tem 6 caracteres ou mais no email antes do @*/
-        if (email.indexOf(" ") > 0) {
-            ipt_email.classList.add("error")
-            ipt_email.classList.remove("confirmar")
-            campo_confirmar_email.style.color = "red"
-            campo_confirmar_email.innerHTML = "Email inválido, retire os espaços!"
-        } else if (email.indexOf(".") - email.indexOf("@") >= -4) {
-            ipt_email.classList.add("error")
-            ipt_email.classList.remove("confirmar")
-            campo_confirmar_email.style.color = "red"
-            campo_confirmar_email.innerHTML = "Email inválido"
-        } else if ((email.indexOf("@sptech.school") > 6 || email.indexOf("@gmail.com") || email.indexOf("@hotmail.com")> 6) && email.indexOf("@") > 6) {
-            campo_confirmar_email.style.color = "green"
-            campo_confirmar_email.innerHTML = "Email válido"
-            ipt_email.classList.remove("error")
-            ipt_email.classList.add("confirmar")
-        } else {
-            ipt_email.classList.add("error")
-            ipt_email.classList.remove("confirmar")
-            campo_confirmar_email.style.color = "red"
-            campo_confirmar_email.innerHTML = "Email inválido"
-        }
-    }
-
-    function validar_senha() {
-        var senha = ipt_senha.value
-        var confirmSenha = ipt_confirmSenha.value
-        /* validação da senha, se tem espaço no começo ou no fim */
-        if (senha.startsWith(" ") || senha.endsWith(" ")) {
-            campo_validar_senha.style.color = "Red"
-            campo_validar_senha.innerHTML = "A senha não pode começar nem terminar com um espaço"
-            ipt_senha.classList.add("error")
-        } else { /* validação da senha, se tem 8 letras ou mais */
-            if (senha.length >= 8) {
-                ipt_senha.classList.remove("error")
-                ipt_senha.classList.add("confirmar")
-                campo_validar_senha.style.color = "Green"
-                campo_validar_senha.innerHTML = "(pelo menos 8 caracteres)"
-                /* Confirmar se a senha é igual nos dois campos*/
-                /*Veririfar se senha é igual com campo CONFIRMSENHA*/
-                if ((senha == confirmSenha) && confirmSenha.length >= 8) {
-                    ipt_confirmSenha.classList.remove("error")
-                    ipt_confirmSenha.classList.add("confirmar")
-                    campo_confirmar_senha.style.color = "green"
-                    campo_confirmar_senha.innerHTML = "senha correta"
-                } else {
-                    ipt_confirmSenha.classList.add("error")
-                    ipt_confirmSenha.classList.remove("confirmar")
-                    campo_confirmar_senha.style.color = "red"
-                    campo_confirmar_senha.innerHTML = "senha incorreta"
-                }
-            } else {
-                ipt_senha.classList.remove("confirmar")
-                campo_validar_senha.innerHTML = "(pelo menos 8 caracteres)"
-                campo_validar_senha.style.color = "Red"
-                ipt_senha.classList.add("error")
-            }
-
-        }
-    }
-
 
     function cadastrar() {
         //aguardar();
@@ -209,11 +146,76 @@
             pesoVar = pesoVar.replaceAll(',','.');
         }
 
-        // if(dtNascVar != "" || alturaVar != "" || pesoVar != ""){
-        //     dtNascVar = dtNascVar.replaceAll('/','-');
-        //     alturaVar = alturaVar.replaceAll(',','.');
-        //     pesoVar = pesoVar.replaceAll(',','.');
-        // }
+        // email
+
+        var email = ipt_email.value.trim()
+        /* Verificar se tem 6 caracteres ou mais no email antes do @*/
+        if (email.indexOf(" ") > 0) {
+            ipt_email.classList.add("error")
+            ipt_email.classList.remove("confirmar")
+            campo_confirmar_email.style.color = "red"
+            campo_confirmar_email.innerHTML = "Email inválido, retire os espaços!"
+
+            var valida_email = 0;
+        } else if ((email.indexOf("@sptech.school") > 3 || email.indexOf("@gmail.com") > 3) && email.indexOf("@") > 3) {
+            campo_confirmar_email.style.color = "green"
+            campo_confirmar_email.innerHTML = "Email válido"
+            ipt_email.classList.remove("error")
+            ipt_email.classList.add("confirmar")
+
+            valida_email = 1;
+        } else {
+            ipt_email.classList.add("error")
+            ipt_email.classList.remove("confirmar")
+            campo_confirmar_email.style.color = "red"
+            campo_confirmar_email.innerHTML = "Email inválido"
+
+            valida_email = 0;
+        }
+
+        // senha
+
+        var senha = ipt_senha.value;
+        var confirmSenha = ipt_confirmarSenha.value;
+        /* validação da senha, se tem espaço no começo ou no fim */
+        if (senha.startsWith(" ") || senha.endsWith(" ")) {
+            campo_validar_senha.style.color = "Red"
+            campo_validar_senha.innerHTML = "A senha não pode começar nem terminar com um espaço"
+            ipt_senha.classList.add("error")
+
+            var valida_senha = 0;
+        } else { /* validação da senha, se tem 8 letras ou mais */
+            if (senha.length >= 8) {
+                ipt_senha.classList.remove("error")
+                ipt_senha.classList.add("confirmar")
+                campo_validar_senha.style.color = "Green"
+                campo_validar_senha.innerHTML = "(pelo menos 8 caracteres)"
+                /* Confirmar se a senha é igual nos dois campos*/
+                /*Veririfar se senha é igual com campo CONFIRMSENHA*/
+                valida_senha = 1;
+                if ((senha == confirmSenha) && confirmSenha.length >= 8) {
+                    ipt_confirmarSenha.classList.remove("error")
+                    ipt_confirmarSenha.classList.add("confirmar")
+                    campo_confirmar_senha.style.color = "green"
+                    campo_confirmar_senha.innerHTML = "senha correta"
+                    valida_senha = 1;
+                } else {
+                    ipt_confirmarSenha.classList.add("error")
+                    ipt_confirmarSenha.classList.remove("confirmar")
+                    campo_confirmar_senha.style.color = "red"
+                    campo_confirmar_senha.innerHTML = "senha incorreta"
+
+                    valida_senha = 0;
+                }
+            } else {
+                ipt_senha.classList.remove("confirmar")
+                campo_validar_senha.innerHTML = "(pelo menos 8 caracteres)"
+                campo_validar_senha.style.color = "Red"
+                ipt_senha.classList.add("error")
+
+                valida_senha = 0;
+            }
+        }
 
         // Enviando o valor da nova input
         fetch("/usuarios/cadastrar", {
