@@ -47,9 +47,10 @@
             </div>
 
             <div class="container-campos">
-                
-                <div class="campo-nome">
-                    <span>Nome:</span>
+                <div class="campos">
+
+                    <div class="campo-nome">
+                        <span>Nome:</span>
                     <input type="text" name="nome" id="ipt_nome">
                 </div>
                 
@@ -78,29 +79,30 @@
                         <option value="Kakushi">Kakushi</option>
                     </select>
                 </div>
-
+                
                 <div class="campo-email">
                     <span>E-mail</span>
                     <input type="text" name="email" id="ipt_email">
                 </div>
-
+                
                 <div class="campo-senha">
                     <span>Senha:</span>
                     <input type="password" name="senha" id="ipt_senha">
                 </div>
-
+                
                 <div class="campo-confirmarSenha">
                     <span class="spn_confirmarSenha">Confirmar Senha:</span>
                     <input type="password" name="confirmar-senha" id="ipt_confirmarSenha">
                 </div>
-
+                
                 <div class="campo-btnEnviar">
-                    <button class="btn_cadastrar" onclick="cadastrar()"> CADASTRAR </button>
+                    <button class="btn-cadastrar" onclick="cadastrar()"><img src="./assets/img/login/Bamboo.png"> <span class="spn-cadastrar"> CADASTRAR </span></button>
                 </div>
-
-                <div id="div_aguardar" class="loading-div">
-                    <img src="./assets/loading-1.gif" id="loading-gif">
-                </div>
+            </div>
+                
+            <div id="div_aguardar" class="loading-div">
+                <img src="./assets/loading-1.gif" id="loading-gif">
+            </div>
 
                 <div id="div_erros_login"></div>
             </div>
