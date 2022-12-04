@@ -50,25 +50,24 @@
                     <div class="img_aba">
                         <img class="img_logo" src="../assets/img/login/IconeBranco.png">
                     </div>
-                    <h1 class="titulo_aba">Olá <span id="usuario">usuário</span>!</h1>
+                    <h1 class="titulo_aba">Olá, <span id="usuario" style="font-size: 60px;">usuário</span>!</h1>
                     <div class="botoes">
-                        <button class="b1" onclick="window.location.href = './dashboard.html'"> 
-                            <a href="./dashboard.html">
-                                <p> Meus Dados</p>
-                            </a>
+                        <button class="abrirDados" id="abreDados" onclick="dadosA()"><img src="../assets/img/login/Bamboo.png" class="bamboo"> <p>DADOS ></p></button>
+                        <button class="fecharDados" id="fechaDados" onclick="dadosF()"><img src="../assets/img/login/Bamboo.png" class="bamboo"> <p>DADOS .</p></button>
+                        <button class="b1" id="meusDados" onclick= onclick="window.location.href = './dashboard.html'"> 
+                            <img src="../assets/img/login/Bamboo.png" class="bamboo"> <p> Meus Dados</p>
                         </button>
-                        <button class="b2" onclick="window.location.href = './dashboard.html'"> 
-                                <p>Missões</p>
+                        <button class="b2" id="minhasMissoes" onclick="missoes()"> 
+                            <img src="../assets/img/login/Bamboo.png" class="bamboo"> <p>Missões</p>
                         </button>
-                        <a href="#cadastro_Funcionario">
-                            <button class="b43" onclick="window.location.href = './dashboard.html'">
-                                <a href="./dashboard.html">
-                                    <p>Voto Rank</p>
-                                </a>
-                            </button>
-                        </a>
-                        <button class="b4" onclick="sugestao()"> 
-                            <p>Sugestões</p>
+                        <button class="b3" id="votoRank" onclick="voto()">
+                            <img src="../assets/img/login/Bamboo.png" class="bamboo"> <p>Voto Rank</p>
+                        </button>
+                        <button class="b4" id="cruzadinha" onclick="jogo()">
+                            <img src="../assets/img/login/Bamboo.png" class="bamboo"> <p>Cruzadinha</p>
+                        </button>
+                        <button class="b5" id="sugestoes" onclick="window.location.href = './mural.html'">
+                            <img src="../assets/img/login/Bamboo.png" class="bamboo"><a href="./mural.html"><p>Sugestões</p></a>
                         </button>
                     </div>
                 </div>

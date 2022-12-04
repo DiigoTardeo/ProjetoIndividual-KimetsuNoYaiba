@@ -104,6 +104,7 @@ function fecharModal() {
         container_dados.style.display = "flex";
         container_missoes.style.display = "none";
         container_voto.style.display = "none";
+        fundo_voto.style.display = "none";
         container_cruzadinha.style.display = "none";
         // container_sugestao.style.display = "none";
     }
@@ -112,6 +113,7 @@ function fecharModal() {
         container_dados.style.display = "none";
         container_missoes.style.display = "flex";
         container_voto.style.display = "none";
+        fundo_voto.style.display = "none";
         container_cruzadinha.style.display = "none";
         // container_sugestao.style.display = "none";
     }
@@ -120,6 +122,7 @@ function fecharModal() {
         container_dados.style.display = "none";
         container_missoes.style.display = "none";
         container_voto.style.display = "flex";
+        fundo_voto.style.display = "block";
         container_cruzadinha.style.display = "none";
         // container_sugestao.style.display = "none";
     }
@@ -128,6 +131,7 @@ function fecharModal() {
         container_dados.style.display = "none";
         container_missoes.style.display = "none";
         container_voto.style.display = "none";
+        fundo_voto.style.display = "none";
         container_cruzadinha.style.display = "block";
     }
 
