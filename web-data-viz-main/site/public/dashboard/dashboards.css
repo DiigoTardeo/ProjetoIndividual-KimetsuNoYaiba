@@ -205,11 +205,33 @@ button .bamboo{
   background-color: #FFF;
   width: 550px;
   height: 620px;
+  padding: 20px;
 }
 
 .img-personagens img{
   display: none;
   width: 550px;
+}
+
+.btn-voto button{
+  display: flex;
+    background: none;
+    border: none;
+}
+
+.btn-voto button:hover{
+  opacity: 0.7;
+}
+
+.btn-voto button img{
+  width: 100px;
+  margin: 0px 0px -14px -10px;
+}
+
+.btn-voto span{
+  margin: 0px 0px -10px -70px;
+  font-size: 20px;
+  color: #FFF;
 }
 
 /* JOGO - CRUZADINHA */
