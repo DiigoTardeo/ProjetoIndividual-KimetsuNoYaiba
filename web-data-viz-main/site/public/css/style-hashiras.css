@@ -23,7 +23,7 @@ body{
    justify-content: center;
    align-items: center;
    flex-direction: column;
-   padding: 20px;
+   padding: 0px 100px;
 }
 
 .hist-kagaya h2{
@@ -55,6 +55,7 @@ body{
 
 .img-gyomei img{
     width: 370px;
+    margin-top: 150px;
 }
 
 .gyomei .hist-gyomei{
@@ -105,6 +106,7 @@ body{
 
 .img-muichiro img{
     width: 370px;
+    margin-top: 130px;
 }
 
 .muichiro .hist-muichiro{
@@ -130,6 +132,7 @@ body{
 
 .img-giyu img{
     width: 370px;
+    margin-top: 130px;
 }
 
 .giyu .hist-giyu{
@@ -155,6 +158,7 @@ body{
 
 .img-obanai img{
     width: 370px;
+    margin-top: 150px;
 }
 
 .obanai .hist-obanai{
@@ -180,6 +184,7 @@ body{
 
 .img-mitsuri img{
     width: 370px;
+    margin-top: 120px;
 }
 
 .mitsuri .hist-mitsuri{
@@ -205,6 +210,7 @@ body{
 
 .img-tengen img{
     width: 370px;
+    margin-top: 240px;
 }
 
 .tengen .hist-tengen{
@@ -230,6 +236,7 @@ body{
 
 .img-kyojuro img{
     width: 370px;
+    margin-top: 150px;
 }
 
 .kyojuro .hist-kyojuro{
@@ -255,6 +262,7 @@ body{
 
 .img-shinobu img{
     width: 370px;
+    margin-top: 120px;
 }
 
 .shinobu .hist-shinobu{
