@@ -59,12 +59,12 @@ body {
   right: -260px;
 }
 
-.container-principal .espada-formulario img:hover {
+.container-principal .espada-login img:hover {
   position: relative;
   right: -260px;
 }
 
-.container-principal .espada-login img:hover {
+.container-principal .espada-rank img:hover {
   position: relative;
   right: -260px;
 }
