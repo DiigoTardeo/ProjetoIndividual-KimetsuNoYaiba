@@ -100,6 +100,10 @@ body{
     flex-direction: column;
 }
 
+/* .campo-senha p{
+    color: #FFF;
+} */
+
 .container-campos .campo-confirmarSenha{
     display: flex;
     justify-content: center;
@@ -125,4 +129,20 @@ body{
 }
 .campo-btnEnviar button .spn-cadastrar{
 margin-left: -75px;
+}
+
+/* VALIDAÇÕES */
+
+.error {
+    border-bottom: red solid !important ;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+}
+
+.confirmar {
+    border-bottom: green solid !important; 
+    border-top: none;
+    border-left: none;
+    border-right: none;
 }
