@@ -130,8 +130,20 @@ button .bamboo{
   font-size: 25px;
 }
 
+.abrirDados p img{
+  width: 16px;
+  height: 17px;
+  margin: 0px 0px -4px 5px;
+}
+
 .fecharDados{
   display: none;
+}
+
+.fecharDados p img{
+  width: 18px;
+  height: 13px;
+  margin: 0px 0px 0px 5px;
 }
 
 .b1, .b2{
