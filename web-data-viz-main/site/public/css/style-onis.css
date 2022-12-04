@@ -2,8 +2,9 @@ body{
     background-image: url("../assets/img/PossiveisFundos/casaNoite.png");
 }
 
-.titulo{
+.titulo h1{
     color: white;
+    font-size: 50px;
 }
 
 /* Muzan - Lider */
@@ -28,6 +29,7 @@ body{
 
 .hist-muzan h2{
     color: white;
+    font-size: 30px;
 }
 
 .muzan .texto-muzan{
@@ -40,7 +42,7 @@ body{
     flex-direction: column;
     margin: 50px 30px 30px 30px;
     padding: 5px 15px;
-    background-color: rgb(78 64 91);
+    background: linear-gradient(85deg, rgb(78 64 91),rgb(255, 255, 255));
 }
 
 .container-luas-superiores h1{
@@ -48,6 +50,12 @@ body{
     align-items: center;
     justify-content: center;
     color: white;
+    font-size: 50px;
+}
+
+.container-luas-superiores .text-luasSuperiores{
+    text-align: center;
+    padding: 0px 200px;
 }
 
 /* Kokushibou - 1ª Lua Superior */ 
@@ -62,6 +70,7 @@ body{
 .img-kokushibou img{
     width: 370px;
     border: #FFF solid;
+    margin-top: 140px;
 }
 
 .kokushibou .hist-kokushibou{
@@ -91,7 +100,7 @@ body{
 
 .img-douma img{
     width: 370px;
-    border: black solid;
+    margin-top: 110px;
 }
 
 .douma .hist-douma{
@@ -152,6 +161,7 @@ body{
 
 .img-hantengu img{
     width: 370px;
+    margin-top: 50px;
 }
 
 .hantengu .hist-hantengu{
@@ -238,7 +248,7 @@ body{
 }
 
 .img-daki_gyuutarou img{
-    width: 370px;
+    width: 245px;
 }
 
 .daki_gyuutarou .hist-daki_gyuutarou{
@@ -268,6 +278,7 @@ body{
 
 .img-kaigaku img{
     width: 370px;
+    margin-top: 90px;
 }
 
 .kaigaku .hist-kaigaku{
@@ -292,15 +303,23 @@ body{
     flex-direction: column;
     margin: 14px 30px 30px 30px;
     padding: 5px 15px;
-    background-color: rgb(126 149 180);
+    background: linear-gradient(85deg, rgb(255 255 255), rgb(126 149 180));
 }
+
 
 .container-luas-inferiores h1{
     display: flex;
     align-items: center;
     justify-content: center;
     color: white;
+    font-size: 50px;
 }
+
+.container-luas-inferiores .text-luasInferiores{
+    text-align: center;
+    padding: 0px 200px;
+}
+
 
 /* Enmu - 1ª Lua Inferior */ 
 .enmu{
@@ -313,6 +332,7 @@ body{
 
 .img-enmu img{
     width: 370px;
+    margin-top: 110px;
 }
 
 .enmu .hist-enmu{
@@ -342,6 +362,7 @@ body{
 
 .img-hairo img{
     width: 370px;
+    margin-top: 30px;
 }
 
 .hairo .hist-hairo{
@@ -360,6 +381,35 @@ body{
     color: white;
 }
 
+/* Rokuro - 2ª Lua Inferior SUBISTITUTO */ 
+.rokuro{
+    display: flex;
+    background-color: gray;
+    border-radius: 15px;
+    padding: 13px;
+    margin: 0px 0px 20px 0px;
+}
+
+.img-rokuro img{
+    width: 250px;
+}
+
+.rokuro .hist-rokuro{
+    display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+   padding: 20px;
+}
+
+.hist-rokuro h2{
+    color: white;
+}
+
+.rokuro .texto-rokuro{
+    color: white;
+}
+
 /* Wakuraba - 3ª Lua Inferior */ 
 .wakuraba{
     display: flex;
@@ -370,7 +420,7 @@ body{
 }
 
 .img-wakuraba img{
-    width: 370px;
+    width: 320px;
 }
 
 .wakuraba .hist-wakuraba{
@@ -428,6 +478,7 @@ body{
 
 .img-rui img{
     width: 370px;
+    margin-top: 180px;
 }
 
 .rui .hist-rui{
@@ -457,6 +508,7 @@ body{
 
 .img-kyogai img{
     width: 370px;
+    margin-top: 80px;
 }
 
 .kyogai .hist-kyogai{
